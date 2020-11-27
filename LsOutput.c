@@ -7,3 +7,9 @@ void printOptions(bool optioni, bool optionl, bool optionR) {
     printf("Option l = %d\n", optionl);
     printf("Option R = %d\n", optionR);
 }
+
+void printDirectory(char ** dirs, int dirc) {
+    for (int i = 0; i < dirc; i++) {
+        printf("Directory: %s\n", dirs[i]);
+    }
+}

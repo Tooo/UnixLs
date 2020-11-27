@@ -32,6 +32,6 @@ int main (int arc, char** args) {
     }
 
     printOptions(optioni, optionl, optionR);
-
+    printDirectory(&args[argCounter], arc-argCounter);
     return 0;
 }
