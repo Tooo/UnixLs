@@ -1,6 +1,6 @@
 #ifndef _LSFILE_H_
 #define _LSFILE_H_
 
-void readDirectory(char * directory);
+void readDirectory(char * dirName);
 
 #endif
