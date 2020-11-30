@@ -29,6 +29,10 @@ void readDirectory(char * dirName) {
             printInode(dp->d_ino);
         }
 
+        if (getOptionl()) {
+            printl(buf);
+        }
+
         printFilename(dp->d_name);
     }
     
