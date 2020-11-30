@@ -18,7 +18,7 @@ int main (int arc, char** args) {
         for (int i = 1; i < strLength; i++) {
             switch (args[argCounter][i]) {
                 case 'i':
-                    optioni = true;
+                optioni = true;
                     break;
                 case 'l':
                     optionl = true;
@@ -33,12 +33,13 @@ int main (int arc, char** args) {
         argCounter++;
     }
 
-    printOptions(optioni, optionl, optionR);
+    //printOptions(optioni, optionl, optionR);
 
     char ** directories = &args[argCounter];
     int dirCount = arc-argCounter;
     for (int i = 0; i < dirCount; i++) {
-        printDirectory(directories[i]);
+        //printDirectory(directories[i]);
+        readDirectory(directories[i]);
     }
     return 0;
 }
