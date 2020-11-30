@@ -9,19 +9,27 @@
 
 #include "LsFile.h"
 #include "UnixLs.h"
+#include "LsOutput.h"
 
 void readDirectory(char * dirName) {
-    DIR * dir = opendir(".");
-    struct dirent * dp = readdir(dir);
-    struct stat buf;
+    DIR * dir = opendir(dirName);
+    struct dirent * dp;
 
     while ((dp = readdir(dir)) != NULL) {
         if (dp->d_name[0] == '.') {
             continue;
         }
-        stat(dp->d_name, &buf);
-        printf("%ld ", buf.st_ino);
-        printf("%s\n", dp->d_name);
+        struct stat buf;
+        int result = stat(dp->d_name, &buf);
+        if (result == -1) {
+            result = lstat(dp->d_name, &buf);
+        }
+
+        if (getOptioni()) {
+            printInode(dp->d_ino);
+        }
+
+        printFilename(dp->d_name);
     }
     
     closedir(dir);

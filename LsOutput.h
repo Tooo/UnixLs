@@ -5,6 +5,8 @@
 
 void printOptions(bool optioni, bool optionl, bool optionR);
 
-void printDirectory(char * directory);
+void printFilename(char * filename);
+
+void printInode(long inode);
 
 #endif

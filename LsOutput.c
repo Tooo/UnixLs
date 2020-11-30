@@ -8,6 +8,10 @@ void printOptions(bool optioni, bool optionl, bool optionR) {
     printf("Option R = %d\n", optionR);
 }
 
-void printDirectory(char * directory) {
-    printf("Directory: %s\n", directory);
+void printFilename(char * filename) {
+    printf("%s\n", filename);
+}
+
+void printInode(long inode) {
+    printf("%ld ", inode);
 }
