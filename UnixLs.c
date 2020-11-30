@@ -2,13 +2,15 @@
 #include <stdbool.h>
 #include <string.h>
 
+#include "UnixLs.h"
 #include "LsOutput.h"
 #include "LsFile.h"
 
+static bool optioni = false;
+static bool optionl = false;
+static bool optionR = false;
+
 int main (int arc, char** args) {
-    bool optioni = false;
-    bool optionl = false;
-    bool optionR = false;
     int argCounter = 1;
 
     while (arc > argCounter && args[argCounter][0] == '-') {
@@ -17,15 +19,12 @@ int main (int arc, char** args) {
             switch (args[argCounter][i]) {
                 case 'i':
                     optioni = true;
-                    setOptioni(true);
                     break;
                 case 'l':
                     optionl = true;
-                    setOptionl(true);
                     break;
                 case 'R':
                     optionR = true;
-                    setOptionR(true);
                     break;
                 default:
                     break;
@@ -42,4 +41,16 @@ int main (int arc, char** args) {
         printDirectory(directories[i]);
     }
     return 0;
+}
+
+bool getOptioni() {
+    return optioni;
+}
+
+bool getOptionl() {
+    return optionl;
+}
+
+bool getOptionR() {
+    return optionR;
 }

@@ -2,19 +2,8 @@
 #include <stdbool.h>
 
 #include "LsFile.h"
+#include "UnixLs.h"
 
-static bool optioni = false;
-static bool optionl = false;
-static bool optionR = false;
+void readDirectory(char * directory) {
 
-void setOptioni(bool option) {
-    optioni = option;
-}
-
-void setOptionl(bool option) {
-    optionl = option;
-}
-
-void setOptionR(bool option) {
-    optionR = option;
 }
