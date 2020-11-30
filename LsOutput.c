@@ -2,10 +2,12 @@
 
 #include "LsOutput.h"
 
-void printOptions(bool optioni, bool optionl, bool optionR) {
-    printf("Option i = %d\n", optioni);
-    printf("Option l = %d\n", optionl);
-    printf("Option R = %d\n", optionR);
+void printNewLine() {
+    printf("\n");
+}
+
+void printDirectory(char * directory) {
+    printf("%s:\n", directory);
 }
 
 void printFilename(char * filename) {

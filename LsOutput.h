@@ -3,10 +3,14 @@
 
 #include <stdbool.h>
 
-void printOptions(bool optioni, bool optionl, bool optionR);
+void printNewLine();
+
+void printDirectory(char * directory);
 
 void printFilename(char * filename);
 
 void printInode(long inode);
+
+
 
 #endif

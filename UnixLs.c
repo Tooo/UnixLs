@@ -35,13 +35,23 @@ int main (int arc, char** args) {
 
     char ** directories = &args[argCounter];
     int dirCount = arc-argCounter;
-    for (int i = 0; i < dirCount; i++) {
-        readDirectory(directories[i]);
-    }
 
     if (dirCount == 0) {
         readDirectory(".");
+        return 0;
+    } else if (dirCount == 1) {
+        readDirectory(directories[0]);
+        return 0;
     }
+
+    for (int i = 0; i < dirCount-1; i++) {
+        printDirectory(directories[i]);
+        readDirectory(directories[i]);
+        printNewLine();
+    }
+
+    printDirectory(directories[dirCount-1]);
+    readDirectory(directories[dirCount-1]);
 
     return 0;
 }
