@@ -35,6 +35,11 @@ int main (int arc, char** args) {
     }
 
     printOptions(optioni, optionl, optionR);
-    printDirectory(&args[argCounter], arc-argCounter);
+
+    char ** directories = &args[argCounter];
+    int dirCount = arc-argCounter;
+    for (int i = 0; i < dirCount; i++) {
+        printDirectory(directories[i]);
+    }
     return 0;
 }

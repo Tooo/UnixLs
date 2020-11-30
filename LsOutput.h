@@ -5,6 +5,6 @@
 
 void printOptions(bool optioni, bool optionl, bool optionR);
 
-void printDirectory(char ** dirs, int dirc);
+void printDirectory(char * directory);
 
 #endif
