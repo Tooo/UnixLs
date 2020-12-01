@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <sys/stat.h>
 #include <string.h>
+#include <time.h>
 
 #include "LsOutput.h"
 
@@ -33,4 +34,24 @@ void printPermission(mode_t mode) {
 }
 
 void printDate(struct timespec time) {
+    time_t seconds = time.tv_sec;
+    struct tm * local = localtime(&seconds);
+
+    char * months[12] = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+    printf("%s %2d ", months[local->tm_mon], local->tm_mday);
+
+    int hour = local->tm_hour;
+
+    if (hour < 10) {
+        printf("0%d:", hour);
+    } else {
+        printf("%d:", hour);
+    }
+
+    int min = local->tm_min;
+    if (min < 10) {
+        printf("0%d ", min);
+    } else {
+        printf("%d ", min);
+    }
 }
