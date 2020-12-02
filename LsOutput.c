@@ -54,19 +54,5 @@ void printDate(struct timespec time) {
 
     char * months[12] = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
     printf("%s %2d ", months[local->tm_mon], local->tm_mday);
-
-    int hour = local->tm_hour;
-
-    if (hour < 10) {
-        printf("0%d:", hour);
-    } else {
-        printf("%d:", hour);
-    }
-
-    int min = local->tm_min;
-    if (min < 10) {
-        printf("0%d ", min);
-    } else {
-        printf("%d ", min);
-    }
+    printf("%02d:%02d ", local->tm_hour, local->tm_min);
 }
