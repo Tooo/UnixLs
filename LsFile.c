@@ -11,7 +11,7 @@
 #include "UnixLs.h"
 #include "LsOutput.h"
 
-void readDirectory(char * dirName) {
+void File_readDirectory(char * dirName) {
     DIR * dir = opendir(dirName);
     struct dirent * dp;
 

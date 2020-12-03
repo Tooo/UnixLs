@@ -37,21 +37,21 @@ int main (int arc, char** args) {
     int dirCount = arc-argCounter;
 
     if (dirCount == 0) {
-        readDirectory(".");
+        File_readDirectory(".");
         return 0;
     } else if (dirCount == 1) {
-        readDirectory(directories[0]);
+        File_readDirectory(directories[0]);
         return 0;
     }
 
     for (int i = 0; i < dirCount-1; i++) {
         printDirectory(directories[i]);
-        readDirectory(directories[i]);
+        File_readDirectory(directories[i]);
         printNewLine();
     }
 
     printDirectory(directories[dirCount-1]);
-    readDirectory(directories[dirCount-1]);
+    File_readDirectory(directories[dirCount-1]);
 
     return 0;
 }
