@@ -6,6 +6,7 @@
 #include <time.h>
 
 #include "LsOutput.h"
+#include "LsFile.h"
 
 void printNewLine() {
     printf("\n");
@@ -26,8 +27,8 @@ void printInode(long inode) {
 void printl(struct stat buf) {
     printPermission(buf.st_mode);
     printf("%ld ", buf.st_nlink);
-    printUserID(buf.st_uid);
-    printUserID(buf.st_gid);
+    printf("%s ", File_getUserID(buf.st_uid));
+    printf("%s ", File_getUserID(buf.st_gid));
     printf("%5ld ", buf.st_size);
     printDate(buf.st_mtim);
 }
@@ -48,11 +49,6 @@ void printPermission(mode_t mode) {
         }
     }
     printf(" ");
-}
-
-void printUserID (int userID) {
-    struct passwd * pwd = getpwuid(userID);
-    printf("%s ", pwd->pw_name);
 }
 
 void printDate(struct timespec time) {

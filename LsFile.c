@@ -4,6 +4,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <dirent.h>
+#include <pwd.h>
 
 #include <stdio.h>
 
@@ -37,4 +38,9 @@ void File_readDirectory(char * dirName) {
     }
     
     closedir(dir);
+}
+
+char * File_getUserID(int userID) {
+    struct passwd * pwd = getpwuid(userID);
+    return pwd->pw_name;
 }
