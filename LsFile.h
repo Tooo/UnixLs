@@ -3,7 +3,7 @@
 
 void File_readDirectory(char * dirName);
 
-char * File_getUserID(int userID);
+char * File_getNameFromID(int userID);
 
 
 #endif

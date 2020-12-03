@@ -40,7 +40,7 @@ void File_readDirectory(char * dirName) {
     closedir(dir);
 }
 
-char * File_getUserID(int userID) {
+char * File_getNameFromID(int userID) {
     struct passwd * pwd = getpwuid(userID);
     return pwd->pw_name;
 }
