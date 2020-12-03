@@ -15,7 +15,7 @@ void printInode(long inode);
 void printl(struct stat buf);
 
 void printPermission(mode_t mode);
-
+void printUserID (int userID);
 void printDate(struct timespec time);
 
 #endif

@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <sys/stat.h>
+#include <sys/types.h>
+#include <pwd.h>
 #include <string.h>
 #include <time.h>
 
@@ -24,8 +26,8 @@ void printInode(long inode) {
 void printl(struct stat buf) {
     printPermission(buf.st_mode);
     printf("%ld ", buf.st_nlink);
-    printf("%d ", buf.st_uid);
-    printf("%d ", buf.st_gid);
+    printUserID(buf.st_uid);
+    printUserID(buf.st_gid);
     printf("%5ld ", buf.st_size);
     printDate(buf.st_mtim);
 }
@@ -46,6 +48,11 @@ void printPermission(mode_t mode) {
         }
     }
     printf(" ");
+}
+
+void printUserID (int userID) {
+    struct passwd * pwd = getpwuid(userID);
+    printf("%s ", pwd->pw_name);
 }
 
 void printDate(struct timespec time) {
