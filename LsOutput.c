@@ -39,9 +39,12 @@ void printl(struct stat buf) {
 void printPermission(mode_t mode) {
     if (S_ISDIR(mode)) {
         printf("d");
+    } else if (S_ISLNK(mode)) {
+        printf("l");
     } else {
         printf("-");
     }
+    
     char rwx[9] = "rwxrwxrwx";
     int permission[9] = {S_IRUSR, S_IWUSR, S_IXUSR, S_IRGRP, S_IWGRP, S_IXGRP, S_IROTH, S_IWOTH, S_IXOTH};
     for (int i = 0; i < 9; i++) {

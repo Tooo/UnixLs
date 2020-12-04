@@ -25,12 +25,18 @@ int File_setup() {
 }
 
 void File_readDirectory(char * dirName) {
-    DIR * dir = opendir(dirName);
-    if (!dir) {
+    struct stat buf;
+    int result = stat(dirName, &buf);
+    if (result) {
+        result = lstat(dirName, &buf);
+    }
+
+    if (!S_ISDIR(buf.st_mode)) {
         File_readFile(dirName);
         printFilename(dirName);
         return;
     }
+    DIR * dir = opendir(dirName);
     char * dirNameCopy = malloc(sizeof(dirName));
     strcpy(dirNameCopy, dirName);
     List_prepend(directories, dirNameCopy);
@@ -41,8 +47,11 @@ void File_readFile(char * fileName) {
     struct stat buf;
     int result = stat(fileName, &buf);
     if (result) {
-        printNoFile(fileName);
-        return;
+        result = lstat(fileName, &buf);
+        if (result) {
+            printNoFile(fileName);
+            return;
+        } 
     }
 
     if (getOptioni()) {
@@ -61,11 +70,16 @@ char * File_getNameFromID(int userID) {
 
 void File_runDirectory() {
     while (List_count(directories)) {
-        printNewLine();
         char * dirName = List_trim(directories);
-        printDirectory(dirName);
         DIR * dir = opendir(dirName);
 
+        if (!dir) {
+            free (dirName);
+            continue;
+        }
+
+        printNewLine();
+        printDirectory(dirName);
         struct dirent * dp;
         while ((dp = readdir(dir)) != NULL) {
             if (dp->d_name[0] == '.') {
@@ -83,7 +97,7 @@ void File_runDirectory() {
                 if (S_ISDIR(buf.st_mode)) {
                     char * pathCopy = malloc(sizeof(path));
                     strcpy(pathCopy, path);
-                    List_prepend(directories, pathCopy);
+                    List_append(directories, pathCopy);
                 }
             }
         }
