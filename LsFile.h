@@ -1,6 +1,8 @@
 #ifndef _LSFILE_H_
 #define _LSFILE_H_
 
+int File_setup();
+
 void File_readDirectory(char * dirName);
 void File_readFile(char * fileName);
 

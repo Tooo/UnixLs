@@ -12,6 +12,17 @@
 #include "LsFile.h"
 #include "UnixLs.h"
 #include "LsOutput.h"
+#include "list.h"
+
+static List * directories;
+
+int File_setup() {
+    directories = List_create();
+    if (!directories) {
+        return 1;
+    }
+    return 0;
+}
 
 void File_readDirectory(char * dirName) {
     DIR * dir = opendir(dirName);
@@ -62,5 +73,5 @@ char * File_getNameFromID(int userID) {
 }
 
 void File_runDirectory() {
-    
+
 }

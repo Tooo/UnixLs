@@ -33,6 +33,11 @@ int main (int arc, char** args) {
         argCounter++;
     }
 
+    int result = File_setup();
+    if (result) {
+        return 1;
+    }
+
     char ** directories = &args[argCounter];
     int dirCount = arc-argCounter;
 
