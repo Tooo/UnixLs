@@ -32,21 +32,7 @@ void File_readDirectory(char * dirName) {
         return;
     }
 
-    struct dirent * dp;
-
-    while ((dp = readdir(dir)) != NULL) {
-        if (dp->d_name[0] == '.') {
-            continue;
-        }
-        struct stat buf;
-        char path[512];
-        sprintf(path, "%s/%s", dirName, dp->d_name);
-        stat(path, &buf);
-
-        File_readFile(path);
-        printFilename(dp->d_name);       
-    }
-    
+    List_prepend(directories, dirName);
     closedir(dir);
 }
 
@@ -73,5 +59,26 @@ char * File_getNameFromID(int userID) {
 }
 
 void File_runDirectory() {
+    while (List_count(directories)) {
+        printNewLine();
+        char * dirName = List_trim(directories);
+        printDirectory(dirName);
+        DIR * dir = opendir(dirName);
 
+        struct dirent * dp;
+        while ((dp = readdir(dir)) != NULL) {
+            if (dp->d_name[0] == '.') {
+                continue;
+            }
+            struct stat buf;
+            char path[512];
+            sprintf(path, "%s/%s", dirName, dp->d_name);
+            stat(path, &buf);
+
+            File_readFile(path);
+            printFilename(dp->d_name);
+        }
+    
+        closedir(dir);
+    }
 }
