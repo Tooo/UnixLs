@@ -31,8 +31,9 @@ void File_readDirectory(char * dirName) {
         printFilename(dirName);
         return;
     }
-
-    List_prepend(directories, dirName);
+    char * dirNameCopy = malloc(sizeof(dirName));
+    strcpy(dirNameCopy, dirName);
+    List_prepend(directories, dirNameCopy);
     closedir(dir);
 }
 
@@ -77,8 +78,16 @@ void File_runDirectory() {
 
             File_readFile(path);
             printFilename(dp->d_name);
+
+            if (getOptionR()) {
+                if (S_ISDIR(buf.st_mode)) {
+                    char * pathCopy = malloc(sizeof(path));
+                    strcpy(pathCopy, path);
+                    List_prepend(directories, pathCopy);
+                }
+            }
         }
-    
+        free(dirName);
         closedir(dir);
     }
 }
