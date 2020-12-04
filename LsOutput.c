@@ -44,7 +44,7 @@ void printPermission(mode_t mode) {
     } else {
         printf("-");
     }
-    
+
     char rwx[9] = "rwxrwxrwx";
     int permission[9] = {S_IRUSR, S_IWUSR, S_IXUSR, S_IRGRP, S_IWGRP, S_IXGRP, S_IROTH, S_IWOTH, S_IXOTH};
     for (int i = 0; i < 9; i++) {
@@ -63,5 +63,6 @@ void printDate(struct timespec time) {
 
     char * months[12] = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
     printf("%s %2d ", months[local->tm_mon], local->tm_mday);
+    printf("%d ", local->tm_year+1900);
     printf("%02d:%02d ", local->tm_hour, local->tm_min);
 }
