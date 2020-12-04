@@ -14,6 +14,11 @@
 
 void File_readDirectory(char * dirName) {
     DIR * dir = opendir(dirName);
+    if (!dir) {
+        File_readFile(dirName);
+        return;
+    }
+
     struct dirent * dp;
 
     while ((dp = readdir(dir)) != NULL) {
@@ -22,15 +27,16 @@ void File_readDirectory(char * dirName) {
         }
         struct stat buf;
         int result = stat(dp->d_name, &buf);
-        if (result == -1) {
-            result = lstat(dp->d_name, &buf);
-        }
 
         if (getOptioni()) {
             printInode(dp->d_ino);
         }
 
         if (getOptionl()) {
+            if (result) {
+                printf("ERROR: %s cannot be read\n", dp->d_name);
+                continue;
+            }
             printl(buf);
         }
 
@@ -38,6 +44,18 @@ void File_readDirectory(char * dirName) {
     }
     
     closedir(dir);
+}
+
+void File_readFile(char * fileName) {
+    struct stat buf;
+    stat(fileName, &buf);
+    if (getOptioni()) {
+        printInode(buf.st_ino);
+    }
+    if (getOptionl()) {    
+        printl(buf);
+    }
+    printFilename(fileName);
 }
 
 char * File_getNameFromID(int userID) {
