@@ -5,6 +5,7 @@
 #include <sys/stat.h>
 #include <dirent.h>
 #include <pwd.h>
+#include <unistd.h>
 
 #include <stdio.h>
 
@@ -48,10 +49,16 @@ void File_readDirectory(char * dirName) {
 
 void File_readFile(char * fileName) {
     struct stat buf;
-    stat(fileName, &buf);
+    int result = stat(fileName, &buf);
+    if (result) {
+        printNoFile(fileName);
+        return;
+    }
+
     if (getOptioni()) {
         printInode(buf.st_ino);
     }
+    
     if (getOptionl()) {    
         printl(buf);
     }

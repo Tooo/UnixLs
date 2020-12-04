@@ -8,7 +8,9 @@ void printNewLine();
 
 void printDirectory(char * directory);
 
-void printFilename(char * filename);
+void printFilename(char * fileName);
+
+void printNoFile(char * fileName);
 
 void printInode(long inode);
 

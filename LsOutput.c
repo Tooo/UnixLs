@@ -15,8 +15,12 @@ void printDirectory(char * directory) {
     printf("%s:\n", directory);
 }
 
-void printFilename(char * filename) {
-    printf("%s\n", filename);
+void printFilename(char * fileName) {
+    printf("%s\n", fileName);
+}
+
+void printNoFile(char * fileName) {
+    printf("UnixLs: cannot access '%s': No such file or directory\n", fileName);
 }
 
 void printInode(long inode) {
