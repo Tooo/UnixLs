@@ -27,7 +27,9 @@ void File_readDirectory(char * dirName) {
             continue;
         }
         struct stat buf;
-        int result = stat(dp->d_name, &buf);
+        char path[512];
+        sprintf(path, "%s/%s", dirName, dp->d_name);
+        int result = stat(path, &buf);
 
         if (getOptioni()) {
             printInode(dp->d_ino);
@@ -58,7 +60,7 @@ void File_readFile(char * fileName) {
     if (getOptioni()) {
         printInode(buf.st_ino);
     }
-    
+
     if (getOptionl()) {    
         printl(buf);
     }
