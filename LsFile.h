@@ -4,7 +4,7 @@
 int File_setup();
 
 void File_readDirectory(char * dirName);
-void File_readFile(char * fileName);
+void File_readFile(char * path, char * fileName);
 
 char * File_getNameFromID(int userID);
 

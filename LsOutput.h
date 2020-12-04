@@ -20,4 +20,6 @@ void printPermission(mode_t mode);
 
 void printDate(struct timespec time);
 
+void printLink(char * link);
+
 #endif

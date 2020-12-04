@@ -16,7 +16,7 @@ void printDirectory(char * directory) {
 }
 
 void printFilename(char * fileName) {
-    printf("%s\n", fileName);
+    printf("%s", fileName);
 }
 
 void printNoFile(char * fileName) {
@@ -65,4 +65,8 @@ void printDate(struct timespec time) {
     printf("%s %2d ", months[local->tm_mon], local->tm_mday);
     printf("%d ", local->tm_year+1900);
     printf("%02d:%02d ", local->tm_hour, local->tm_min);
+}
+
+void printLink(char * link) {
+    printf(" -> %s", link);
 }

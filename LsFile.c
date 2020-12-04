@@ -32,8 +32,7 @@ void File_readDirectory(char * dirName) {
     }
 
     if (!S_ISDIR(buf.st_mode)) {
-        File_readFile(dirName);
-        printFilename(dirName);
+        File_readFile(dirName, dirName);
         return;
     }
     DIR * dir = opendir(dirName);
@@ -43,13 +42,13 @@ void File_readDirectory(char * dirName) {
     closedir(dir);
 }
 
-void File_readFile(char * fileName) {
+void File_readFile(char * path, char * fileName) {
     struct stat buf;
-    int result = stat(fileName, &buf);
+    int result = stat(path, &buf);
     if (result) {
-        result = lstat(fileName, &buf);
+        result = lstat(path, &buf);
         if (result) {
-            printNoFile(fileName);
+            printNoFile(path);
             return;
         } 
     }
@@ -61,6 +60,15 @@ void File_readFile(char * fileName) {
     if (getOptionl()) {    
         printl(buf);
     }
+    printFilename(fileName);
+
+    if (S_ISLNK(buf.st_mode)) {
+        char link[512] = {};
+        readlink(path, link, 512);
+        printLink(link);
+    }
+
+    printNewLine();
 }
 
 char * File_getNameFromID(int userID) {
@@ -85,15 +93,14 @@ void File_runDirectory() {
             if (dp->d_name[0] == '.') {
                 continue;
             }
-            struct stat buf;
             char path[512];
             sprintf(path, "%s/%s", dirName, dp->d_name);
-            stat(path, &buf);
 
-            File_readFile(path);
-            printFilename(dp->d_name);
+            File_readFile(path, dp->d_name);
 
             if (getOptionR()) {
+                struct stat buf;
+                stat(path, &buf);
                 if (S_ISDIR(buf.st_mode)) {
                     char * pathCopy = malloc(sizeof(path));
                     strcpy(pathCopy, path);
