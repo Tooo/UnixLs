@@ -38,20 +38,13 @@ int main (int arc, char** args) {
 
     if (dirCount == 0) {
         File_readDirectory(".");
-        return 0;
-    } else if (dirCount == 1) {
-        File_readDirectory(directories[0]);
-        return 0;
+    } else {
+        for (int i = 0; i < dirCount; i++) {
+            File_readDirectory(directories[i]);
+        }
     }
 
-    for (int i = 0; i < dirCount-1; i++) {
-        printDirectory(directories[i]);
-        File_readDirectory(directories[i]);
-        printNewLine();
-    }
-
-    printDirectory(directories[dirCount-1]);
-    File_readDirectory(directories[dirCount-1]);
+    File_runDirectory();
 
     return 0;
 }

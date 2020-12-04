@@ -6,5 +6,6 @@ void File_readFile(char * fileName);
 
 char * File_getNameFromID(int userID);
 
+void File_runDirectory();
 
 #endif
