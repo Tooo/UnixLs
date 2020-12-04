@@ -17,6 +17,7 @@ void File_readDirectory(char * dirName) {
     DIR * dir = opendir(dirName);
     if (!dir) {
         File_readFile(dirName);
+        printFilename(dirName);
         return;
     }
 
@@ -29,21 +30,10 @@ void File_readDirectory(char * dirName) {
         struct stat buf;
         char path[512];
         sprintf(path, "%s/%s", dirName, dp->d_name);
-        int result = stat(path, &buf);
+        stat(path, &buf);
 
-        if (getOptioni()) {
-            printInode(dp->d_ino);
-        }
-
-        if (getOptionl()) {
-            if (result) {
-                printf("ERROR: %s cannot be read\n", dp->d_name);
-                continue;
-            }
-            printl(buf);
-        }
-
-        printFilename(dp->d_name);
+        File_readFile(path);
+        printFilename(dp->d_name);       
     }
     
     closedir(dir);
@@ -64,7 +54,6 @@ void File_readFile(char * fileName) {
     if (getOptionl()) {    
         printl(buf);
     }
-    printFilename(fileName);
 }
 
 char * File_getNameFromID(int userID) {
