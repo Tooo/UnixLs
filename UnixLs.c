@@ -44,6 +44,10 @@ int main (int arc, char** args) {
     if (dirCount == 0) {
         File_readDirectory(".");
     } else {
+        if (dirCount > 1) {
+            File_setNeedDirectoryName(true);
+        }
+
         for (int i = 0; i < dirCount; i++) {
             File_readDirectory(directories[i]);
         }

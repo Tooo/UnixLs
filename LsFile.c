@@ -15,13 +15,23 @@
 #include "list.h"
 
 static List * directories;
+static bool needSpacing = false;
+static bool needDirectoryName = false;
 
 int File_setup() {
     directories = List_create();
     if (!directories) {
         return 1;
     }
+
+    if (getOptionR()) {
+        needDirectoryName = true;
+    }
     return 0;
+}
+
+void File_setNeedDirectoryName(bool value) {
+    needDirectoryName = true;
 }
 
 void File_readDirectory(char * dirName) {
@@ -31,10 +41,12 @@ void File_readDirectory(char * dirName) {
         result = lstat(dirName, &buf);
     }
 
-    if (!S_ISDIR(buf.st_mode)) {
+    if (result || !S_ISDIR(buf.st_mode)) {
+        needSpacing = true;
         File_readFile(dirName, dirName);
         return;
     }
+
     DIR * dir = opendir(dirName);
     char * dirNameCopy = malloc(sizeof(dirName));
     strcpy(dirNameCopy, dirName);
@@ -60,6 +72,7 @@ void File_readFile(char * path, char * fileName) {
     if (getOptionl()) {    
         printl(buf);
     }
+
     printFilename(fileName);
 
     if (S_ISLNK(buf.st_mode)) {
@@ -86,8 +99,18 @@ void File_runDirectory() {
             continue;
         }
 
-        printNewLine();
-        printDirectory(dirName);
+        if (needSpacing) {
+            printNewLine();
+        } else {
+            needSpacing = true;
+        }
+        
+        if (needDirectoryName) {
+            printDirectory(dirName);
+        } else {
+            needDirectoryName = true;
+        }
+
         struct dirent * dp;
         while ((dp = readdir(dir)) != NULL) {
             if (dp->d_name[0] == '.') {
