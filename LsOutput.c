@@ -35,7 +35,7 @@ void printl(struct stat buf) {
     printPermission(buf.st_mode);
     printf("%ld ", buf.st_nlink);
     printf("%s ", File_getNameFromID(buf.st_uid));
-    printf("%s ", File_getNameFromID(buf.st_gid));
+    printf("%s ", File_getGroupFromID(buf.st_gid));
     printf("%5ld ", buf.st_size);
     printDate(buf.st_mtim);
 }

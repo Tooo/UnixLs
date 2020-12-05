@@ -10,6 +10,7 @@ void File_readDirectory(char * dirName);
 void File_readFile(char * path, char * fileName);
 
 char * File_getNameFromID(int userID);
+char * File_getGroupFromID(int groupID);
 
 void File_runDirectory();
 

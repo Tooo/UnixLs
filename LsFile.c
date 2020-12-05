@@ -5,6 +5,7 @@
 #include <sys/stat.h>
 #include <dirent.h>
 #include <pwd.h>
+#include <grp.h>
 #include <unistd.h>
 
 #include <stdio.h>
@@ -92,6 +93,11 @@ void File_readFile(char * path, char * fileName) {
 char * File_getNameFromID(int userID) {
     struct passwd * pwd = getpwuid(userID);
     return pwd->pw_name;
+}
+
+char * File_getGroupFromID(int groupID) {
+    struct group *grp = getgrgid(groupID);
+    return grp->gr_name;
 }
 
 void File_runDirectory() {
