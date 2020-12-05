@@ -6,6 +6,8 @@
 
 void printNewLine();
 
+void printError(char * error);
+
 void printDirectory(char * directory);
 
 void printFilename(char * fileName);

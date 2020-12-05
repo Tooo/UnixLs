@@ -11,6 +11,10 @@ void printNewLine() {
     printf("\n");
 }
 
+void printError(char * error) {
+    printf("%s failed\n", error);
+}
+
 void printDirectory(char * directory) {
     printf("%s:\n", directory);
 }

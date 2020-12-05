@@ -21,6 +21,7 @@ static bool needDirectoryName = false;
 int File_setup() {
     directories = List_create();
     if (!directories) {
+        printError("List");
         return 1;
     }
 
@@ -49,7 +50,12 @@ void File_readDirectory(char * dirName) {
 
     DIR * dir = opendir(dirName);
     char * dirNameCopy = strdup(dirName);
-    List_prepend(directories, dirNameCopy);
+    if (!dirNameCopy) {
+        printError("String copy");
+    } else {
+        List_prepend(directories, dirNameCopy);
+    }
+    
     closedir(dir);
 }
 
@@ -125,6 +131,9 @@ void File_runDirectory() {
                 stat(path, &buf);
                 if (S_ISDIR(buf.st_mode)) {
                     char * pathCopy = strdup(path);
+                    if (!pathCopy) {
+                        printError("String copy");
+                    }
                     List_append(directories, pathCopy);
                 }
             }
