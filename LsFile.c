@@ -48,8 +48,7 @@ void File_readDirectory(char * dirName) {
     }
 
     DIR * dir = opendir(dirName);
-    char * dirNameCopy = malloc(sizeof(dirName));
-    strcpy(dirNameCopy, dirName);
+    char * dirNameCopy = strdup(dirName);
     List_prepend(directories, dirNameCopy);
     closedir(dir);
 }
@@ -125,8 +124,7 @@ void File_runDirectory() {
                 struct stat buf;
                 stat(path, &buf);
                 if (S_ISDIR(buf.st_mode)) {
-                    char * pathCopy = malloc(sizeof(path));
-                    strcpy(pathCopy, path);
+                    char * pathCopy = strdup(path);
                     List_append(directories, pathCopy);
                 }
             }
