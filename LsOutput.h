@@ -14,7 +14,7 @@ void printFilename(char * fileName);
 
 void printNoFile(char * fileName);
 
-void printInode(long inode);
+void printInode(unsigned long long inode);
 
 void printl(struct stat buf);
 

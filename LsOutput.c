@@ -32,16 +32,16 @@ void printNoFile(char * fileName) {
     printf("UnixLs: cannot access '%s': No such file or directory\n", fileName);
 }
 
-void printInode(long inode) {
-    printf("%ld ", inode);
+void printInode(unsigned long long inode) {
+    printf("%llu ", inode);
 }
 
 void printl(struct stat buf) {
     printPermission(buf.st_mode);
-    printf("%ld ", buf.st_nlink);
+    printf("%2ld ", buf.st_nlink);
     printf("%s ", File_getNameFromID(buf.st_uid));
     printf("%s ", File_getGroupFromID(buf.st_gid));
-    printf("%5ld ", buf.st_size);
+    printf("%6ld ", buf.st_size);
     printDate(buf.st_mtim);
 }
 
