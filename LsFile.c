@@ -38,9 +38,9 @@ void File_setNeedDirectoryName(bool value) {
 
 void File_readDirectory(char * dirName) {
     struct stat buf;
-    int result = stat(dirName, &buf);
+    int result = lstat(dirName, &buf);
     if (result) {
-        result = lstat(dirName, &buf);
+        result = stat(dirName, &buf);
     }
 
     if (result || !S_ISDIR(buf.st_mode)) {
@@ -62,9 +62,9 @@ void File_readDirectory(char * dirName) {
 
 void File_readFile(char * path, char * fileName) {
     struct stat buf;
-    int result = stat(path, &buf);
+    int result = lstat(path, &buf);
     if (result) {
-        result = lstat(path, &buf);
+        result = stat(path, &buf);
         if (result) {
             printNoFile(path);
             return;
