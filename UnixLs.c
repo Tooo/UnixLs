@@ -10,6 +10,11 @@ static bool optioni = false;
 static bool optionl = false;
 static bool optionR = false;
 
+/*
+    UnixLs
+    Handles input and options
+*/
+
 int main (int arc, char** args) {
     int argCounter = 1;
 

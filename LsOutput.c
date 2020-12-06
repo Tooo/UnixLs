@@ -7,6 +7,11 @@
 #include "LsOutput.h"
 #include "LsFile.h"
 
+/*
+    LsFile
+    Handles all screen outputs
+*/
+
 void printNewLine() {
     printf("\n");
 }

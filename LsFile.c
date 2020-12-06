@@ -15,6 +15,11 @@
 #include "LsOutput.h"
 #include "list.h"
 
+/*
+    LsFile
+    Reading through files and directories
+*/
+
 static List * directories;
 static bool needSpacing = false;
 static bool needDirectoryName = false;
