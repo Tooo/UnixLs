@@ -3,14 +3,14 @@
 # 1 Option (Line 32): ./UnixLs -i 
 # Split Options (Line 51): ./UnixLs -i -l
 # All Options (Line 70): ./UnixLs -Ril test
-# Filter .c (Line 88): ./UnixLs -il *.c
-# Multiple Files (Line 94): ./UnixLs -il list.o LsFile.o test
-# Test Case 1 (Line 102): ./UnixLs -R ~/
-# Test Case 2 (Line 660): ./UnixLs -l
-# Test Case 3 (Line 679): ./UnixLs -Ri -l .. ~
-# Test Case 4 (Line 1339): ./UnixLs -liR . .. ~
+# Filter .c (Line 79): ./UnixLs -il *.c
+# Multiple Files (Line 85): ./UnixLs -il list.c LsFile.c test
+# Test Case 1 (Line 92): ./UnixLs -R ~/
+# Test Case 2 (Line 641): ./UnixLs -l
+# Test Case 3 (Line 660): ./UnixLs -Ri -l .. ~
+# Test Case 4 (Line 1300): ./UnixLs -liR . .. ~
 
-tsc7@csil-cpu10:~/sfuhome/cmpt-300/cmpt300A4$ ./UnixLs
+tsc7@csil-cpu10:~/sfuhome/cmpt-300/cmpt300-A4$ ./UnixLs
 LsFile.c
 LsFile.h
 UnixLs.h
@@ -29,77 +29,67 @@ LsFile.o
 list.o
 UnixLs
 
-tsc7@csil-cpu10:~/sfuhome/cmpt-300/cmpt300A4$ ./UnixLs -i
-5042924172646138464 LsFile.c
-5042924176941105761 LsFile.h
-5042924185531040354 UnixLs.h
-5042924194120974947 UnixLs.c
-5042924202710909540 README.md
-5042924207005876837 list.c
-5042924215595811430 list.h
-5042924228480713320 makefile
-5042924237070647913 SampleRun.txt
--9221002430345718140 LsOutput.c
-5042924262843758168 LsOutput.h
--6715797935568866461 test
-5042933385356062652 UnixLs.o
-5042933419715801021 LsOutput.o
-5042933548564819902 LsFile.o
-5042933587219525567 list.o
-5042933604399394752 UnixLs
+tsc7@csil-cpu10:~/sfuhome/cmpt-300/cmpt300-A4$ ./UnixLs -i
+4315234447873532042 LsFile.c
+4315234469348368523 LsFile.h
+4315234486528237708 UnixLs.h
+4315234495118172301 UnixLs.c
+4315234499413139598 README.md
+4315234503708106895 list.c
+4315234516593008784 list.h
+4315234520887976081 makefile
+4315234529477910674 SampleRun.txt
+4315234538067845267 LsOutput.c
+4315234563837649044 LsOutput.h
+4315234572427583637 test
+6354334982650949886 UnixLs.o
+5375649825817587968 LsOutput.o
+5375649830112555265 LsFile.o
+5375649834407522562 list.o
+5375649838702489859 UnixLs
 
-tsc7@csil-cpu10:~/sfuhome/cmpt-300/cmpt300A4$ ./UnixLs -i -l
-5042924172646138464 -rwxr-xr-x 1 tsc7 domain users  3211 Dec  5 2020 16:09 LsFile.c
-5042924176941105761 -rwxr-xr-x 1 tsc7 domain users   330 Dec  5 2020 15:53 LsFile.h
-5042924185531040354 -rwxr-xr-x 1 tsc7 domain users   103 Nov 29 2020 20:27 UnixLs.h
-5042924194120974947 -rwxr-xr-x 1 tsc7 domain users  1429 Dec  5 2020 15:39 UnixLs.c
-5042924202710909540 -rwxr-xr-x 1 tsc7 domain users    11 Nov 24 2020 23:18 README.md
-5042924207005876837 -rwxr-xr-x 1 tsc7 domain users 14674 Sep 29 2020 19:58 list.c
-5042924215595811430 -rwxr-xr-x 1 tsc7 domain users  5377 Dec  3 2020 18:58 list.h
-5042924228480713320 -rwxr-xr-x 1 tsc7 domain users   375 Dec  3 2020 18:53 makefile
-5042924237070647913 -rwxr-xr-x 1 tsc7 domain users     0 Nov 26 2020 17:55 SampleRun.txt
--9221002430345718140 -rwxr-xr-x 1 tsc7 domain users  1795 Dec  5 2020 15:54 LsOutput.c
-5042924262843758168 -rwxr-xr-x 1 tsc7 domain users   427 Dec  5 2020 15:39 LsOutput.h
--6715797935568866461 drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 15:12 test
-5042933385356062652 -rwxr-xr-x 1 tsc7 domain users  5680 Dec  5 2020 16:23 UnixLs.o
-5042933419715801021 -rwxr-xr-x 1 tsc7 domain users 13096 Dec  5 2020 16:23 LsOutput.o
-5042933548564819902 -rwxr-xr-x 1 tsc7 domain users 15456 Dec  5 2020 16:23 LsFile.o
-5042933587219525567 -rwxr-xr-x 1 tsc7 domain users 17904 Dec  5 2020 16:23 list.o
-5042933604399394752 -rwxr-xr-x 1 tsc7 domain users 36416 Dec  5 2020 16:23 UnixLs
+tsc7@csil-cpu10:~/sfuhome/cmpt-300/cmpt300-A4$ ./UnixLs -i -l
+4315234447873532042 -rwxr-xr-x  1 tsc7 domain users   3271 Dec  5 2020 17:10 LsFile.c
+4315234469348368523 -rwxr-xr-x  1 tsc7 domain users    330 Dec  5 2020 15:53 LsFile.h
+4315234486528237708 -rwxr-xr-x  1 tsc7 domain users    103 Nov 29 2020 20:27 UnixLs.h
+4315234495118172301 -rwxr-xr-x  1 tsc7 domain users   1477 Dec  5 2020 17:11 UnixLs.c
+4315234499413139598 -rwxr-xr-x  1 tsc7 domain users     11 Nov 24 2020 23:18 README.md
+4315234503708106895 -rwxr-xr-x  1 tsc7 domain users  14674 Sep 29 2020 19:58 list.c
+4315234516593008784 -rwxr-xr-x  1 tsc7 domain users   5377 Dec  3 2020 18:58 list.h
+4315234520887976081 -rwxr-xr-x  1 tsc7 domain users    375 Dec  3 2020 18:53 makefile
+4315234529477910674 -rwxr-xr-x  1 tsc7 domain users 106912 Dec  5 2020 17:00 SampleRun.txt
+4315234538067845267 -rwxr-xr-x  1 tsc7 domain users   1860 Dec  5 2020 23:42 LsOutput.c
+4315234563837649044 -rwxr-xr-x  1 tsc7 domain users    441 Dec  5 2020 23:42 LsOutput.h
+4315234572427583637 drwxr-xr-x  2 tsc7 domain users      0 Dec  5 2020 23:52 test
+6354334982650949886 -rwxr-xr-x  1 tsc7 domain users   5680 Dec  5 2020 23:56 UnixLs.o
+5375649825817587968 -rwxr-xr-x  1 tsc7 domain users  13104 Dec  5 2020 23:56 LsOutput.o
+5375649830112555265 -rwxr-xr-x  1 tsc7 domain users  15464 Dec  5 2020 23:56 LsFile.o
+5375649834407522562 -rwxr-xr-x  1 tsc7 domain users  17904 Dec  5 2020 23:56 list.o
+5375649838702489859 -rwxr-xr-x  1 tsc7 domain users  36416 Dec  5 2020 23:56 UnixLs
 
-tsc7@csil-cpu10:~/sfuhome/cmpt-300/cmpt300A4$ ./UnixLs -Ril test
+tsc7@csil-cpu10:~/sfuhome/cmpt-300/cmpt300-A4$ ./UnixLs -Ril test
 test:
-5042927153358773574 drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 15:07 perm
-5042927196308446541 drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 16:07 link
+5027575054751235052 drwxr-xr-x  2 tsc7 domain users      0 Dec  5 2020 16:07 link
 
 test/link:
-5042927204898381134 -rwxr-xr-x 1 tsc7 domain users    15 Dec  5 2020 16:04 a.txt
-5042927213488315727 lrwxrwxrwx 1 tsc7 domain users     5 Dec  5 2020 16:23 b.txt -> a.txt
-5042927222078250320 lrwxrwxrwx 1 tsc7 domain users     5 Dec  5 2020 16:23 c.txt -> a.txt
+5027575059046202349 -rwxr-xr-x  1 tsc7 domain users     15 Dec  5 2020 16:04 a.txt
+5027575071931104238 lrwxrwxrwx  1 tsc7 domain users      5 Dec  5 2020 23:56 b.txt -> a.txt
+5027575076226071535 lrwxrwxrwx  1 tsc7 domain users      5 Dec  5 2020 23:56 c.txt -> a.txt
 
-test/perm:
-5042927157653740871 -r-xr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:00 noperm.txt
-5042927166243675464 -rwxr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:04 owner.txt
-5042927170538642761 -rwxr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:06 group.txt
-5042927179128577354 -rwxr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:06 other.txt
-5042927183423544651 -rwxr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:06 all.txt
-5042927192013479244 -r-xr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:07 read.txt
+tsc7@csil-cpu10:~/sfuhome/cmpt-300/cmpt300-A4$ ./UnixLs -il *.c
+4315234503708106895 -rwxr-xr-x  1 tsc7 domain users  14674 Sep 29 2020 19:58 list.c
+4315234447873532042 -rwxr-xr-x  1 tsc7 domain users   3271 Dec  5 2020 17:10 LsFile.c
+4315234538067845267 -rwxr-xr-x  1 tsc7 domain users   1860 Dec  5 2020 23:42 LsOutput.c
+4315234495118172301 -rwxr-xr-x  1 tsc7 domain users   1477 Dec  5 2020 17:11 UnixLs.c
 
-tsc7@csil-cpu10:~/sfuhome/cmpt-300/cmpt300A4$ ./UnixLs -il *.c
-5042924207005876837 -rwxr-xr-x 1 tsc7 domain users 14674 Sep 29 2020 19:58 list.c
-5042924172646138464 -rwxr-xr-x 1 tsc7 domain users  3211 Dec  5 2020 16:09 LsFile.c
--9221002430345718140 -rwxr-xr-x 1 tsc7 domain users  1795 Dec  5 2020 15:54 LsOutput.c
-5042924194120974947 -rwxr-xr-x 1 tsc7 domain users  1429 Dec  5 2020 15:39 UnixLs.c
-
-tsc7@csil-cpu10:~/sfuhome/cmpt-300/cmpt300A4$ ./UnixLs -il list.o LsFile.o test
-5042933587219525567 -rwxr-xr-x 1 tsc7 domain users 17904 Dec  5 2020 16:23 list.o
-5042933548564819902 -rwxr-xr-x 1 tsc7 domain users 15456 Dec  5 2020 16:23 LsFile.o
+tsc7@csil-cpu10:~/sfuhome/cmpt-300/cmpt300-A4$ ./UnixLs -il list.c LsFile.c test
+4315234503708106895 -rwxr-xr-x  1 tsc7 domain users  14674 Sep 29 2020 19:58 list.c
+4315234447873532042 -rwxr-xr-x  1 tsc7 domain users   3271 Dec  5 2020 17:10 LsFile.c
 
 test:
-5042927153358773574 drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 15:07 perm
-5042927196308446541 drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 16:07 link
+5027575054751235052 drwxr-xr-x  2 tsc7 domain users      0 Dec  5 2020 16:07 link
 
-tsc7@csil-cpu10:~/sfuhome/cmpt-300/cmpt300A4$ ./UnixLs -R ~/
+tsc7@csil-cpu10:~/sfuhome/cmpt-300/cmpt300-A4$ ./UnixLs -R ~/
 /home/tsc7/:
 sfuhome
 Desktop
@@ -413,10 +403,10 @@ cmpt300-A2.zip
 cmpt300-A2
 cmpt300-A3.zip
 cmpt300-A3
-cmpt300A4.zip
-cmpt300A4
+cmpt300-A4.zip
+cmpt300-A4
 
-/home/tsc7//sfuhome/cmpt-300/cmpt300A4:
+/home/tsc7//sfuhome/cmpt-300/cmpt300-A4:
 LsFile.c
 LsFile.h
 UnixLs.h
@@ -435,22 +425,13 @@ LsFile.o
 list.o
 UnixLs
 
-/home/tsc7//sfuhome/cmpt-300/cmpt300A4/test:
-perm
+/home/tsc7//sfuhome/cmpt-300/cmpt300-A4/test:
 link
 
-/home/tsc7//sfuhome/cmpt-300/cmpt300A4/test/link:
+/home/tsc7//sfuhome/cmpt-300/cmpt300-A4/test/link:
 a.txt
 b.txt -> a.txt
 c.txt -> a.txt
-
-/home/tsc7//sfuhome/cmpt-300/cmpt300A4/test/perm:
-noperm.txt
-owner.txt
-group.txt
-other.txt
-all.txt
-read.txt
 
 /home/tsc7//sfuhome/cmpt-300/cmpt300-A3:
 list.c
@@ -657,145 +638,136 @@ $RYDO8FB.mp4
 
 /home/tsc7//sfuhome/pub_html:
 
-tsc7@csil-cpu10:~/sfuhome/cmpt-300/cmpt300A4$ ./UnixLs -l
--rwxr-xr-x 1 tsc7 domain users  3211 Dec  5 2020 16:09 LsFile.c
--rwxr-xr-x 1 tsc7 domain users   330 Dec  5 2020 15:53 LsFile.h
--rwxr-xr-x 1 tsc7 domain users   103 Nov 29 2020 20:27 UnixLs.h
--rwxr-xr-x 1 tsc7 domain users  1429 Dec  5 2020 15:39 UnixLs.c
--rwxr-xr-x 1 tsc7 domain users    11 Nov 24 2020 23:18 README.md
--rwxr-xr-x 1 tsc7 domain users 14674 Sep 29 2020 19:58 list.c
--rwxr-xr-x 1 tsc7 domain users  5377 Dec  3 2020 18:58 list.h
--rwxr-xr-x 1 tsc7 domain users   375 Dec  3 2020 18:53 makefile
--rwxr-xr-x 1 tsc7 domain users     0 Nov 26 2020 17:55 SampleRun.txt
--rwxr-xr-x 1 tsc7 domain users  1795 Dec  5 2020 15:54 LsOutput.c
--rwxr-xr-x 1 tsc7 domain users   427 Dec  5 2020 15:39 LsOutput.h
-drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 15:12 test
--rwxr-xr-x 1 tsc7 domain users  5680 Dec  5 2020 16:23 UnixLs.o
--rwxr-xr-x 1 tsc7 domain users 13096 Dec  5 2020 16:23 LsOutput.o
--rwxr-xr-x 1 tsc7 domain users 15456 Dec  5 2020 16:23 LsFile.o
--rwxr-xr-x 1 tsc7 domain users 17904 Dec  5 2020 16:23 list.o
--rwxr-xr-x 1 tsc7 domain users 36416 Dec  5 2020 16:23 UnixLs
+tsc7@csil-cpu10:~/sfuhome/cmpt-300/cmpt300-A4$ ./UnixLs -l
+-rwxr-xr-x  1 tsc7 domain users   3271 Dec  5 2020 17:10 LsFile.c
+-rwxr-xr-x  1 tsc7 domain users    330 Dec  5 2020 15:53 LsFile.h
+-rwxr-xr-x  1 tsc7 domain users    103 Nov 29 2020 20:27 UnixLs.h
+-rwxr-xr-x  1 tsc7 domain users   1477 Dec  5 2020 17:11 UnixLs.c
+-rwxr-xr-x  1 tsc7 domain users     11 Nov 24 2020 23:18 README.md
+-rwxr-xr-x  1 tsc7 domain users  14674 Sep 29 2020 19:58 list.c
+-rwxr-xr-x  1 tsc7 domain users   5377 Dec  3 2020 18:58 list.h
+-rwxr-xr-x  1 tsc7 domain users    375 Dec  3 2020 18:53 makefile
+-rwxr-xr-x  1 tsc7 domain users 106912 Dec  5 2020 17:00 SampleRun.txt
+-rwxr-xr-x  1 tsc7 domain users   1860 Dec  5 2020 23:42 LsOutput.c
+-rwxr-xr-x  1 tsc7 domain users    441 Dec  5 2020 23:42 LsOutput.h
+drwxr-xr-x  2 tsc7 domain users      0 Dec  5 2020 23:52 test
+-rwxr-xr-x  1 tsc7 domain users   5680 Dec  5 2020 23:56 UnixLs.o
+-rwxr-xr-x  1 tsc7 domain users  13104 Dec  5 2020 23:56 LsOutput.o
+-rwxr-xr-x  1 tsc7 domain users  15464 Dec  5 2020 23:56 LsFile.o
+-rwxr-xr-x  1 tsc7 domain users  17904 Dec  5 2020 23:56 list.o
+-rwxr-xr-x  1 tsc7 domain users  36416 Dec  5 2020 23:56 UnixLs
 
-tsc7@csil-cpu10:~/sfuhome/cmpt-300/cmpt300A4$ ./UnixLs -Ri -l .. ~
+tsc7@csil-cpu10:~/sfuhome/cmpt-300/cmpt300-A4$ ./UnixLs -Ri -l .. ~
 ..:
-1976488493062581165 -rwxr-xr-x 1 tsc7 domain users  6913 Sep 29 2020 21:13 cmpt300-A1.zip
-1976488497357548462 drwxr-xr-x 2 tsc7 domain users     0 Sep 29 2020 21:14 cmpt300-A1
-1976488523127352245 -rwxr-xr-x 1 tsc7 domain users 13055 Oct 27 2020 19:32 cmpt300-A2.zip
-1976488527422319542 drwxr-xr-x 2 tsc7 domain users     0 Oct 27 2020 19:33 cmpt300-A2
-4402222155685826152 -rwxr-xr-x 1 tsc7 domain users 15381 Nov 19 2020 20:58 cmpt300-A3.zip
-4402229744893038185 drwxr-xr-x 2 tsc7 domain users     0 Nov 19 2020 21:01 cmpt300-A3
-1345746256152871516 -rwxr-xr-x 1 tsc7 domain users 177798 Dec  5 2020 16:22 cmpt300A4.zip
-1337733131373757022 drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 16:24 cmpt300A4
+1976488493062581165 -rwxr-xr-x  1 tsc7 domain users   6913 Sep 29 2020 21:13 cmpt300-A1.zip
+1976488497357548462 drwxr-xr-x  2 tsc7 domain users      0 Sep 29 2020 21:14 cmpt300-A1
+1976488523127352245 -rwxr-xr-x  1 tsc7 domain users  13055 Oct 27 2020 19:32 cmpt300-A2.zip
+1976488527422319542 drwxr-xr-x  2 tsc7 domain users      0 Oct 27 2020 19:33 cmpt300-A2
+4402222155685826152 -rwxr-xr-x  1 tsc7 domain users  15381 Nov 19 2020 20:58 cmpt300-A3.zip
+4402229744893038185 drwxr-xr-x  2 tsc7 domain users      0 Nov 19 2020 21:01 cmpt300-A3
+4315234087096279176 -rwxr-xr-x  1 tsc7 domain users  28949 Dec  5 2020 23:56 cmpt300-A4.zip
+4315234439283597449 drwxr-xr-x  2 tsc7 domain users      0 Dec  5 2020 23:56 cmpt300-A4
 
-../cmpt300A4:
-5042924172646138464 -rwxr-xr-x 1 tsc7 domain users  3211 Dec  5 2020 16:09 LsFile.c
-5042924176941105761 -rwxr-xr-x 1 tsc7 domain users   330 Dec  5 2020 15:53 LsFile.h
-5042924185531040354 -rwxr-xr-x 1 tsc7 domain users   103 Nov 29 2020 20:27 UnixLs.h
-5042924194120974947 -rwxr-xr-x 1 tsc7 domain users  1429 Dec  5 2020 15:39 UnixLs.c
-5042924202710909540 -rwxr-xr-x 1 tsc7 domain users    11 Nov 24 2020 23:18 README.md
-5042924207005876837 -rwxr-xr-x 1 tsc7 domain users 14674 Sep 29 2020 19:58 list.c
-5042924215595811430 -rwxr-xr-x 1 tsc7 domain users  5377 Dec  3 2020 18:58 list.h
-5042924228480713320 -rwxr-xr-x 1 tsc7 domain users   375 Dec  3 2020 18:53 makefile
-5042924237070647913 -rwxr-xr-x 1 tsc7 domain users     0 Nov 26 2020 17:55 SampleRun.txt
--9221002430345718140 -rwxr-xr-x 1 tsc7 domain users  1795 Dec  5 2020 15:54 LsOutput.c
-5042924262843758168 -rwxr-xr-x 1 tsc7 domain users   427 Dec  5 2020 15:39 LsOutput.h
--6715797935568866461 drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 15:12 test
-5042933385356062652 -rwxr-xr-x 1 tsc7 domain users  5680 Dec  5 2020 16:23 UnixLs.o
-5042933419715801021 -rwxr-xr-x 1 tsc7 domain users 13096 Dec  5 2020 16:23 LsOutput.o
-5042933548564819902 -rwxr-xr-x 1 tsc7 domain users 15456 Dec  5 2020 16:23 LsFile.o
-5042933587219525567 -rwxr-xr-x 1 tsc7 domain users 17904 Dec  5 2020 16:23 list.o
-5042933604399394752 -rwxr-xr-x 1 tsc7 domain users 36416 Dec  5 2020 16:23 UnixLs
+../cmpt300-A4:
+4315234447873532042 -rwxr-xr-x  1 tsc7 domain users   3271 Dec  5 2020 17:10 LsFile.c
+4315234469348368523 -rwxr-xr-x  1 tsc7 domain users    330 Dec  5 2020 15:53 LsFile.h
+4315234486528237708 -rwxr-xr-x  1 tsc7 domain users    103 Nov 29 2020 20:27 UnixLs.h
+4315234495118172301 -rwxr-xr-x  1 tsc7 domain users   1477 Dec  5 2020 17:11 UnixLs.c
+4315234499413139598 -rwxr-xr-x  1 tsc7 domain users     11 Nov 24 2020 23:18 README.md
+4315234503708106895 -rwxr-xr-x  1 tsc7 domain users  14674 Sep 29 2020 19:58 list.c
+4315234516593008784 -rwxr-xr-x  1 tsc7 domain users   5377 Dec  3 2020 18:58 list.h
+4315234520887976081 -rwxr-xr-x  1 tsc7 domain users    375 Dec  3 2020 18:53 makefile
+4315234529477910674 -rwxr-xr-x  1 tsc7 domain users 106912 Dec  5 2020 17:00 SampleRun.txt
+4315234538067845267 -rwxr-xr-x  1 tsc7 domain users   1860 Dec  5 2020 23:42 LsOutput.c
+4315234563837649044 -rwxr-xr-x  1 tsc7 domain users    441 Dec  5 2020 23:42 LsOutput.h
+4315234572427583637 drwxr-xr-x  2 tsc7 domain users      0 Dec  5 2020 23:52 test
+6354334982650949886 -rwxr-xr-x  1 tsc7 domain users   5680 Dec  5 2020 23:56 UnixLs.o
+5375649825817587968 -rwxr-xr-x  1 tsc7 domain users  13104 Dec  5 2020 23:56 LsOutput.o
+5375649830112555265 -rwxr-xr-x  1 tsc7 domain users  15464 Dec  5 2020 23:56 LsFile.o
+5375649834407522562 -rwxr-xr-x  1 tsc7 domain users  17904 Dec  5 2020 23:56 list.o
+5375649838702489859 -rwxr-xr-x  1 tsc7 domain users  36416 Dec  5 2020 23:56 UnixLs
 
-../cmpt300A4/test:
-5042927153358773574 drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 15:07 perm
-5042927196308446541 drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 16:07 link
+../cmpt300-A4/test:
+5027575054751235052 drwxr-xr-x  2 tsc7 domain users      0 Dec  5 2020 16:07 link
 
-../cmpt300A4/test/link:
-5042927204898381134 -rwxr-xr-x 1 tsc7 domain users    15 Dec  5 2020 16:04 a.txt
-5042927213488315727 lrwxrwxrwx 1 tsc7 domain users     5 Dec  5 2020 16:23 b.txt -> a.txt
-5042927222078250320 lrwxrwxrwx 1 tsc7 domain users     5 Dec  5 2020 16:23 c.txt -> a.txt
-
-../cmpt300A4/test/perm:
-5042927157653740871 -r-xr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:00 noperm.txt
-5042927166243675464 -rwxr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:04 owner.txt
-5042927170538642761 -rwxr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:06 group.txt
-5042927179128577354 -rwxr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:06 other.txt
-5042927183423544651 -rwxr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:06 all.txt
-5042927192013479244 -r-xr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:07 read.txt
+../cmpt300-A4/test/link:
+5027575059046202349 -rwxr-xr-x  1 tsc7 domain users     15 Dec  5 2020 16:04 a.txt
+5027575071931104238 lrwxrwxrwx  1 tsc7 domain users      5 Dec  5 2020 23:56 b.txt -> a.txt
+5027575076226071535 lrwxrwxrwx  1 tsc7 domain users      5 Dec  5 2020 23:56 c.txt -> a.txt
 
 ../cmpt300-A3:
-4402229749188005482 -rwxr-xr-x 1 tsc7 domain users 14674 Sep 29 2020 19:58 list.c
-4402229757777940075 -rwxr-xr-x 1 tsc7 domain users  5379 Nov 19 2020 20:45 list.h
-4402229766367874668 -rwxr-xr-x 1 tsc7 domain users  2907 Nov 19 2020 20:40 main.c
-4402229774957809261 -rwxr-xr-x 1 tsc7 domain users   516 Nov 19 2020 17:47 makefile
-4402229783547743854 -rwxr-xr-x 1 tsc7 domain users  3295 Nov 19 2020 20:38 message.c
-4402229792137678447 -rwxr-xr-x 1 tsc7 domain users   544 Nov 19 2020 18:32 message.h
-4402229800727613040 -rwxr-xr-x 1 tsc7 domain users  7387 Nov 19 2020 20:41 process.c
-4402229809317547633 -rwxr-xr-x 1 tsc7 domain users   915 Nov 19 2020 16:59 process.h
-4402229817907482226 -rwxr-xr-x 1 tsc7 domain users  4241 Nov 19 2020 20:51 README.md
-4402229826497416819 -rwxr-xr-x 1 tsc7 domain users  1852 Nov 19 2020 20:38 semaphore.c
-4402229830792384116 -rwxr-xr-x 1 tsc7 domain users   488 Nov 19 2020 16:42 semaphore.h
-4402229843677286005 -rwxr-xr-x 1 tsc7 domain users  8241 Nov 19 2020 20:37 textmenu.c
-4402229852262294838 -rwxr-xr-x 1 tsc7 domain users   727 Nov 19 2020 18:34 textmenu.h
-4402234499416909111 -rwxr-xr-x 1 tsc7 domain users  7656 Nov 19 2020 20:58 main.o
-4402234559546451256 -rwxr-xr-x 1 tsc7 domain users 17904 Nov 19 2020 20:58 list.o
-4402234623970960697 -rwxr-xr-x 1 tsc7 domain users 24088 Nov 19 2020 20:58 textmenu.o
-4402234679805535546 -rwxr-xr-x 1 tsc7 domain users 17096 Nov 19 2020 20:58 process.o
-4402234735640110395 -rwxr-xr-x 1 tsc7 domain users 10048 Nov 19 2020 20:58 message.o
-4402234774294816060 -rwxr-xr-x 1 tsc7 domain users  7672 Nov 19 2020 20:58 semaphore.o
-4402234800064619837 -rwxr-xr-x 1 tsc7 domain users 46288 Nov 19 2020 21:01 main
+4402229749188005482 -rwxr-xr-x  1 tsc7 domain users  14674 Sep 29 2020 19:58 list.c
+4402229757777940075 -rwxr-xr-x  1 tsc7 domain users   5379 Nov 19 2020 20:45 list.h
+4402229766367874668 -rwxr-xr-x  1 tsc7 domain users   2907 Nov 19 2020 20:40 main.c
+4402229774957809261 -rwxr-xr-x  1 tsc7 domain users    516 Nov 19 2020 17:47 makefile
+4402229783547743854 -rwxr-xr-x  1 tsc7 domain users   3295 Nov 19 2020 20:38 message.c
+4402229792137678447 -rwxr-xr-x  1 tsc7 domain users    544 Nov 19 2020 18:32 message.h
+4402229800727613040 -rwxr-xr-x  1 tsc7 domain users   7387 Nov 19 2020 20:41 process.c
+4402229809317547633 -rwxr-xr-x  1 tsc7 domain users    915 Nov 19 2020 16:59 process.h
+4402229817907482226 -rwxr-xr-x  1 tsc7 domain users   4241 Nov 19 2020 20:51 README.md
+4402229826497416819 -rwxr-xr-x  1 tsc7 domain users   1852 Nov 19 2020 20:38 semaphore.c
+4402229830792384116 -rwxr-xr-x  1 tsc7 domain users    488 Nov 19 2020 16:42 semaphore.h
+4402229843677286005 -rwxr-xr-x  1 tsc7 domain users   8241 Nov 19 2020 20:37 textmenu.c
+4402229852262294838 -rwxr-xr-x  1 tsc7 domain users    727 Nov 19 2020 18:34 textmenu.h
+4402234499416909111 -rwxr-xr-x  1 tsc7 domain users   7656 Nov 19 2020 20:58 main.o
+4402234559546451256 -rwxr-xr-x  1 tsc7 domain users  17904 Nov 19 2020 20:58 list.o
+4402234623970960697 -rwxr-xr-x  1 tsc7 domain users  24088 Nov 19 2020 20:58 textmenu.o
+4402234679805535546 -rwxr-xr-x  1 tsc7 domain users  17096 Nov 19 2020 20:58 process.o
+4402234735640110395 -rwxr-xr-x  1 tsc7 domain users  10048 Nov 19 2020 20:58 message.o
+4402234774294816060 -rwxr-xr-x  1 tsc7 domain users   7672 Nov 19 2020 20:58 semaphore.o
+4402234800064619837 -rwxr-xr-x  1 tsc7 domain users  46288 Nov 19 2020 21:01 main
 
 ../cmpt300-A2:
-1976488527422319543 -rwxr-xr-x 1 tsc7 domain users  1308 Oct 27 2020 18:41 keyboard.c
-1976488531717286840 -rwxr-xr-x 1 tsc7 domain users   147 Oct 26 2020 22:45 keyboard.h
-1976488536012254137 -rwxr-xr-x 1 tsc7 domain users 14674 Sep 29 2020 19:58 list.c
-3022571887320109778 -rwxr-xr-x 1 tsc7 domain users  5377 Oct 25 2020 14:01 list.h
-3022571895910044371 -rwxr-xr-x 1 tsc7 domain users  1400 Oct 27 2020 18:08 listmanager.c
-3022571904499978964 -rwxr-xr-x 1 tsc7 domain users   524 Oct 27 2020 17:14 listmanager.h
-3022571913089913557 -rwxr-xr-x 1 tsc7 domain users   838 Oct 27 2020 19:12 main.c
-3022571921679848150 -rwxr-xr-x 1 tsc7 domain users   715 Oct 26 2020 21:42 makefile
-3022571930269782743 -rwxr-xr-x 1 tsc7 domain users  2187 Oct 27 2020 18:41 receiver.c
-3022571934564750040 -rwxr-xr-x 1 tsc7 domain users   141 Oct 26 2020 22:17 receiver.h
-3022571943154684633 -rwxr-xr-x 1 tsc7 domain users  1951 Oct 27 2020 18:58 screen.c
-3022571951744619226 -rwxr-xr-x 1 tsc7 domain users   170 Oct 26 2020 22:47 screen.h
-3022571960334553819 -rwxr-xr-x 1 tsc7 domain users  3117 Oct 27 2020 19:01 sender.c
-3022571968924488412 -rwxr-xr-x 1 tsc7 domain users   186 Oct 26 2020 23:25 sender.h
-3022571977514423005 -rwxr-xr-x 1 tsc7 domain users  1434 Oct 27 2020 18:56 shutdownmanager.c
-3022571986104357598 -rwxr-xr-x 1 tsc7 domain users   234 Oct 27 2020 18:09 shutdownmanager.h
-3022578093547852511 -rwxr-xr-x 1 tsc7 domain users  6808 Oct 27 2020 19:33 main.o
--8474417100065645687 -rwxr-xr-x 1 tsc7 domain users  9288 Oct 27 2020 19:33 keyboard.o
--8474417246094533750 -rwxr-xr-x 1 tsc7 domain users 16744 Oct 27 2020 19:33 sender.o
--8474417108655580277 -rwxr-xr-x 1 tsc7 domain users 12848 Oct 27 2020 19:33 receiver.o
--8474417173080089716 -rwxr-xr-x 1 tsc7 domain users 12464 Oct 27 2020 19:33 screen.o
--8474417082885776499 -rwxr-xr-x 1 tsc7 domain users 17904 Oct 27 2020 19:33 list.o
--8474417082885776498 -rwxr-xr-x 1 tsc7 domain users  8408 Oct 27 2020 19:33 listmanager.o
--8474416919677019249 -rwxr-xr-x 1 tsc7 domain users 10768 Oct 27 2020 19:33 shutdownmanager.o
--8474416971216626800 -rwxr-xr-x 1 tsc7 domain users 47720 Oct 27 2020 19:33 s-talk
+1976488527422319543 -rwxr-xr-x  1 tsc7 domain users   1308 Oct 27 2020 18:41 keyboard.c
+1976488531717286840 -rwxr-xr-x  1 tsc7 domain users    147 Oct 26 2020 22:45 keyboard.h
+1976488536012254137 -rwxr-xr-x  1 tsc7 domain users  14674 Sep 29 2020 19:58 list.c
+3022571887320109778 -rwxr-xr-x  1 tsc7 domain users   5377 Oct 25 2020 14:01 list.h
+3022571895910044371 -rwxr-xr-x  1 tsc7 domain users   1400 Oct 27 2020 18:08 listmanager.c
+3022571904499978964 -rwxr-xr-x  1 tsc7 domain users    524 Oct 27 2020 17:14 listmanager.h
+3022571913089913557 -rwxr-xr-x  1 tsc7 domain users    838 Oct 27 2020 19:12 main.c
+3022571921679848150 -rwxr-xr-x  1 tsc7 domain users    715 Oct 26 2020 21:42 makefile
+3022571930269782743 -rwxr-xr-x  1 tsc7 domain users   2187 Oct 27 2020 18:41 receiver.c
+3022571934564750040 -rwxr-xr-x  1 tsc7 domain users    141 Oct 26 2020 22:17 receiver.h
+3022571943154684633 -rwxr-xr-x  1 tsc7 domain users   1951 Oct 27 2020 18:58 screen.c
+3022571951744619226 -rwxr-xr-x  1 tsc7 domain users    170 Oct 26 2020 22:47 screen.h
+3022571960334553819 -rwxr-xr-x  1 tsc7 domain users   3117 Oct 27 2020 19:01 sender.c
+3022571968924488412 -rwxr-xr-x  1 tsc7 domain users    186 Oct 26 2020 23:25 sender.h
+3022571977514423005 -rwxr-xr-x  1 tsc7 domain users   1434 Oct 27 2020 18:56 shutdownmanager.c
+3022571986104357598 -rwxr-xr-x  1 tsc7 domain users    234 Oct 27 2020 18:09 shutdownmanager.h
+3022578093547852511 -rwxr-xr-x  1 tsc7 domain users   6808 Oct 27 2020 19:33 main.o
+9972326973643905929 -rwxr-xr-x  1 tsc7 domain users   9288 Oct 27 2020 19:33 keyboard.o
+9972326827615017866 -rwxr-xr-x  1 tsc7 domain users  16744 Oct 27 2020 19:33 sender.o
+9972326965053971339 -rwxr-xr-x  1 tsc7 domain users  12848 Oct 27 2020 19:33 receiver.o
+9972326900629461900 -rwxr-xr-x  1 tsc7 domain users  12464 Oct 27 2020 19:33 screen.o
+9972326990823775117 -rwxr-xr-x  1 tsc7 domain users  17904 Oct 27 2020 19:33 list.o
+9972326990823775118 -rwxr-xr-x  1 tsc7 domain users   8408 Oct 27 2020 19:33 listmanager.o
+9972327154032532367 -rwxr-xr-x  1 tsc7 domain users  10768 Oct 27 2020 19:33 shutdownmanager.o
+9972327102492924816 -rwxr-xr-x  1 tsc7 domain users  47720 Oct 27 2020 19:33 s-talk
 
 ../cmpt300-A1:
-1976488497357548463 -rwxr-xr-x 1 tsc7 domain users 14674 Sep 29 2020 20:56 list.c
-1976488501652515760 -rwxr-xr-x 1 tsc7 domain users  5378 Sep 29 2020 20:56 list.h
-1976488505947483057 -rwxr-xr-x 1 tsc7 domain users    75 Sep 29 2020 20:56 makefile
-1976488510242450354 -rwxr-xr-x 1 tsc7 domain users 12718 Sep 29 2020 20:56 test.c
-1976488518832384947 -rwxr-xr-x 1 tsc7 domain users 22696 Sep 29 2020 21:14 test
+1976488497357548463 -rwxr-xr-x  1 tsc7 domain users  14674 Sep 29 2020 20:56 list.c
+1976488501652515760 -rwxr-xr-x  1 tsc7 domain users   5378 Sep 29 2020 20:56 list.h
+1976488505947483057 -rwxr-xr-x  1 tsc7 domain users     75 Sep 29 2020 20:56 makefile
+1976488510242450354 -rwxr-xr-x  1 tsc7 domain users  12718 Sep 29 2020 20:56 test.c
+1976488518832384947 -rwxr-xr-x  1 tsc7 domain users  22696 Sep 29 2020 21:14 test
 
 /home/tsc7:
-453204442293707733 drwxr-xr-x 2 tsc7 domain users     0 Sep 29 2020 21:08 sfuhome
-15569765750 drwxr-xr-x 2 tsc7 domain users    10 Jan 15 2019 11:13 Desktop
-16107621202 drwxr-xr-x 2 tsc7 domain users    10 Dec  2 2019 11:09 Downloads
-16643396550 drwxr-xr-x 2 tsc7 domain users    10 Jan  8 2019 11:30 Templates
-170842 drwxr-xr-x 2 tsc7 domain users    10 Jan  8 2019 11:30 Public
-537041886 drwxr-xr-x 2 tsc7 domain users    10 Jan  8 2019 11:30 Documents
-1075043502 drwxr-xr-x 2 tsc7 domain users    10 Jan  8 2019 11:30 Music
-1610725214 drwxr-xr-x 2 tsc7 domain users    10 Jan  8 2019 11:30 Pictures
-2148029073 drwxr-xr-x 2 tsc7 domain users    10 Jan  8 2019 11:30 Videos
-8594901754 lrwxrwxrwx 1 tsc7 domain users    37 Sep 13 2019 12:32 Android -> /usr/shared/CMPT/scratch/tsc7/Android
-8594901756 lrwxrwxrwx 1 tsc7 domain users    40 Sep 13 2019 12:32 VirtualBox VMs -> /usr/shared/CMPT/scratch/tsc7/VirtualBox
+453204442293707733 drwxr-xr-x  2 tsc7 domain users      0 Sep 29 2020 21:08 sfuhome
+15569765750 drwxr-xr-x  2 tsc7 domain users     10 Jan 15 2019 11:13 Desktop
+16107621202 drwxr-xr-x  2 tsc7 domain users     10 Dec  2 2019 11:09 Downloads
+16643396550 drwxr-xr-x  2 tsc7 domain users     10 Jan  8 2019 11:30 Templates
+170842 drwxr-xr-x  2 tsc7 domain users     10 Jan  8 2019 11:30 Public
+537041886 drwxr-xr-x  2 tsc7 domain users     10 Jan  8 2019 11:30 Documents
+1075043502 drwxr-xr-x  2 tsc7 domain users     10 Jan  8 2019 11:30 Music
+1610725214 drwxr-xr-x  2 tsc7 domain users     10 Jan  8 2019 11:30 Pictures
+2148029073 drwxr-xr-x  2 tsc7 domain users     10 Jan  8 2019 11:30 Videos
+8594901754 lrwxrwxrwx  1 tsc7 domain users     37 Sep 13 2019 12:32 Android -> /usr/shared/CMPT/scratch/tsc7/Android
+8594901756 lrwxrwxrwx  1 tsc7 domain users     40 Sep 13 2019 12:32 VirtualBox VMs -> /usr/shared/CMPT/scratch/tsc7/VirtualBox
 
 /home/tsc7/VirtualBox VMs:
 
 /home/tsc7/Android:
-104595657 drwxr-xr-x 2 tsc7 domain users  4096 Sep 13 2019 12:32 Sdk
+104595657 drwxr-xr-x  2 tsc7 domain users   4096 Sep 13 2019 12:32 Sdk
 
 /home/tsc7/Android/Sdk:
 
@@ -816,682 +788,653 @@ tsc7@csil-cpu10:~/sfuhome/cmpt-300/cmpt300A4$ ./UnixLs -Ri -l .. ~
 /home/tsc7/Desktop:
 
 /home/tsc7/sfuhome:
--6652083375647884485 drwxr-xr-x 2 tsc7 domain users     0 Jun  6 2018 14:04 pub_html
-1264783695941880222 -rwxr-xr-x 1 tsc7 domain users   282 Oct  4 2019 11:16 desktop.ini
-1264791487012555167 drwxr-xr-x 2 tsc7 domain users     0 Sep 20 2018 12:31 $RECYCLE.BIN
-4162612982555926768 drwxr-xr-x 2 tsc7 domain users     0 Jan  8 2019 12:25 cmpt-127
-1976368427251821484 drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 16:23 cmpt-300
--3101329114822780212 drwxr-xr-x 2 tsc7 domain users     0 Nov 24 2019 00:15 cmpt-295
--3366194018479945042 drwxr-xr-x 2 tsc7 domain users     0 Dec  2 2019 11:09 cmpt-225
-1264885284803332514 drwxr-xr-x 2 tsc7 domain users     0 Oct  4 2018 12:31 cmpt-120
+11794660698061667131 drwxr-xr-x  2 tsc7 domain users      0 Jun  6 2018 14:04 pub_html
+1264783695941880222 -rwxr-xr-x  1 tsc7 domain users    282 Oct  4 2019 11:16 desktop.ini
+1264791487012555167 drwxr-xr-x  2 tsc7 domain users      0 Sep 20 2018 12:31 $RECYCLE.BIN
+4162612982555926768 drwxr-xr-x  2 tsc7 domain users      0 Jan  8 2019 12:25 cmpt-127
+1976368427251821484 drwxr-xr-x  2 tsc7 domain users      0 Dec  5 2020 23:56 cmpt-300
+15345414958886771404 drwxr-xr-x  2 tsc7 domain users      0 Nov 24 2019 00:15 cmpt-295
+15080550055229606574 drwxr-xr-x  2 tsc7 domain users      0 Dec  2 2019 11:09 cmpt-225
+1264885284803332514 drwxr-xr-x  2 tsc7 domain users      0 Oct  4 2018 12:31 cmpt-120
 
 /home/tsc7/sfuhome/cmpt-120:
-2155144469535767586 -rwxr-xr-x 1 tsc7 domain users  5851 Sep 20 2018 13:20 Lab Week 3.py
-1264879666986109345 -rwxr-xr-x 1 tsc7 domain users 59207 Sep 13 2018 12:32 labWk2.pdf
-1430776863308007847 -rwxr-xr-x 1 tsc7 domain users  8704 Sep 16 2018 18:43 Thumbs.db
-1265402819772565925 -rwxr-xr-x 1 tsc7 domain users  1750 Sep 16 2018 19:19 Lab Week 2.py
--8753236940848931661 -rwxr-xr-x 1 tsc7 domain users  2132 Sep 27 2018 13:19 Lab Week 4.py
-2155106317341182378 -rwxr-xr-x 1 tsc7 domain users 158918 Sep 20 2018 12:30 labWk3.pdf
-2155433701225242978 -rwxr-xr-x 1 tsc7 domain users 224606 Sep 27 2018 12:34 labWk4.pdf
-1927010289401973870 -rwxr-xr-x 1 tsc7 domain users  2562 Oct  4 2018 13:19 Lab Week 5.py
-1927008867769338024 -rwxr-xr-x 1 tsc7 domain users 119026 Oct  4 2018 12:30 labWk5.pdf
+2155144469535767586 -rwxr-xr-x  1 tsc7 domain users   5851 Sep 20 2018 13:20 Lab Week 3.py
+1264879666986109345 -rwxr-xr-x  1 tsc7 domain users  59207 Sep 13 2018 12:32 labWk2.pdf
+1430776863308007847 -rwxr-xr-x  1 tsc7 domain users   8704 Sep 16 2018 18:43 Thumbs.db
+1265402819772565925 -rwxr-xr-x  1 tsc7 domain users   1750 Sep 16 2018 19:19 Lab Week 2.py
+9693507132860619955 -rwxr-xr-x  1 tsc7 domain users   2132 Sep 27 2018 13:19 Lab Week 4.py
+2155106317341182378 -rwxr-xr-x  1 tsc7 domain users 158918 Sep 20 2018 12:30 labWk3.pdf
+2155433701225242978 -rwxr-xr-x  1 tsc7 domain users 224606 Sep 27 2018 12:34 labWk4.pdf
+1927010289401973870 -rwxr-xr-x  1 tsc7 domain users   2562 Oct  4 2018 13:19 Lab Week 5.py
+1927008867769338024 -rwxr-xr-x  1 tsc7 domain users 119026 Oct  4 2018 12:30 labWk5.pdf
 
 /home/tsc7/sfuhome/cmpt-225:
--3366193129421714769 -rwxr-xr-x 1 tsc7 domain users  5574 Oct 21 2019 22:36 A1a.zip
--3366192910378382672 drwxr-xr-x 2 tsc7 domain users     0 Oct 21 2019 22:36 A1a
-5585508434771456434 -rwxr-xr-x 1 tsc7 domain users  5881 Oct 22 2019 19:11 A1-travis.zip
-5585508434771456435 drwxr-xr-x 2 tsc7 domain users     0 Oct 22 2019 19:12 A1-travis
--47669176238431432 drwxr-xr-x 2 tsc7 domain users     0 Dec  2 2019 12:05 TEST
-7877425433451919401 drwxr-xr-x 2 tsc7 domain users     0 Dec  2 2019 11:05 A2
+15080550944287836847 -rwxr-xr-x  1 tsc7 domain users   5574 Oct 21 2019 22:36 A1a.zip
+15080551163331168944 drwxr-xr-x  2 tsc7 domain users      0 Oct 21 2019 22:36 A1a
+5585508434771456434 -rwxr-xr-x  1 tsc7 domain users   5881 Oct 22 2019 19:11 A1-travis.zip
+5585508434771456435 drwxr-xr-x  2 tsc7 domain users      0 Oct 22 2019 19:12 A1-travis
+18399074897471120184 drwxr-xr-x  2 tsc7 domain users      0 Dec  2 2019 12:05 TEST
+7877425433451919401 drwxr-xr-x  2 tsc7 domain users      0 Dec  2 2019 11:05 A2
 
 /home/tsc7/sfuhome/cmpt-225/A2:
-6526348225286704899 -rwxr-xr-x 1 tsc7 domain users 11839 Dec  2 2019 11:01 AvlTreeB.h
-6526348225286704898 -rwxr-xr-x 1 tsc7 domain users  8628 Dec  2 2019 10:44 BinarySearchTree1.h
-6526348229581672193 -rwxr-xr-x 1 tsc7 domain users  9009 Dec  2 2019 10:41 BinarySearchTree2.h
-6526348225286704900 -rwxr-xr-x 1 tsc7 domain users   283 Nov 28 2019 18:45 dsexceptions.h
-6526348229581672197 -rwxr-xr-x 1 tsc7 domain users   417 Dec  1 2019 17:58 Makefile
--48475539169770038 -rwxr-xr-x 1 tsc7 domain users  1122 Dec  1 2019 17:49 TestAVLTree.cpp
-6526348229581672198 -rwxr-xr-x 1 tsc7 domain users   855 Dec  2 2019 10:54 TestBinarySearchTree1.cpp
-6526348233876639495 -rwxr-xr-x 1 tsc7 domain users  1287 Dec  2 2019 10:44 TestBinarySearchTree2.cpp
+6526348225286704899 -rwxr-xr-x  1 tsc7 domain users  11839 Dec  2 2019 11:01 AvlTreeB.h
+6526348225286704898 -rwxr-xr-x  1 tsc7 domain users   8628 Dec  2 2019 10:44 BinarySearchTree1.h
+6526348229581672193 -rwxr-xr-x  1 tsc7 domain users   9009 Dec  2 2019 10:41 BinarySearchTree2.h
+6526348225286704900 -rwxr-xr-x  1 tsc7 domain users    283 Nov 28 2019 18:45 dsexceptions.h
+6526348229581672197 -rwxr-xr-x  1 tsc7 domain users    417 Dec  1 2019 17:58 Makefile
+18398268534539781578 -rwxr-xr-x  1 tsc7 domain users   1122 Dec  1 2019 17:49 TestAVLTree.cpp
+6526348229581672198 -rwxr-xr-x  1 tsc7 domain users    855 Dec  2 2019 10:54 TestBinarySearchTree1.cpp
+6526348233876639495 -rwxr-xr-x  1 tsc7 domain users   1287 Dec  2 2019 10:44 TestBinarySearchTree2.cpp
 
 /home/tsc7/sfuhome/cmpt-225/TEST:
--161306039432688108 -rwxr-xr-x 1 tsc7 domain users  9910 Dec  2 2019 12:05 A2.zip
--47661840434289862 drwxr-xr-x 2 tsc7 domain users     0 Dec  2 2019 12:05 A2
+18285438034276863508 -rwxr-xr-x  1 tsc7 domain users   9910 Dec  2 2019 12:05 A2.zip
+18399082233275261754 drwxr-xr-x  2 tsc7 domain users      0 Dec  2 2019 12:05 A2
 
 /home/tsc7/sfuhome/cmpt-225/TEST/A2:
--47661836139322565 -rwxr-xr-x 1 tsc7 domain users  9009 Dec  2 2019 10:41 BinarySearchTree2.h
--47661831844355268 -rwxr-xr-x 1 tsc7 domain users  8628 Dec  2 2019 10:44 BinarySearchTree1.h
--47661827549387971 -rwxr-xr-x 1 tsc7 domain users 12256 Dec  2 2019 12:04 AvlTreeB.h
--47661823254420674 -rwxr-xr-x 1 tsc7 domain users   283 Nov 28 2019 18:45 dsexceptions.h
--47661823254420673 -rwxr-xr-x 1 tsc7 domain users   417 Dec  1 2019 17:58 Makefile
--47661818959453376 -rwxr-xr-x 1 tsc7 domain users   855 Dec  2 2019 10:54 TestBinarySearchTree1.cpp
--47661814664486079 -rwxr-xr-x 1 tsc7 domain users  1287 Dec  2 2019 10:44 TestBinarySearchTree2.cpp
--6126819419474638216 -rwxr-xr-x 1 tsc7 domain users  1122 Dec  2 2019 12:04 TestAVLTree.cpp
+18399082237570229051 -rwxr-xr-x  1 tsc7 domain users   9009 Dec  2 2019 10:41 BinarySearchTree2.h
+18399082241865196348 -rwxr-xr-x  1 tsc7 domain users   8628 Dec  2 2019 10:44 BinarySearchTree1.h
+18399082246160163645 -rwxr-xr-x  1 tsc7 domain users  12256 Dec  2 2019 12:04 AvlTreeB.h
+18399082250455130942 -rwxr-xr-x  1 tsc7 domain users    283 Nov 28 2019 18:45 dsexceptions.h
+18399082250455130943 -rwxr-xr-x  1 tsc7 domain users    417 Dec  1 2019 17:58 Makefile
+18399082254750098240 -rwxr-xr-x  1 tsc7 domain users    855 Dec  2 2019 10:54 TestBinarySearchTree1.cpp
+18399082259045065537 -rwxr-xr-x  1 tsc7 domain users   1287 Dec  2 2019 10:44 TestBinarySearchTree2.cpp
+12319924654234913400 -rwxr-xr-x  1 tsc7 domain users   1122 Dec  2 2019 12:04 TestAVLTree.cpp
 
 /home/tsc7/sfuhome/cmpt-225/A1-travis:
-5585508443361391028 -rwxr-xr-x 1 tsc7 domain users   283 Oct 13 2019 18:13 dsexceptions.h
-5585508443361391029 -rwxr-xr-x 1 tsc7 domain users  2036 Oct 22 2019 19:08 Exp.cpp
-5585508443361391030 -rwxr-xr-x 1 tsc7 domain users  8377 Oct 22 2019 19:08 List.h
-5585508443361391031 -rwxr-xr-x 1 tsc7 domain users   123 Oct 20 2019 21:21 Makefile
-5585508443361391032 -rwxr-xr-x 1 tsc7 domain users  3073 Oct 22 2019 19:08 Test.cpp
-5585508443361391033 -rwxr-xr-x 1 tsc7 domain users  4492 Oct 22 2019 16:13 Vector.h
-5585508451951325626 -rwxr-xr-x 1 tsc7 domain users 47368 Oct 22 2019 19:12 Test.o
-5585508447656358331 -rwxr-xr-x 1 tsc7 domain users 26600 Oct 22 2019 19:12 Test
-5585508443361391036 -rwxr-xr-x 1 tsc7 domain users 24328 Oct 22 2019 19:12 Exp.o
-5585508443361391037 -rwxr-xr-x 1 tsc7 domain users 20168 Oct 22 2019 19:12 Exp
+5585508443361391028 -rwxr-xr-x  1 tsc7 domain users    283 Oct 13 2019 18:13 dsexceptions.h
+5585508443361391029 -rwxr-xr-x  1 tsc7 domain users   2036 Oct 22 2019 19:08 Exp.cpp
+5585508443361391030 -rwxr-xr-x  1 tsc7 domain users   8377 Oct 22 2019 19:08 List.h
+5585508443361391031 -rwxr-xr-x  1 tsc7 domain users    123 Oct 20 2019 21:21 Makefile
+5585508443361391032 -rwxr-xr-x  1 tsc7 domain users   3073 Oct 22 2019 19:08 Test.cpp
+5585508443361391033 -rwxr-xr-x  1 tsc7 domain users   4492 Oct 22 2019 16:13 Vector.h
+5585508451951325626 -rwxr-xr-x  1 tsc7 domain users  47368 Oct 22 2019 19:12 Test.o
+5585508447656358331 -rwxr-xr-x  1 tsc7 domain users  26600 Oct 22 2019 19:12 Test
+5585508443361391036 -rwxr-xr-x  1 tsc7 domain users  24328 Oct 22 2019 19:12 Exp.o
+5585508443361391037 -rwxr-xr-x  1 tsc7 domain users  20168 Oct 22 2019 19:12 Exp
 
 /home/tsc7/sfuhome/cmpt-225/A1a:
--3383581244390028619 -rwxr-xr-x 1 tsc7 domain users   283 Oct 13 2019 18:13 dsexceptions.h
--3383581235800094026 -rwxr-xr-x 1 tsc7 domain users  1667 Oct 21 2019 22:13 Exp.cpp
--2175523024106337609 -rwxr-xr-x 1 tsc7 domain users  8523 Oct 21 2019 22:14 List.h
--2175523015516403016 -rwxr-xr-x 1 tsc7 domain users   123 Oct 20 2019 21:21 Makefile
--2175523006926468423 -rwxr-xr-x 1 tsc7 domain users  1781 Oct 21 2019 22:07 Test.cpp
--2175522998336533830 -rwxr-xr-x 1 tsc7 domain users  4492 Oct 21 2019 22:14 Vector.h
--2175519837240603973 -rwxr-xr-x 1 tsc7 domain users 44408 Oct 21 2019 22:36 Test.o
-9047301287108260104 -rwxr-xr-x 1 tsc7 domain users 26600 Oct 21 2019 22:36 Test
-6565707571888164977 -rwxr-xr-x 1 tsc7 domain users 24448 Oct 21 2019 22:36 Exp.o
-6565707846766071922 -rwxr-xr-x 1 tsc7 domain users 20168 Oct 21 2019 22:36 Exp
+15063162829319522997 -rwxr-xr-x  1 tsc7 domain users    283 Oct 13 2019 18:13 dsexceptions.h
+15063162837909457590 -rwxr-xr-x  1 tsc7 domain users   1667 Oct 21 2019 22:13 Exp.cpp
+16271221049603214007 -rwxr-xr-x  1 tsc7 domain users   8523 Oct 21 2019 22:14 List.h
+16271221058193148600 -rwxr-xr-x  1 tsc7 domain users    123 Oct 20 2019 21:21 Makefile
+16271221066783083193 -rwxr-xr-x  1 tsc7 domain users   1781 Oct 21 2019 22:07 Test.cpp
+16271221075373017786 -rwxr-xr-x  1 tsc7 domain users   4492 Oct 21 2019 22:14 Vector.h
+16271224236468947643 -rwxr-xr-x  1 tsc7 domain users  44408 Oct 21 2019 22:36 Test.o
+9047301287108260104 -rwxr-xr-x  1 tsc7 domain users  26600 Oct 21 2019 22:36 Test
+6565707571888164977 -rwxr-xr-x  1 tsc7 domain users  24448 Oct 21 2019 22:36 Exp.o
+6565707846766071922 -rwxr-xr-x  1 tsc7 domain users  20168 Oct 21 2019 22:36 Exp
 
 /home/tsc7/sfuhome/cmpt-295:
--3099969761968563507 -rwxr-xr-x 1 tsc7 domain users  5755 Sep 14 2019 16:41 q3.zip
--3099916843676509490 drwxr-xr-x 2 tsc7 domain users     0 Sep 14 2019 16:42 q3
--3099916787841934634 -rwxr-xr-x 1 tsc7 domain users  5635 Sep 17 2019 09:15 q4.zip
--3099916779252000041 drwxr-xr-x 2 tsc7 domain users     0 Sep 17 2019 09:16 q4
--3361054076497600466 -rwxr-xr-x 1 tsc7 domain users  2032 Sep 19 2019 18:04 q4b.zip
--3361048707788480465 drwxr-xr-x 2 tsc7 domain users     0 Sep 19 2019 18:39 q4b
--8649879583663558911 -rwxr-xr-x 1 tsc7 domain users  1125 Sep 26 2019 20:21 a2a.zip
--8649879570778657022 drwxr-xr-x 2 tsc7 domain users     0 Sep 26 2019 20:21 a2a
-4550478199017834682 -rwxr-xr-x 1 tsc7 domain users  2070 Oct  2 2019 23:25 a3a.zip
-4550478199017834683 drwxr-xr-x 2 tsc7 domain users     0 Oct  2 2019 23:26 a3a
--5195158901788933904 -rwxr-xr-x 1 tsc7 domain users  2539 Oct 16 2019 21:08 a4.zip
--5195158893198999311 drwxr-xr-x 2 tsc7 domain users     0 Oct 16 2019 21:10 a4
--2194612397094076086 drwxr-xr-x 2 tsc7 domain users     0 Oct 22 2019 10:38 care-l5
--2194612358439370417 -rwxr-xr-x 1 tsc7 domain users  1733 Oct 22 2019 09:32 care-l5.zip
--3260400332503723096 -rwxr-xr-x 1 tsc7 domain users  2878 Oct 24 2019 15:28 A5.zip
--3260400323913788503 drwxr-xr-x 2 tsc7 domain users     0 Oct 24 2019 22:39 A5
--3260400104870456399 -rwxr-xr-x 1 tsc7 domain users 12089 Oct 28 2019 11:44 a6.zip
--3260400053330848844 drwxr-xr-x 2 tsc7 domain users     0 Oct 28 2019 11:45 a6
-8274155496797778260 -rwxr-xr-x 1 tsc7 domain users  8986 Oct 28 2019 22:25 L6.zip
-8274155496797778261 drwxr-xr-x 2 tsc7 domain users     0 Oct 29 2019 09:10 L6
--1199100481813206949 -rwxr-xr-x 1 tsc7 domain users 199434 Nov  1 2019 11:27 Assignment 6.pdf
--1605821137282459525 -rwxr-xr-x 1 tsc7 domain users 11125 Nov  6 2019 11:53 A7q5.zip
--1610807581428213636 drwxr-xr-x 2 tsc7 domain users     0 Nov  6 2019 14:29 A7q5
--696214589469560290 -rwxr-xr-x 1 tsc7 domain users  8410 Nov 18 2019 20:54 Base.zip
--7559148028708933532 -rwxr-xr-x 1 tsc7 domain users  2714 Nov 24 2019 00:14 A9.zip
--696181294883081697 drwxr-xr-x 2 tsc7 domain users     0 Nov 21 2019 21:14 a8
--7559148024413966235 drwxr-xr-x 2 tsc7 domain users     0 Nov 25 2019 12:41 A9
+15346774311740988109 -rwxr-xr-x  1 tsc7 domain users   5755 Sep 14 2019 16:41 q3.zip
+15346827230033042126 drwxr-xr-x  2 tsc7 domain users      0 Sep 14 2019 16:42 q3
+15346827285867616982 -rwxr-xr-x  1 tsc7 domain users   5635 Sep 17 2019 09:15 q4.zip
+15346827294457551575 drwxr-xr-x  2 tsc7 domain users      0 Sep 17 2019 09:16 q4
+15085689997211951150 -rwxr-xr-x  1 tsc7 domain users   2032 Sep 19 2019 18:04 q4b.zip
+15085695365921071151 drwxr-xr-x  2 tsc7 domain users      0 Sep 19 2019 18:39 q4b
+9796864490045992705 -rwxr-xr-x  1 tsc7 domain users   1125 Sep 26 2019 20:21 a2a.zip
+9796864502930894594 drwxr-xr-x  2 tsc7 domain users      0 Sep 26 2019 20:21 a2a
+4550478199017834682 -rwxr-xr-x  1 tsc7 domain users   2070 Oct  2 2019 23:25 a3a.zip
+4550478199017834683 drwxr-xr-x  2 tsc7 domain users      0 Oct  2 2019 23:26 a3a
+13251585171920617712 -rwxr-xr-x  1 tsc7 domain users   2539 Oct 16 2019 21:08 a4.zip
+13251585180510552305 drwxr-xr-x  2 tsc7 domain users      0 Oct 16 2019 21:10 a4
+16252131676615475530 drwxr-xr-x  2 tsc7 domain users      0 Oct 22 2019 10:38 care-l5
+16252131715270181199 -rwxr-xr-x  1 tsc7 domain users   1733 Oct 22 2019 09:32 care-l5.zip
+15186343741205828520 -rwxr-xr-x  1 tsc7 domain users   2878 Oct 24 2019 15:28 A5.zip
+15186343749795763113 drwxr-xr-x  2 tsc7 domain users      0 Oct 24 2019 22:39 A5
+15186343968839095217 -rwxr-xr-x  1 tsc7 domain users  12089 Oct 28 2019 11:44 a6.zip
+15186344020378702772 drwxr-xr-x  2 tsc7 domain users      0 Oct 28 2019 11:45 a6
+8274155496797778260 -rwxr-xr-x  1 tsc7 domain users   8986 Oct 28 2019 22:25 L6.zip
+8274155496797778261 drwxr-xr-x  2 tsc7 domain users      0 Oct 29 2019 09:10 L6
+17247643591896344667 -rwxr-xr-x  1 tsc7 domain users 199434 Nov  1 2019 11:27 Assignment 6.pdf
+16840922936427092091 -rwxr-xr-x  1 tsc7 domain users  11125 Nov  6 2019 11:53 A7q5.zip
+16835936492281337980 drwxr-xr-x  2 tsc7 domain users      0 Nov  6 2019 14:29 A7q5
+17750529484239991326 -rwxr-xr-x  1 tsc7 domain users   8410 Nov 18 2019 20:54 Base.zip
+10887596045000618084 -rwxr-xr-x  1 tsc7 domain users   2714 Nov 24 2019 00:14 A9.zip
+17750562778826469919 drwxr-xr-x  2 tsc7 domain users      0 Nov 21 2019 21:14 a8
+10887596049295585381 drwxr-xr-x  2 tsc7 domain users      0 Nov 25 2019 12:41 A9
 
 /home/tsc7/sfuhome/cmpt-295/A9:
--3890152364710418570 -rwxr-xr-x 1 tsc7 domain users   823 Nov 25 2019 12:41 main.c
--7559148028708933529 -r-xr-xr-x 1 tsc7 domain users   350 Nov 19 2019 13:03 makefile
--7559148024413966232 -r-xr-xr-x 1 tsc7 domain users   695 Nov 19 2019 13:03 matrix.c
--7559148024413966231 -r-xr-xr-x 1 tsc7 domain users   265 Nov 19 2019 13:03 matrix.h
--3890152394775189643 -rwxr-xr-x 1 tsc7 domain users  1802 Nov 25 2019 12:40 mul.c
--6715409283975338132 -r-xr-xr-x 1 tsc7 domain users   114 Nov 19 2019 13:03 mul.h
--3890419786554136722 -rwxr-xr-x 1 tsc7 domain users  2297 Nov 25 2019 12:41 main.s
--3890380921395075217 -rwxr-xr-x 1 tsc7 domain users  2440 Nov 25 2019 12:41 main.o
--3890380998704486544 -rwxr-xr-x 1 tsc7 domain users  2690 Nov 25 2019 12:41 mul.s
--3890311033687234703 -rwxr-xr-x 1 tsc7 domain users  2136 Nov 25 2019 12:41 mul.o
--3890311050867103886 -rwxr-xr-x 1 tsc7 domain users  2955 Nov 24 2019 00:15 matrix.s
--3890194897771550861 -rwxr-xr-x 1 tsc7 domain users  2440 Nov 24 2019 00:15 matrix.o
--3890194811872204940 -rwxr-xr-x 1 tsc7 domain users 12960 Nov 25 2019 12:41 x
+14556591708999133046 -rwxr-xr-x  1 tsc7 domain users    823 Nov 25 2019 12:41 main.c
+10887596045000618087 -r-xr-xr-x  1 tsc7 domain users    350 Nov 19 2019 13:03 makefile
+10887596049295585384 -r-xr-xr-x  1 tsc7 domain users    695 Nov 19 2019 13:03 matrix.c
+10887596049295585385 -r-xr-xr-x  1 tsc7 domain users    265 Nov 19 2019 13:03 matrix.h
+14556591678934361973 -rwxr-xr-x  1 tsc7 domain users   1802 Nov 25 2019 12:40 mul.c
+11731334789734213484 -r-xr-xr-x  1 tsc7 domain users    114 Nov 19 2019 13:03 mul.h
+14556324287155414894 -rwxr-xr-x  1 tsc7 domain users   2297 Nov 25 2019 12:41 main.s
+14556363152314476399 -rwxr-xr-x  1 tsc7 domain users   2440 Nov 25 2019 12:41 main.o
+14556363075005065072 -rwxr-xr-x  1 tsc7 domain users   2690 Nov 25 2019 12:41 mul.s
+14556433040022316913 -rwxr-xr-x  1 tsc7 domain users   2136 Nov 25 2019 12:41 mul.o
+14556433022842447730 -rwxr-xr-x  1 tsc7 domain users   2955 Nov 24 2019 00:15 matrix.s
+14556549175938000755 -rwxr-xr-x  1 tsc7 domain users   2440 Nov 24 2019 00:15 matrix.o
+14556549261837346676 -rwxr-xr-x  1 tsc7 domain users  12960 Nov 25 2019 12:41 x
 
 /home/tsc7/sfuhome/cmpt-295/a8:
--696181290588114400 -rwxr-xr-x 1 tsc7 domain users  2976 Nov 18 2019 20:53 biggrid
--696181281998179807 -rwxr-xr-x 1 tsc7 domain users   566 Nov 18 2019 20:53 gengrid.py
--696181273408245214 -rwxr-xr-x 1 tsc7 domain users  3519 Nov 18 2019 20:53 main.c
--696181260523343325 -rwxr-xr-x 1 tsc7 domain users  8233 Nov 18 2019 20:58 main.s
--696181251933408732 -rwxr-xr-x 1 tsc7 domain users  6664 Nov 18 2019 20:58 main.o
--696181251933408731 -rwxr-xr-x 1 tsc7 domain users   220 Nov 18 2019 20:53 makefile
--696181239048506842 -rwxr-xr-x 1 tsc7 domain users   606 Nov 20 2019 11:00 smallgrid
--682801767377057437 -rwxr-xr-x 1 tsc7 domain users  3352 Nov 21 2019 21:14 stats.c
--696177996348198360 -rwxr-xr-x 1 tsc7 domain users  6645 Nov 21 2019 21:14 stats.s
--682822675277854367 -rwxr-xr-x 1 tsc7 domain users  2832 Nov 21 2019 21:14 stats.o
--682801690067646110 -rwxr-xr-x 1 tsc7 domain users 13184 Nov 21 2019 21:14 x
--696172292631629269 -rwxr-xr-x 1 tsc7 domain users     0 Nov 18 2019 20:56 basegrid
--682764744758965916 -rwxr-xr-x 1 tsc7 domain users  2087 Nov 20 2019 10:48 stats2.c
+17750562783121437216 -rwxr-xr-x  1 tsc7 domain users   2976 Nov 18 2019 20:53 biggrid
+17750562791711371809 -rwxr-xr-x  1 tsc7 domain users    566 Nov 18 2019 20:53 gengrid.py
+17750562800301306402 -rwxr-xr-x  1 tsc7 domain users   3519 Nov 18 2019 20:53 main.c
+17750562813186208291 -rwxr-xr-x  1 tsc7 domain users   8233 Nov 18 2019 20:58 main.s
+17750562821776142884 -rwxr-xr-x  1 tsc7 domain users   6664 Nov 18 2019 20:58 main.o
+17750562821776142885 -rwxr-xr-x  1 tsc7 domain users    220 Nov 18 2019 20:53 makefile
+17750562834661044774 -rwxr-xr-x  1 tsc7 domain users    606 Nov 20 2019 11:00 smallgrid
+17763942306332494179 -rwxr-xr-x  1 tsc7 domain users   3352 Nov 21 2019 21:14 stats.c
+17750566077361353256 -rwxr-xr-x  1 tsc7 domain users   6645 Nov 21 2019 21:14 stats.s
+17763921398431697249 -rwxr-xr-x  1 tsc7 domain users   2832 Nov 21 2019 21:14 stats.o
+17763942383641905506 -rwxr-xr-x  1 tsc7 domain users  13184 Nov 21 2019 21:14 x
+17750571781077922347 -rwxr-xr-x  1 tsc7 domain users      0 Nov 18 2019 20:56 basegrid
+17763979328950585700 -rwxr-xr-x  1 tsc7 domain users   2087 Nov 20 2019 10:48 stats2.c
 
 /home/tsc7/sfuhome/cmpt-295/A7q5:
--1610807572838279043 drwxr-xr-x 2 tsc7 domain users     0 Nov  6 2019 14:42 q5
+16835936500871272573 drwxr-xr-x  2 tsc7 domain users      0 Nov  6 2019 14:42 q5
 
 /home/tsc7/sfuhome/cmpt-295/A7q5/q5:
--1610807568543311746 -rwxr-xr-x 1 tsc7 domain users  1550 Aug  7 2019 16:51 LL.c
--1610807564248344449 -rwxr-xr-x 1 tsc7 domain users   248 Aug  7 2019 16:51 LL.h
--1610807559953377152 -rwxr-xr-x 1 tsc7 domain users   221 Aug  7 2019 16:51 makefile
--4689045264207550261 -rwxr-xr-x 1 tsc7 domain users  1577 Nov  6 2019 14:42 main.c
--1610807555658409854 -rwxr-xr-x 1 tsc7 domain users  3316 Nov  6 2019 14:42 main.s
--4689095901871970105 -rwxr-xr-x 1 tsc7 domain users  3008 Nov  6 2019 14:42 main.o
--4689050830485165878 -rwxr-xr-x 1 tsc7 domain users  4039 Nov  6 2019 14:39 LL.s
--4689082342660216632 -rwxr-xr-x 1 tsc7 domain users  2816 Nov  6 2019 14:39 LL.o
--4689068933772318519 -rwxr-xr-x 1 tsc7 domain users 13120 Nov  6 2019 14:42 x
+16835936505166239870 -rwxr-xr-x  1 tsc7 domain users   1550 Aug  7 2019 16:51 LL.c
+16835936509461207167 -rwxr-xr-x  1 tsc7 domain users    248 Aug  7 2019 16:51 LL.h
+16835936513756174464 -rwxr-xr-x  1 tsc7 domain users    221 Aug  7 2019 16:51 makefile
+13757698809502001355 -rwxr-xr-x  1 tsc7 domain users   1577 Nov  6 2019 14:42 main.c
+16835936518051141762 -rwxr-xr-x  1 tsc7 domain users   3316 Nov  6 2019 14:42 main.s
+13757648171837581511 -rwxr-xr-x  1 tsc7 domain users   3008 Nov  6 2019 14:42 main.o
+13757693243224385738 -rwxr-xr-x  1 tsc7 domain users   4039 Nov  6 2019 14:39 LL.s
+13757661731049334984 -rwxr-xr-x  1 tsc7 domain users   2816 Nov  6 2019 14:39 LL.o
+13757675139937233097 -rwxr-xr-x  1 tsc7 domain users  13120 Nov  6 2019 14:42 x
 
 /home/tsc7/sfuhome/cmpt-295/L6:
-4384830746456251549 drwxr-xr-x 2 tsc7 domain users     0 Oct 29 2019 09:32 care-l6
+4384830746456251549 drwxr-xr-x  2 tsc7 domain users      0 Oct 29 2019 09:32 care-l6
 
 /home/tsc7/sfuhome/cmpt-295/L6/care-l6:
--1304844414887304815 -rwxr-xr-x 1 tsc7 domain users  1714 Oct 29 2019 09:31 main.c
-4384830759341153439 -rwxr-xr-x 1 tsc7 domain users   268 Oct 28 2019 22:20 sum_plus.s
-4384830763636120736 -rwxr-xr-x 1 tsc7 domain users   244 Oct  4 2019 08:55 makefile
-4384830772226055329 -rwxr-xr-x 1 tsc7 domain users  2534 Oct 29 2019 09:32 main.s
--1304846463586705009 -rwxr-xr-x 1 tsc7 domain users  2904 Oct 29 2019 09:32 main.o
-4384830780815989923 -rwxr-xr-x 1 tsc7 domain users   816 Oct 28 2019 22:20 sum_plus.o
--1304846377687359088 -rwxr-xr-x 1 tsc7 domain users  8832 Oct 29 2019 09:32 x
-4390323026081022938 -rwxr-xr-x 1 tsc7 domain users  2445 Oct 28 2019 21:48 main copy.s
--1304953378207604338 -rwxr-xr-x 1 tsc7 domain users   243 Oct 28 2019 22:18 sum_plus1.s
+17141899658822246801 -rwxr-xr-x  1 tsc7 domain users   1714 Oct 29 2019 09:31 main.c
+4384830759341153439 -rwxr-xr-x  1 tsc7 domain users    268 Oct 28 2019 22:20 sum_plus.s
+4384830763636120736 -rwxr-xr-x  1 tsc7 domain users    244 Oct  4 2019 08:55 makefile
+4384830772226055329 -rwxr-xr-x  1 tsc7 domain users   2534 Oct 29 2019 09:32 main.s
+17141897610122846607 -rwxr-xr-x  1 tsc7 domain users   2904 Oct 29 2019 09:32 main.o
+4384830780815989923 -rwxr-xr-x  1 tsc7 domain users    816 Oct 28 2019 22:20 sum_plus.o
+17141897696022192528 -rwxr-xr-x  1 tsc7 domain users   8832 Oct 29 2019 09:32 x
+4390323026081022938 -rwxr-xr-x  1 tsc7 domain users   2445 Oct 28 2019 21:48 main copy.s
+17141790695501947278 -rwxr-xr-x  1 tsc7 domain users    243 Oct 28 2019 22:18 sum_plus1.s
 
 /home/tsc7/sfuhome/cmpt-295/a6:
--3260400044740914251 drwxr-xr-x 2 tsc7 domain users     0 Oct 28 2019 12:00 care-a6
+15186344028968637365 drwxr-xr-x  2 tsc7 domain users      0 Oct 28 2019 12:00 care-a6
 
 /home/tsc7/sfuhome/cmpt-295/a6/care-a6:
--1338074856034397314 -rwxr-xr-x 1 tsc7 domain users   459 Oct 25 2019 09:43 assembly.sample
--1338074851739430017 -rwxr-xr-x 1 tsc7 domain users   633 Oct 27 2019 15:31 lsearch_2.c
--1338074847444462720 -rwxr-xr-x 1 tsc7 domain users    44 Oct 25 2019 09:43 lsearch_2.h
--1337867903035239543 -rwxr-xr-x 1 tsc7 domain users  2478 Oct 28 2019 12:00 main.c
--1338074843149495422 -rwxr-xr-x 1 tsc7 domain users   287 Oct 25 2019 09:43 makefile
--1338074838854528125 -rwxr-xr-x 1 tsc7 domain users  6003 Oct 28 2019 12:00 main.s
--1338074825969626239 -rwxr-xr-x 1 tsc7 domain users  4448 Oct 28 2019 12:00 main.o
--1338074834559560827 -rwxr-xr-x 1 tsc7 domain users   797 Oct 28 2019 11:41 lsearch_2.s
--1338074825969626234 -rwxr-xr-x 1 tsc7 domain users   848 Oct 28 2019 11:45 lsearch_2.o
--1338074821674658940 -rwxr-xr-x 1 tsc7 domain users 12912 Oct 28 2019 12:00 x
--1338074825969626232 -rwxr-xr-x 1 tsc7 domain users   768 Oct 27 2019 15:37 lsearch_2 copy.s
+17108669217675154302 -rwxr-xr-x  1 tsc7 domain users    459 Oct 25 2019 09:43 assembly.sample
+17108669221970121599 -rwxr-xr-x  1 tsc7 domain users    633 Oct 27 2019 15:31 lsearch_2.c
+17108669226265088896 -rwxr-xr-x  1 tsc7 domain users     44 Oct 25 2019 09:43 lsearch_2.h
+17108876170674312073 -rwxr-xr-x  1 tsc7 domain users   2478 Oct 28 2019 12:00 main.c
+17108669230560056194 -rwxr-xr-x  1 tsc7 domain users    287 Oct 25 2019 09:43 makefile
+17108669234855023491 -rwxr-xr-x  1 tsc7 domain users   6003 Oct 28 2019 12:00 main.s
+17108669247739925377 -rwxr-xr-x  1 tsc7 domain users   4448 Oct 28 2019 12:00 main.o
+17108669239149990789 -rwxr-xr-x  1 tsc7 domain users    797 Oct 28 2019 11:41 lsearch_2.s
+17108669247739925382 -rwxr-xr-x  1 tsc7 domain users    848 Oct 28 2019 11:45 lsearch_2.o
+17108669252034892676 -rwxr-xr-x  1 tsc7 domain users  12912 Oct 28 2019 12:00 x
+17108669247739925384 -rwxr-xr-x  1 tsc7 domain users    768 Oct 27 2019 15:37 lsearch_2 copy.s
 
 /home/tsc7/sfuhome/cmpt-295/A5:
--3260400289554050134 -rwxr-xr-x 1 tsc7 domain users  1876 Oct 24 2019 13:44 main.c
--3260400259489279061 -r-xr-xr-x 1 tsc7 domain users   309 Oct 17 2019 16:22 makefile
--3260400246604377172 -r-xr-xr-x 1 tsc7 domain users   959 Oct 17 2019 16:22 output.c
--3260400225129540691 -r-xr-xr-x 1 tsc7 domain users   141 Oct 17 2019 16:22 output.h
--3260400199359736914 -rwxr-xr-x 1 tsc7 domain users  1210 Oct 24 2019 22:37 sum_float.s
--3260400190769802321 -rwxr-xr-x 1 tsc7 domain users  3621 Oct 24 2019 15:29 main.s
--3260400173589933136 -rwxr-xr-x 1 tsc7 domain users  3960 Oct 24 2019 15:29 main.o
-2162784494786193450 -rwxr-xr-x 1 tsc7 domain users  2288 Oct 24 2019 22:39 sum_float.o
--3260400096280521806 -rwxr-xr-x 1 tsc7 domain users  2589 Oct 24 2019 15:29 output.s
--3260400083395619917 -rwxr-xr-x 1 tsc7 domain users  2448 Oct 24 2019 15:29 output.o
-2162784610750310443 -rwxr-xr-x 1 tsc7 domain users 13896 Oct 24 2019 22:39 x
+15186343784155501482 -rwxr-xr-x  1 tsc7 domain users   1876 Oct 24 2019 13:44 main.c
+15186343814220272555 -r-xr-xr-x  1 tsc7 domain users    309 Oct 17 2019 16:22 makefile
+15186343827105174444 -r-xr-xr-x  1 tsc7 domain users    959 Oct 17 2019 16:22 output.c
+15186343848580010925 -r-xr-xr-x  1 tsc7 domain users    141 Oct 17 2019 16:22 output.h
+15186343874349814702 -rwxr-xr-x  1 tsc7 domain users   1210 Oct 24 2019 22:37 sum_float.s
+15186343882939749295 -rwxr-xr-x  1 tsc7 domain users   3621 Oct 24 2019 15:29 main.s
+15186343900119618480 -rwxr-xr-x  1 tsc7 domain users   3960 Oct 24 2019 15:29 main.o
+2162784494786193450 -rwxr-xr-x  1 tsc7 domain users   2288 Oct 24 2019 22:39 sum_float.o
+15186343977429029810 -rwxr-xr-x  1 tsc7 domain users   2589 Oct 24 2019 15:29 output.s
+15186343990313931699 -rwxr-xr-x  1 tsc7 domain users   2448 Oct 24 2019 15:29 output.o
+2162784610750310443 -rwxr-xr-x  1 tsc7 domain users  13896 Oct 24 2019 22:39 x
 
 /home/tsc7/sfuhome/cmpt-295/care-l5:
--2194612392799108789 -rwxr-xr-x 1 tsc7 domain users   258 Oct 20 2019 22:20 makefile
--2194612379914206900 -rwxr-xr-x 1 tsc7 domain users    66 Oct 20 2019 22:20 qsorts.h
--2194612375619239603 -rwxr-xr-x 1 tsc7 domain users  1077 Oct 20 2019 22:20 qsorts.c
--2194430595423403691 -rwxr-xr-x 1 tsc7 domain users  1084 Oct 22 2019 10:38 main.c
--2194598751982976688 -rwxr-xr-x 1 tsc7 domain users  2458 Oct 22 2019 10:38 main.s
--2194612208115515058 -rwxr-xr-x 1 tsc7 domain users  2568 Oct 22 2019 10:38 main.o
--2194598644608794286 -rwxr-xr-x 1 tsc7 domain users  3838 Oct 22 2019 09:38 qsorts.s
--2194598627428925101 -rwxr-xr-x 1 tsc7 domain users  2176 Oct 22 2019 09:38 qsorts.o
--2194598472810102447 -rwxr-xr-x 1 tsc7 domain users 12840 Oct 22 2019 10:38 x
+16252131680910442827 -rwxr-xr-x  1 tsc7 domain users    258 Oct 20 2019 22:20 makefile
+16252131693795344716 -rwxr-xr-x  1 tsc7 domain users     66 Oct 20 2019 22:20 qsorts.h
+16252131698090312013 -rwxr-xr-x  1 tsc7 domain users   1077 Oct 20 2019 22:20 qsorts.c
+16252313478286147925 -rwxr-xr-x  1 tsc7 domain users   1084 Oct 22 2019 10:38 main.c
+16252145321726574928 -rwxr-xr-x  1 tsc7 domain users   2458 Oct 22 2019 10:38 main.s
+16252131865594036558 -rwxr-xr-x  1 tsc7 domain users   2568 Oct 22 2019 10:38 main.o
+16252145429100757330 -rwxr-xr-x  1 tsc7 domain users   3838 Oct 22 2019 09:38 qsorts.s
+16252145446280626515 -rwxr-xr-x  1 tsc7 domain users   2176 Oct 22 2019 09:38 qsorts.o
+16252145600899449169 -rwxr-xr-x  1 tsc7 domain users  12840 Oct 22 2019 10:38 x
 
 /home/tsc7/sfuhome/cmpt-295/a4:
--5195158888904032014 -rwxr-xr-x 1 tsc7 domain users   643 Oct  1 2019 13:49 dot_prod.s
--5195158880314097421 -rwxr-xr-x 1 tsc7 domain users   908 Oct  1 2019 13:49 main.c
--5195158871724162828 -rwxr-xr-x 1 tsc7 domain users   326 Oct  1 2019 13:49 makefile
--5195158867429195531 -rwxr-xr-x 1 tsc7 domain users  1177 Oct 16 2019 20:53 matrix_prod.s
--5195158863134228234 -rwxr-xr-x 1 tsc7 domain users   419 Oct  1 2019 13:49 mod.s
--5195158854544293641 -rwxr-xr-x 1 tsc7 domain users  2327 Oct 16 2019 21:10 main.s
--1777828362674667272 -rwxr-xr-x 1 tsc7 domain users  2624 Oct 16 2019 21:10 main.o
--1777828332609896199 -rwxr-xr-x 1 tsc7 domain users  2000 Oct 16 2019 21:10 dot_prod.o
-4518095309541758178 -rwxr-xr-x 1 tsc7 domain users  1936 Oct 16 2019 21:10 mod.o
-4518095313836725475 -rwxr-xr-x 1 tsc7 domain users  2336 Oct 16 2019 21:10 matrix_prod.o
--4867721396984764401 -rwxr-xr-x 1 tsc7 domain users 10104 Oct 16 2019 21:10 x
+13251585184805519602 -rwxr-xr-x  1 tsc7 domain users    643 Oct  1 2019 13:49 dot_prod.s
+13251585193395454195 -rwxr-xr-x  1 tsc7 domain users    908 Oct  1 2019 13:49 main.c
+13251585201985388788 -rwxr-xr-x  1 tsc7 domain users    326 Oct  1 2019 13:49 makefile
+13251585206280356085 -rwxr-xr-x  1 tsc7 domain users   1177 Oct 16 2019 20:53 matrix_prod.s
+13251585210575323382 -rwxr-xr-x  1 tsc7 domain users    419 Oct  1 2019 13:49 mod.s
+13251585219165257975 -rwxr-xr-x  1 tsc7 domain users   2327 Oct 16 2019 21:10 main.s
+16668915711034884344 -rwxr-xr-x  1 tsc7 domain users   2624 Oct 16 2019 21:10 main.o
+16668915741099655417 -rwxr-xr-x  1 tsc7 domain users   2000 Oct 16 2019 21:10 dot_prod.o
+4518095309541758178 -rwxr-xr-x  1 tsc7 domain users   1936 Oct 16 2019 21:10 mod.o
+4518095313836725475 -rwxr-xr-x  1 tsc7 domain users   2336 Oct 16 2019 21:10 matrix_prod.o
+13579022676724787215 -rwxr-xr-x  1 tsc7 domain users  10104 Oct 16 2019 21:10 x
 
 /home/tsc7/sfuhome/cmpt-295/a3a:
-4550478211902736572 -rwxr-xr-x 1 tsc7 domain users   992 Sep 24 2019 13:55 bonux.c
-4550478220492671165 -rwxr-xr-x 1 tsc7 domain users   501 Oct  2 2019 23:21 dot_prod.s
-4550478229082605758 -rwxr-xr-x 1 tsc7 domain users   912 Oct  2 2019 21:04 main.c
-4550478237672540351 -rwxr-xr-x 1 tsc7 domain users   353 Sep 24 2019 13:55 makefile
-4550478241967507648 -rwxr-xr-x 1 tsc7 domain users  2957 Oct  2 2019 23:26 main.s
-4550478250557442241 -rwxr-xr-x 1 tsc7 domain users  2720 Oct  2 2019 23:26 main.o
-4550478267737311426 -rwxr-xr-x 1 tsc7 domain users  2000 Oct  2 2019 23:26 dot_prod.o
-4550478276327246019 -rwxr-xr-x 1 tsc7 domain users  9424 Oct  2 2019 23:26 x
--4215739052142578702 -rwxr-xr-x 1 tsc7 domain users  2357 Oct  2 2019 23:26 bonux.s
--4215739026372774925 -rwxr-xr-x 1 tsc7 domain users  2488 Oct  2 2019 23:26 bonux.o
--4215738966243232780 -rwxr-xr-x 1 tsc7 domain users  9424 Oct  2 2019 23:26 bonux
+4550478211902736572 -rwxr-xr-x  1 tsc7 domain users    992 Sep 24 2019 13:55 bonux.c
+4550478220492671165 -rwxr-xr-x  1 tsc7 domain users    501 Oct  2 2019 23:21 dot_prod.s
+4550478229082605758 -rwxr-xr-x  1 tsc7 domain users    912 Oct  2 2019 21:04 main.c
+4550478237672540351 -rwxr-xr-x  1 tsc7 domain users    353 Sep 24 2019 13:55 makefile
+4550478241967507648 -rwxr-xr-x  1 tsc7 domain users   2957 Oct  2 2019 23:26 main.s
+4550478250557442241 -rwxr-xr-x  1 tsc7 domain users   2720 Oct  2 2019 23:26 main.o
+4550478267737311426 -rwxr-xr-x  1 tsc7 domain users   2000 Oct  2 2019 23:26 dot_prod.o
+4550478276327246019 -rwxr-xr-x  1 tsc7 domain users   9424 Oct  2 2019 23:26 x
+14231005021566972914 -rwxr-xr-x  1 tsc7 domain users   2357 Oct  2 2019 23:26 bonux.s
+14231005047336776691 -rwxr-xr-x  1 tsc7 domain users   2488 Oct  2 2019 23:26 bonux.o
+14231005107466318836 -rwxr-xr-x  1 tsc7 domain users   9424 Oct  2 2019 23:26 bonux
 
 /home/tsc7/sfuhome/cmpt-295/a2a:
--8649879570778657021 -rwxr-xr-x 1 tsc7 domain users   212 Sep 26 2019 19:49 main.c
--8649879566483689724 -rwxr-xr-x 1 tsc7 domain users   298 Aug 28 2019 14:33 makefile
--8649879562188722427 -rwxr-xr-x 1 tsc7 domain users   245 Sep 26 2019 20:03 sqrt.s
--3268850083658124326 -rwxr-xr-x 1 tsc7 domain users   902 Sep 26 2019 20:21 main.s
--3268850066478255141 -rwxr-xr-x 1 tsc7 domain users  1816 Sep 26 2019 20:21 main.o
--3268850045003418660 -rwxr-xr-x 1 tsc7 domain users  2024 Sep 26 2019 20:21 sqrt.o
--3268850010643680291 -rwxr-xr-x 1 tsc7 domain users  9200 Sep 26 2019 20:21 x
+9796864502930894595 -rwxr-xr-x  1 tsc7 domain users    212 Sep 26 2019 19:49 main.c
+9796864507225861892 -rwxr-xr-x  1 tsc7 domain users    298 Aug 28 2019 14:33 makefile
+9796864511520829189 -rwxr-xr-x  1 tsc7 domain users    245 Sep 26 2019 20:03 sqrt.s
+15177893990051427290 -rwxr-xr-x  1 tsc7 domain users    902 Sep 26 2019 20:21 main.s
+15177894007231296475 -rwxr-xr-x  1 tsc7 domain users   1816 Sep 26 2019 20:21 main.o
+15177894028706132956 -rwxr-xr-x  1 tsc7 domain users   2024 Sep 26 2019 20:21 sqrt.o
+15177894063065871325 -rwxr-xr-x  1 tsc7 domain users   9200 Sep 26 2019 20:21 x
 
 /home/tsc7/sfuhome/cmpt-295/q4b:
--3360917423523143621 -rwxr-xr-x 1 tsc7 domain users   203 Sep 19 2019 18:39 main.c
--3361048690608611279 -rwxr-xr-x 1 tsc7 domain users   645 Sep 19 2019 18:39 main.s
--3361048682018676686 -rwxr-xr-x 1 tsc7 domain users   289 Aug 27 2019 09:23 makefile
--3361048673428742093 -rwxr-xr-x 1 tsc7 domain users   136 Sep 16 2019 19:59 mul.s
--3361009284283670476 -rwxr-xr-x 1 tsc7 domain users   452 Sep 19 2019 17:58 mul-bonus.s
--3361048677723709392 -rwxr-xr-x 1 tsc7 domain users  1800 Sep 19 2019 18:39 main.o
--3361003919869517770 -rwxr-xr-x 1 tsc7 domain users   888 Sep 19 2019 18:04 mul-bonus.o
--3361003881214812105 -rwxr-xr-x 1 tsc7 domain users  8520 Sep 19 2019 18:39 bonux
--3361003194020044744 -rwxr-xr-x 1 tsc7 domain users   776 Sep 19 2019 18:04 mul.o
--3361003924164485067 -rwxr-xr-x 1 tsc7 domain users  8424 Sep 19 2019 18:39 x
+15085826650186407995 -rwxr-xr-x  1 tsc7 domain users    203 Sep 19 2019 18:39 main.c
+15085695383100940337 -rwxr-xr-x  1 tsc7 domain users    645 Sep 19 2019 18:39 main.s
+15085695391690874930 -rwxr-xr-x  1 tsc7 domain users    289 Aug 27 2019 09:23 makefile
+15085695400280809523 -rwxr-xr-x  1 tsc7 domain users    136 Sep 16 2019 19:59 mul.s
+15085734789425881140 -rwxr-xr-x  1 tsc7 domain users    452 Sep 19 2019 17:58 mul-bonus.s
+15085695395985842224 -rwxr-xr-x  1 tsc7 domain users   1800 Sep 19 2019 18:39 main.o
+15085740153840033846 -rwxr-xr-x  1 tsc7 domain users    888 Sep 19 2019 18:04 mul-bonus.o
+15085740192494739511 -rwxr-xr-x  1 tsc7 domain users   8520 Sep 19 2019 18:39 bonux
+15085740879689506872 -rwxr-xr-x  1 tsc7 domain users    776 Sep 19 2019 18:04 mul.o
+15085740149545066549 -rwxr-xr-x  1 tsc7 domain users   8424 Sep 19 2019 18:39 x
 
 /home/tsc7/sfuhome/cmpt-295/q4:
--3099916770662065448 -rwxr-xr-x 1 tsc7 domain users   195 Sep 15 2019 22:12 main.c
--2917437010552988967 -rwxr-xr-x 1 tsc7 domain users   136 Sep 16 2019 19:59 mul.s
--5122328741915552233 -rwxr-xr-x 1 tsc7 domain users   134 Aug 27 2019 09:23 mul-bonus.s
--5048125489590584830 -rwxr-xr-x 1 tsc7 domain users   289 Aug 27 2019 09:23 makefile
--5048125485295617533 -rwxr-xr-x 1 tsc7 domain users   628 Sep 15 2019 22:12 main.s
--5048125468115748345 -rwxr-xr-x 1 tsc7 domain users  1800 Sep 17 2019 09:16 main.o
--5048125450935879160 -rwxr-xr-x 1 tsc7 domain users   776 Sep 17 2019 09:16 mul.o
--5048125446640911863 -rwxr-xr-x 1 tsc7 domain users  8464 Sep 17 2019 09:16 x
+15346827303047486168 -rwxr-xr-x  1 tsc7 domain users    195 Sep 15 2019 22:12 main.c
+15529307063156562649 -rwxr-xr-x  1 tsc7 domain users    136 Sep 16 2019 19:59 mul.s
+13324415331793999383 -rwxr-xr-x  1 tsc7 domain users    134 Aug 27 2019 09:23 mul-bonus.s
+13398618584118966786 -rwxr-xr-x  1 tsc7 domain users    289 Aug 27 2019 09:23 makefile
+13398618588413934083 -rwxr-xr-x  1 tsc7 domain users    628 Sep 15 2019 22:12 main.s
+13398618605593803271 -rwxr-xr-x  1 tsc7 domain users   1800 Sep 17 2019 09:16 main.o
+13398618622773672456 -rwxr-xr-x  1 tsc7 domain users    776 Sep 17 2019 09:16 mul.o
+13398618627068639753 -rwxr-xr-x  1 tsc7 domain users   8464 Sep 17 2019 09:16 x
 
 /home/tsc7/sfuhome/cmpt-295/q3:
--3099916835086574897 -rwxr-xr-x 1 tsc7 domain users  2200 Sep 14 2019 16:42 main.o
--3099916830791607600 -rwxr-xr-x 1 tsc7 domain users   183 Aug 27 2019 09:23 makefile
--3099916822201673007 -rwxr-xr-x 1 tsc7 domain users   173 Aug 27 2019 09:23 mystery.s
--3099916813611738414 -rwxr-xr-x 1 tsc7 domain users   240 Sep 14 2019 16:27 main.c
--3099916809316771117 -rwxr-xr-x 1 tsc7 domain users  1181 Sep 14 2019 16:27 main.s
--3099916792136901932 -rwxr-xr-x 1 tsc7 domain users   776 Sep 14 2019 16:42 mystery.o
--3099916787841934635 -rwxr-xr-x 1 tsc7 domain users  8504 Sep 14 2019 16:42 x
+15346827238622976719 -rwxr-xr-x  1 tsc7 domain users   2200 Sep 14 2019 16:42 main.o
+15346827242917944016 -rwxr-xr-x  1 tsc7 domain users    183 Aug 27 2019 09:23 makefile
+15346827251507878609 -rwxr-xr-x  1 tsc7 domain users    173 Aug 27 2019 09:23 mystery.s
+15346827260097813202 -rwxr-xr-x  1 tsc7 domain users    240 Sep 14 2019 16:27 main.c
+15346827264392780499 -rwxr-xr-x  1 tsc7 domain users   1181 Sep 14 2019 16:27 main.s
+15346827281572649684 -rwxr-xr-x  1 tsc7 domain users    776 Sep 14 2019 16:42 mystery.o
+15346827285867616981 -rwxr-xr-x  1 tsc7 domain users   8504 Sep 14 2019 16:42 x
 
 /home/tsc7/sfuhome/cmpt-300:
-1976488493062581165 -rwxr-xr-x 1 tsc7 domain users  6913 Sep 29 2020 21:13 cmpt300-A1.zip
-1976488497357548462 drwxr-xr-x 2 tsc7 domain users     0 Sep 29 2020 21:14 cmpt300-A1
-1976488523127352245 -rwxr-xr-x 1 tsc7 domain users 13055 Oct 27 2020 19:32 cmpt300-A2.zip
-1976488527422319542 drwxr-xr-x 2 tsc7 domain users     0 Oct 27 2020 19:33 cmpt300-A2
-4402222155685826152 -rwxr-xr-x 1 tsc7 domain users 15381 Nov 19 2020 20:58 cmpt300-A3.zip
-4402229744893038185 drwxr-xr-x 2 tsc7 domain users     0 Nov 19 2020 21:01 cmpt300-A3
-1345746256152871516 -rwxr-xr-x 1 tsc7 domain users 177798 Dec  5 2020 16:22 cmpt300A4.zip
-1337733131373757022 drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 16:24 cmpt300A4
+1976488493062581165 -rwxr-xr-x  1 tsc7 domain users   6913 Sep 29 2020 21:13 cmpt300-A1.zip
+1976488497357548462 drwxr-xr-x  2 tsc7 domain users      0 Sep 29 2020 21:14 cmpt300-A1
+1976488523127352245 -rwxr-xr-x  1 tsc7 domain users  13055 Oct 27 2020 19:32 cmpt300-A2.zip
+1976488527422319542 drwxr-xr-x  2 tsc7 domain users      0 Oct 27 2020 19:33 cmpt300-A2
+4402222155685826152 -rwxr-xr-x  1 tsc7 domain users  15381 Nov 19 2020 20:58 cmpt300-A3.zip
+4402229744893038185 drwxr-xr-x  2 tsc7 domain users      0 Nov 19 2020 21:01 cmpt300-A3
+4315234087096279176 -rwxr-xr-x  1 tsc7 domain users  28949 Dec  5 2020 23:56 cmpt300-A4.zip
+4315234439283597449 drwxr-xr-x  2 tsc7 domain users      0 Dec  5 2020 23:56 cmpt300-A4
 
-/home/tsc7/sfuhome/cmpt-300/cmpt300A4:
-5042924172646138464 -rwxr-xr-x 1 tsc7 domain users  3211 Dec  5 2020 16:09 LsFile.c
-5042924176941105761 -rwxr-xr-x 1 tsc7 domain users   330 Dec  5 2020 15:53 LsFile.h
-5042924185531040354 -rwxr-xr-x 1 tsc7 domain users   103 Nov 29 2020 20:27 UnixLs.h
-5042924194120974947 -rwxr-xr-x 1 tsc7 domain users  1429 Dec  5 2020 15:39 UnixLs.c
-5042924202710909540 -rwxr-xr-x 1 tsc7 domain users    11 Nov 24 2020 23:18 README.md
-5042924207005876837 -rwxr-xr-x 1 tsc7 domain users 14674 Sep 29 2020 19:58 list.c
-5042924215595811430 -rwxr-xr-x 1 tsc7 domain users  5377 Dec  3 2020 18:58 list.h
-5042924228480713320 -rwxr-xr-x 1 tsc7 domain users   375 Dec  3 2020 18:53 makefile
-5042924237070647913 -rwxr-xr-x 1 tsc7 domain users     0 Nov 26 2020 17:55 SampleRun.txt
--9221002430345718140 -rwxr-xr-x 1 tsc7 domain users  1795 Dec  5 2020 15:54 LsOutput.c
-5042924262843758168 -rwxr-xr-x 1 tsc7 domain users   427 Dec  5 2020 15:39 LsOutput.h
--6715797935568866461 drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 15:12 test
-5042933385356062652 -rwxr-xr-x 1 tsc7 domain users  5680 Dec  5 2020 16:23 UnixLs.o
-5042933419715801021 -rwxr-xr-x 1 tsc7 domain users 13096 Dec  5 2020 16:23 LsOutput.o
-5042933548564819902 -rwxr-xr-x 1 tsc7 domain users 15456 Dec  5 2020 16:23 LsFile.o
-5042933587219525567 -rwxr-xr-x 1 tsc7 domain users 17904 Dec  5 2020 16:23 list.o
-5042933604399394752 -rwxr-xr-x 1 tsc7 domain users 36416 Dec  5 2020 16:23 UnixLs
+/home/tsc7/sfuhome/cmpt-300/cmpt300-A4:
+4315234447873532042 -rwxr-xr-x  1 tsc7 domain users   3271 Dec  5 2020 17:10 LsFile.c
+4315234469348368523 -rwxr-xr-x  1 tsc7 domain users    330 Dec  5 2020 15:53 LsFile.h
+4315234486528237708 -rwxr-xr-x  1 tsc7 domain users    103 Nov 29 2020 20:27 UnixLs.h
+4315234495118172301 -rwxr-xr-x  1 tsc7 domain users   1477 Dec  5 2020 17:11 UnixLs.c
+4315234499413139598 -rwxr-xr-x  1 tsc7 domain users     11 Nov 24 2020 23:18 README.md
+4315234503708106895 -rwxr-xr-x  1 tsc7 domain users  14674 Sep 29 2020 19:58 list.c
+4315234516593008784 -rwxr-xr-x  1 tsc7 domain users   5377 Dec  3 2020 18:58 list.h
+4315234520887976081 -rwxr-xr-x  1 tsc7 domain users    375 Dec  3 2020 18:53 makefile
+4315234529477910674 -rwxr-xr-x  1 tsc7 domain users 106912 Dec  5 2020 17:00 SampleRun.txt
+4315234538067845267 -rwxr-xr-x  1 tsc7 domain users   1860 Dec  5 2020 23:42 LsOutput.c
+4315234563837649044 -rwxr-xr-x  1 tsc7 domain users    441 Dec  5 2020 23:42 LsOutput.h
+4315234572427583637 drwxr-xr-x  2 tsc7 domain users      0 Dec  5 2020 23:52 test
+6354334982650949886 -rwxr-xr-x  1 tsc7 domain users   5680 Dec  5 2020 23:56 UnixLs.o
+5375649825817587968 -rwxr-xr-x  1 tsc7 domain users  13104 Dec  5 2020 23:56 LsOutput.o
+5375649830112555265 -rwxr-xr-x  1 tsc7 domain users  15464 Dec  5 2020 23:56 LsFile.o
+5375649834407522562 -rwxr-xr-x  1 tsc7 domain users  17904 Dec  5 2020 23:56 list.o
+5375649838702489859 -rwxr-xr-x  1 tsc7 domain users  36416 Dec  5 2020 23:56 UnixLs
 
-/home/tsc7/sfuhome/cmpt-300/cmpt300A4/test:
-5042927153358773574 drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 15:07 perm
-5042927196308446541 drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 16:07 link
+/home/tsc7/sfuhome/cmpt-300/cmpt300-A4/test:
+5027575054751235052 drwxr-xr-x  2 tsc7 domain users      0 Dec  5 2020 16:07 link
 
-/home/tsc7/sfuhome/cmpt-300/cmpt300A4/test/link:
-5042927204898381134 -rwxr-xr-x 1 tsc7 domain users    15 Dec  5 2020 16:04 a.txt
-5042927213488315727 lrwxrwxrwx 1 tsc7 domain users     5 Dec  5 2020 16:23 b.txt -> a.txt
-5042927222078250320 lrwxrwxrwx 1 tsc7 domain users     5 Dec  5 2020 16:23 c.txt -> a.txt
-
-/home/tsc7/sfuhome/cmpt-300/cmpt300A4/test/perm:
-5042927157653740871 -r-xr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:00 noperm.txt
-5042927166243675464 -rwxr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:04 owner.txt
-5042927170538642761 -rwxr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:06 group.txt
-5042927179128577354 -rwxr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:06 other.txt
-5042927183423544651 -rwxr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:06 all.txt
-5042927192013479244 -r-xr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:07 read.txt
+/home/tsc7/sfuhome/cmpt-300/cmpt300-A4/test/link:
+5027575059046202349 -rwxr-xr-x  1 tsc7 domain users     15 Dec  5 2020 16:04 a.txt
+5027575071931104238 lrwxrwxrwx  1 tsc7 domain users      5 Dec  5 2020 23:56 b.txt -> a.txt
+5027575076226071535 lrwxrwxrwx  1 tsc7 domain users      5 Dec  5 2020 23:56 c.txt -> a.txt
 
 /home/tsc7/sfuhome/cmpt-300/cmpt300-A3:
-4402229749188005482 -rwxr-xr-x 1 tsc7 domain users 14674 Sep 29 2020 19:58 list.c
-4402229757777940075 -rwxr-xr-x 1 tsc7 domain users  5379 Nov 19 2020 20:45 list.h
-4402229766367874668 -rwxr-xr-x 1 tsc7 domain users  2907 Nov 19 2020 20:40 main.c
-4402229774957809261 -rwxr-xr-x 1 tsc7 domain users   516 Nov 19 2020 17:47 makefile
-4402229783547743854 -rwxr-xr-x 1 tsc7 domain users  3295 Nov 19 2020 20:38 message.c
-4402229792137678447 -rwxr-xr-x 1 tsc7 domain users   544 Nov 19 2020 18:32 message.h
-4402229800727613040 -rwxr-xr-x 1 tsc7 domain users  7387 Nov 19 2020 20:41 process.c
-4402229809317547633 -rwxr-xr-x 1 tsc7 domain users   915 Nov 19 2020 16:59 process.h
-4402229817907482226 -rwxr-xr-x 1 tsc7 domain users  4241 Nov 19 2020 20:51 README.md
-4402229826497416819 -rwxr-xr-x 1 tsc7 domain users  1852 Nov 19 2020 20:38 semaphore.c
-4402229830792384116 -rwxr-xr-x 1 tsc7 domain users   488 Nov 19 2020 16:42 semaphore.h
-4402229843677286005 -rwxr-xr-x 1 tsc7 domain users  8241 Nov 19 2020 20:37 textmenu.c
-4402229852262294838 -rwxr-xr-x 1 tsc7 domain users   727 Nov 19 2020 18:34 textmenu.h
-4402234499416909111 -rwxr-xr-x 1 tsc7 domain users  7656 Nov 19 2020 20:58 main.o
-4402234559546451256 -rwxr-xr-x 1 tsc7 domain users 17904 Nov 19 2020 20:58 list.o
-4402234623970960697 -rwxr-xr-x 1 tsc7 domain users 24088 Nov 19 2020 20:58 textmenu.o
-4402234679805535546 -rwxr-xr-x 1 tsc7 domain users 17096 Nov 19 2020 20:58 process.o
-4402234735640110395 -rwxr-xr-x 1 tsc7 domain users 10048 Nov 19 2020 20:58 message.o
-4402234774294816060 -rwxr-xr-x 1 tsc7 domain users  7672 Nov 19 2020 20:58 semaphore.o
-4402234800064619837 -rwxr-xr-x 1 tsc7 domain users 46288 Nov 19 2020 21:01 main
+4402229749188005482 -rwxr-xr-x  1 tsc7 domain users  14674 Sep 29 2020 19:58 list.c
+4402229757777940075 -rwxr-xr-x  1 tsc7 domain users   5379 Nov 19 2020 20:45 list.h
+4402229766367874668 -rwxr-xr-x  1 tsc7 domain users   2907 Nov 19 2020 20:40 main.c
+4402229774957809261 -rwxr-xr-x  1 tsc7 domain users    516 Nov 19 2020 17:47 makefile
+4402229783547743854 -rwxr-xr-x  1 tsc7 domain users   3295 Nov 19 2020 20:38 message.c
+4402229792137678447 -rwxr-xr-x  1 tsc7 domain users    544 Nov 19 2020 18:32 message.h
+4402229800727613040 -rwxr-xr-x  1 tsc7 domain users   7387 Nov 19 2020 20:41 process.c
+4402229809317547633 -rwxr-xr-x  1 tsc7 domain users    915 Nov 19 2020 16:59 process.h
+4402229817907482226 -rwxr-xr-x  1 tsc7 domain users   4241 Nov 19 2020 20:51 README.md
+4402229826497416819 -rwxr-xr-x  1 tsc7 domain users   1852 Nov 19 2020 20:38 semaphore.c
+4402229830792384116 -rwxr-xr-x  1 tsc7 domain users    488 Nov 19 2020 16:42 semaphore.h
+4402229843677286005 -rwxr-xr-x  1 tsc7 domain users   8241 Nov 19 2020 20:37 textmenu.c
+4402229852262294838 -rwxr-xr-x  1 tsc7 domain users    727 Nov 19 2020 18:34 textmenu.h
+4402234499416909111 -rwxr-xr-x  1 tsc7 domain users   7656 Nov 19 2020 20:58 main.o
+4402234559546451256 -rwxr-xr-x  1 tsc7 domain users  17904 Nov 19 2020 20:58 list.o
+4402234623970960697 -rwxr-xr-x  1 tsc7 domain users  24088 Nov 19 2020 20:58 textmenu.o
+4402234679805535546 -rwxr-xr-x  1 tsc7 domain users  17096 Nov 19 2020 20:58 process.o
+4402234735640110395 -rwxr-xr-x  1 tsc7 domain users  10048 Nov 19 2020 20:58 message.o
+4402234774294816060 -rwxr-xr-x  1 tsc7 domain users   7672 Nov 19 2020 20:58 semaphore.o
+4402234800064619837 -rwxr-xr-x  1 tsc7 domain users  46288 Nov 19 2020 21:01 main
 
 /home/tsc7/sfuhome/cmpt-300/cmpt300-A2:
-1976488527422319543 -rwxr-xr-x 1 tsc7 domain users  1308 Oct 27 2020 18:41 keyboard.c
-1976488531717286840 -rwxr-xr-x 1 tsc7 domain users   147 Oct 26 2020 22:45 keyboard.h
-1976488536012254137 -rwxr-xr-x 1 tsc7 domain users 14674 Sep 29 2020 19:58 list.c
-3022571887320109778 -rwxr-xr-x 1 tsc7 domain users  5377 Oct 25 2020 14:01 list.h
-3022571895910044371 -rwxr-xr-x 1 tsc7 domain users  1400 Oct 27 2020 18:08 listmanager.c
-3022571904499978964 -rwxr-xr-x 1 tsc7 domain users   524 Oct 27 2020 17:14 listmanager.h
-3022571913089913557 -rwxr-xr-x 1 tsc7 domain users   838 Oct 27 2020 19:12 main.c
-3022571921679848150 -rwxr-xr-x 1 tsc7 domain users   715 Oct 26 2020 21:42 makefile
-3022571930269782743 -rwxr-xr-x 1 tsc7 domain users  2187 Oct 27 2020 18:41 receiver.c
-3022571934564750040 -rwxr-xr-x 1 tsc7 domain users   141 Oct 26 2020 22:17 receiver.h
-3022571943154684633 -rwxr-xr-x 1 tsc7 domain users  1951 Oct 27 2020 18:58 screen.c
-3022571951744619226 -rwxr-xr-x 1 tsc7 domain users   170 Oct 26 2020 22:47 screen.h
-3022571960334553819 -rwxr-xr-x 1 tsc7 domain users  3117 Oct 27 2020 19:01 sender.c
-3022571968924488412 -rwxr-xr-x 1 tsc7 domain users   186 Oct 26 2020 23:25 sender.h
-3022571977514423005 -rwxr-xr-x 1 tsc7 domain users  1434 Oct 27 2020 18:56 shutdownmanager.c
-3022571986104357598 -rwxr-xr-x 1 tsc7 domain users   234 Oct 27 2020 18:09 shutdownmanager.h
-3022578093547852511 -rwxr-xr-x 1 tsc7 domain users  6808 Oct 27 2020 19:33 main.o
--8474417100065645687 -rwxr-xr-x 1 tsc7 domain users  9288 Oct 27 2020 19:33 keyboard.o
--8474417246094533750 -rwxr-xr-x 1 tsc7 domain users 16744 Oct 27 2020 19:33 sender.o
--8474417108655580277 -rwxr-xr-x 1 tsc7 domain users 12848 Oct 27 2020 19:33 receiver.o
--8474417173080089716 -rwxr-xr-x 1 tsc7 domain users 12464 Oct 27 2020 19:33 screen.o
--8474417082885776499 -rwxr-xr-x 1 tsc7 domain users 17904 Oct 27 2020 19:33 list.o
--8474417082885776498 -rwxr-xr-x 1 tsc7 domain users  8408 Oct 27 2020 19:33 listmanager.o
--8474416919677019249 -rwxr-xr-x 1 tsc7 domain users 10768 Oct 27 2020 19:33 shutdownmanager.o
--8474416971216626800 -rwxr-xr-x 1 tsc7 domain users 47720 Oct 27 2020 19:33 s-talk
+1976488527422319543 -rwxr-xr-x  1 tsc7 domain users   1308 Oct 27 2020 18:41 keyboard.c
+1976488531717286840 -rwxr-xr-x  1 tsc7 domain users    147 Oct 26 2020 22:45 keyboard.h
+1976488536012254137 -rwxr-xr-x  1 tsc7 domain users  14674 Sep 29 2020 19:58 list.c
+3022571887320109778 -rwxr-xr-x  1 tsc7 domain users   5377 Oct 25 2020 14:01 list.h
+3022571895910044371 -rwxr-xr-x  1 tsc7 domain users   1400 Oct 27 2020 18:08 listmanager.c
+3022571904499978964 -rwxr-xr-x  1 tsc7 domain users    524 Oct 27 2020 17:14 listmanager.h
+3022571913089913557 -rwxr-xr-x  1 tsc7 domain users    838 Oct 27 2020 19:12 main.c
+3022571921679848150 -rwxr-xr-x  1 tsc7 domain users    715 Oct 26 2020 21:42 makefile
+3022571930269782743 -rwxr-xr-x  1 tsc7 domain users   2187 Oct 27 2020 18:41 receiver.c
+3022571934564750040 -rwxr-xr-x  1 tsc7 domain users    141 Oct 26 2020 22:17 receiver.h
+3022571943154684633 -rwxr-xr-x  1 tsc7 domain users   1951 Oct 27 2020 18:58 screen.c
+3022571951744619226 -rwxr-xr-x  1 tsc7 domain users    170 Oct 26 2020 22:47 screen.h
+3022571960334553819 -rwxr-xr-x  1 tsc7 domain users   3117 Oct 27 2020 19:01 sender.c
+3022571968924488412 -rwxr-xr-x  1 tsc7 domain users    186 Oct 26 2020 23:25 sender.h
+3022571977514423005 -rwxr-xr-x  1 tsc7 domain users   1434 Oct 27 2020 18:56 shutdownmanager.c
+3022571986104357598 -rwxr-xr-x  1 tsc7 domain users    234 Oct 27 2020 18:09 shutdownmanager.h
+3022578093547852511 -rwxr-xr-x  1 tsc7 domain users   6808 Oct 27 2020 19:33 main.o
+9972326973643905929 -rwxr-xr-x  1 tsc7 domain users   9288 Oct 27 2020 19:33 keyboard.o
+9972326827615017866 -rwxr-xr-x  1 tsc7 domain users  16744 Oct 27 2020 19:33 sender.o
+9972326965053971339 -rwxr-xr-x  1 tsc7 domain users  12848 Oct 27 2020 19:33 receiver.o
+9972326900629461900 -rwxr-xr-x  1 tsc7 domain users  12464 Oct 27 2020 19:33 screen.o
+9972326990823775117 -rwxr-xr-x  1 tsc7 domain users  17904 Oct 27 2020 19:33 list.o
+9972326990823775118 -rwxr-xr-x  1 tsc7 domain users   8408 Oct 27 2020 19:33 listmanager.o
+9972327154032532367 -rwxr-xr-x  1 tsc7 domain users  10768 Oct 27 2020 19:33 shutdownmanager.o
+9972327102492924816 -rwxr-xr-x  1 tsc7 domain users  47720 Oct 27 2020 19:33 s-talk
 
 /home/tsc7/sfuhome/cmpt-300/cmpt300-A1:
-1976488497357548463 -rwxr-xr-x 1 tsc7 domain users 14674 Sep 29 2020 20:56 list.c
-1976488501652515760 -rwxr-xr-x 1 tsc7 domain users  5378 Sep 29 2020 20:56 list.h
-1976488505947483057 -rwxr-xr-x 1 tsc7 domain users    75 Sep 29 2020 20:56 makefile
-1976488510242450354 -rwxr-xr-x 1 tsc7 domain users 12718 Sep 29 2020 20:56 test.c
-1976488518832384947 -rwxr-xr-x 1 tsc7 domain users 22696 Sep 29 2020 21:14 test
+1976488497357548463 -rwxr-xr-x  1 tsc7 domain users  14674 Sep 29 2020 20:56 list.c
+1976488501652515760 -rwxr-xr-x  1 tsc7 domain users   5378 Sep 29 2020 20:56 list.h
+1976488505947483057 -rwxr-xr-x  1 tsc7 domain users     75 Sep 29 2020 20:56 makefile
+1976488510242450354 -rwxr-xr-x  1 tsc7 domain users  12718 Sep 29 2020 20:56 test.c
+1976488518832384947 -rwxr-xr-x  1 tsc7 domain users  22696 Sep 29 2020 21:14 test
 
 /home/tsc7/sfuhome/cmpt-127:
-6067307498029617178 drwxr-xr-x 2 tsc7 domain users     0 Apr  2 2019 12:27 CMPT127-1191-tsc7
+6067307498029617178 drwxr-xr-x  2 tsc7 domain users      0 Apr  2 2019 12:27 CMPT127-1191-tsc7
 
 /home/tsc7/sfuhome/cmpt-127/CMPT127-1191-tsc7:
--5121800383646959056 drwxr-xr-x 2 tsc7 domain users     0 Jan  8 2019 12:34 0
-1386528521066988412 drwxr-xr-x 2 tsc7 domain users     0 Apr  1 2019 23:34 1
-4357353345288316106 drwxr-xr-x 2 tsc7 domain users     0 Feb 25 2019 14:11 2
-4389485726501512406 drwxr-xr-x 2 tsc7 domain users     0 Feb 25 2019 14:11 3
--5880529025333770090 drwxr-xr-x 2 tsc7 domain users     0 Feb 25 2019 14:11 4
-4489643663763358346 -rwxr-xr-x 1 tsc7 domain users 12944 Apr  2 2019 12:27 a.out
-8784148456199010687 -rwxr-xr-x 1 tsc7 domain users   239 Feb 26 2019 11:49 Error.c
-8784148494853716352 -rwxr-xr-x 1 tsc7 domain users   852 Feb 26 2019 12:58 LabExam1.c
-4524348902180583972 drwxr-xr-x 2 tsc7 domain users     0 Apr  1 2019 12:06 10
-8512066993889124834 drwxr-xr-x 2 tsc7 domain users     0 Apr  1 2019 12:06 5
-8512743674576544230 drwxr-xr-x 2 tsc7 domain users     0 Apr  1 2019 23:34 6
-8512743704641315308 drwxr-xr-x 2 tsc7 domain users     0 Apr  1 2019 19:25 7
-7894968996195907160 drwxr-xr-x 2 tsc7 domain users     0 Apr  1 2019 12:06 8
-4421900969962856460 drwxr-xr-x 2 tsc7 domain users     0 Apr  1 2019 23:34 Midterm
-7762271343002128538 -rwxr-xr-x 1 tsc7 domain users  1172 Apr  2 2019 12:20 LabExam2.h
-654574731267944687 -rwxr-xr-x 1 tsc7 domain users  1414 Apr  2 2019 12:20 TestDriver.c
-4461591948153121447 -rwxr-xr-x 1 tsc7 domain users  2865 Apr  2 2019 12:20 LabExam2.c
+13324943690062592560 drwxr-xr-x  2 tsc7 domain users      0 Jan  8 2019 12:34 0
+1386528521066988412 drwxr-xr-x  2 tsc7 domain users      0 Apr  1 2019 23:34 1
+4357353345288316106 drwxr-xr-x  2 tsc7 domain users      0 Feb 25 2019 14:11 2
+4389485726501512406 drwxr-xr-x  2 tsc7 domain users      0 Feb 25 2019 14:11 3
+12566215048375781526 drwxr-xr-x  2 tsc7 domain users      0 Feb 25 2019 14:11 4
+4489643663763358346 -rwxr-xr-x  1 tsc7 domain users  12944 Apr  2 2019 12:27 a.out
+8784148456199010687 -rwxr-xr-x  1 tsc7 domain users    239 Feb 26 2019 11:49 Error.c
+8784148494853716352 -rwxr-xr-x  1 tsc7 domain users    852 Feb 26 2019 12:58 LabExam1.c
+4524348902180583972 drwxr-xr-x  2 tsc7 domain users      0 Apr  1 2019 12:06 10
+8512066993889124834 drwxr-xr-x  2 tsc7 domain users      0 Apr  1 2019 12:06 5
+8512743674576544230 drwxr-xr-x  2 tsc7 domain users      0 Apr  1 2019 23:34 6
+8512743704641315308 drwxr-xr-x  2 tsc7 domain users      0 Apr  1 2019 19:25 7
+7894968996195907160 drwxr-xr-x  2 tsc7 domain users      0 Apr  1 2019 12:06 8
+4421900969962856460 drwxr-xr-x  2 tsc7 domain users      0 Apr  1 2019 23:34 Midterm
+7762271343002128538 -rwxr-xr-x  1 tsc7 domain users   1172 Apr  2 2019 12:20 LabExam2.h
+654574731267944687 -rwxr-xr-x  1 tsc7 domain users   1414 Apr  2 2019 12:20 TestDriver.c
+4461591948153121447 -rwxr-xr-x  1 tsc7 domain users   2865 Apr  2 2019 12:20 LabExam2.c
 
 /home/tsc7/sfuhome/cmpt-127/CMPT127-1191-tsc7/Midterm:
-4421900969962856461 -rwxr-xr-x 1 tsc7 domain users  1070 Apr  1 2019 23:34 D100.c
-4421900974257823758 -rwxr-xr-x 1 tsc7 domain users  1217 Apr  1 2019 23:34 D200.c
-4421900978552791055 -rwxr-xr-x 1 tsc7 domain users  1061 Apr  1 2019 23:34 D300.c
-175665571161488748 -rwxr-xr-x 1 tsc7 domain users  1331 Apr  1 2019 23:34 D400.c
-175665575456456045 -rwxr-xr-x 1 tsc7 domain users  1293 Apr  1 2019 23:34 D500.c
+4421900969962856461 -rwxr-xr-x  1 tsc7 domain users   1070 Apr  1 2019 23:34 D100.c
+4421900974257823758 -rwxr-xr-x  1 tsc7 domain users   1217 Apr  1 2019 23:34 D200.c
+4421900978552791055 -rwxr-xr-x  1 tsc7 domain users   1061 Apr  1 2019 23:34 D300.c
+175665571161488748 -rwxr-xr-x  1 tsc7 domain users   1331 Apr  1 2019 23:34 D400.c
+175665575456456045 -rwxr-xr-x  1 tsc7 domain users   1293 Apr  1 2019 23:34 D500.c
 
 /home/tsc7/sfuhome/cmpt-127/CMPT127-1191-tsc7/8:
-7894969717750412889 -rwxr-xr-x 1 tsc7 domain users  2530 Apr  1 2019 12:06 demo.c
-8144685429937420823 -rwxr-xr-x 1 tsc7 domain users  1214 Apr  1 2019 12:06 point_array.h
-8144685434232388120 -rwxr-xr-x 1 tsc7 domain users  1755 Apr  1 2019 12:06 t1.c
-8144685438527355417 -rwxr-xr-x 1 tsc7 domain users  2003 Apr  1 2019 12:06 t2.c
+7894969717750412889 -rwxr-xr-x  1 tsc7 domain users   2530 Apr  1 2019 12:06 demo.c
+8144685429937420823 -rwxr-xr-x  1 tsc7 domain users   1214 Apr  1 2019 12:06 point_array.h
+8144685434232388120 -rwxr-xr-x  1 tsc7 domain users   1755 Apr  1 2019 12:06 t1.c
+8144685438527355417 -rwxr-xr-x  1 tsc7 domain users   2003 Apr  1 2019 12:06 t2.c
 
 /home/tsc7/sfuhome/cmpt-127/CMPT127-1191-tsc7/7:
-8512743708936282605 -rwxr-xr-x 1 tsc7 domain users   349 Apr  1 2019 12:06 Makefile
-8512743717526217198 -rwxr-xr-x 1 tsc7 domain users  1533 Apr  1 2019 12:06 list.c
-8512743721821184495 -rwxr-xr-x 1 tsc7 domain users  1811 Apr  1 2019 12:06 list.h
-4524438155903106242 -rwxr-xr-x 1 tsc7 domain users  3586 Apr  1 2019 12:06 main.c
-4524438164493040835 -rwxr-xr-x 1 tsc7 domain users  1984 Apr  1 2019 12:06 t1.c
-4524438173082975428 -rwxr-xr-x 1 tsc7 domain users  1482 Apr  1 2019 12:06 t2.c
-4524438228917550282 -rwxr-xr-x 1 tsc7 domain users  1491 Apr  1 2019 12:06 t3.c
-4524438276162190541 -rwxr-xr-x 1 tsc7 domain users  1976 Apr  1 2019 12:06 t4.c
--5845094114903655762 -rwxr-xr-x 1 tsc7 domain users  1486 Apr  1 2019 12:06 t5.c
-8153762276386961873 -rwxr-xr-x 1 tsc7 domain users   345 Apr  1 2019 19:25 test.c
-8153762272091994576 -rwxr-xr-x 1 tsc7 domain users  1031 Apr  1 2019 19:25 sort.c
+8512743708936282605 -rwxr-xr-x  1 tsc7 domain users    349 Apr  1 2019 12:06 Makefile
+8512743717526217198 -rwxr-xr-x  1 tsc7 domain users   1533 Apr  1 2019 12:06 list.c
+8512743721821184495 -rwxr-xr-x  1 tsc7 domain users   1811 Apr  1 2019 12:06 list.h
+4524438155903106242 -rwxr-xr-x  1 tsc7 domain users   3586 Apr  1 2019 12:06 main.c
+4524438164493040835 -rwxr-xr-x  1 tsc7 domain users   1984 Apr  1 2019 12:06 t1.c
+4524438173082975428 -rwxr-xr-x  1 tsc7 domain users   1482 Apr  1 2019 12:06 t2.c
+4524438228917550282 -rwxr-xr-x  1 tsc7 domain users   1491 Apr  1 2019 12:06 t3.c
+4524438276162190541 -rwxr-xr-x  1 tsc7 domain users   1976 Apr  1 2019 12:06 t4.c
+12601649958805895854 -rwxr-xr-x  1 tsc7 domain users   1486 Apr  1 2019 12:06 t5.c
+8153762276386961873 -rwxr-xr-x  1 tsc7 domain users    345 Apr  1 2019 19:25 test.c
+8153762272091994576 -rwxr-xr-x  1 tsc7 domain users   1031 Apr  1 2019 19:25 sort.c
 
 /home/tsc7/sfuhome/cmpt-127/CMPT127-1191-tsc7/6:
-8512743678871511527 -rwxr-xr-x 1 tsc7 domain users  6649 Apr  1 2019 12:06 intarr.c
-8512743683166478824 -rwxr-xr-x 1 tsc7 domain users  6005 Apr  1 2019 12:06 intarr.h
-8512743691756413417 -rwxr-xr-x 1 tsc7 domain users   263 Apr  1 2019 12:06 main.c
-8512743696051380714 -rwxr-xr-x 1 tsc7 domain users  2285 Apr  1 2019 23:34 t1.c
-8512743700346348011 -rwxr-xr-x 1 tsc7 domain users  2853 Apr  1 2019 12:06 t2.c
+8512743678871511527 -rwxr-xr-x  1 tsc7 domain users   6649 Apr  1 2019 12:06 intarr.c
+8512743683166478824 -rwxr-xr-x  1 tsc7 domain users   6005 Apr  1 2019 12:06 intarr.h
+8512743691756413417 -rwxr-xr-x  1 tsc7 domain users    263 Apr  1 2019 12:06 main.c
+8512743696051380714 -rwxr-xr-x  1 tsc7 domain users   2285 Apr  1 2019 23:34 t1.c
+8512743700346348011 -rwxr-xr-x  1 tsc7 domain users   2853 Apr  1 2019 12:06 t2.c
 
 /home/tsc7/sfuhome/cmpt-127/CMPT127-1191-tsc7/5:
-8512066998184092131 -rwxr-xr-x 1 tsc7 domain users  6649 Apr  1 2019 12:06 intarr.c
-8512067002479059428 -rwxr-xr-x 1 tsc7 domain users  4419 Apr  1 2019 12:06 intarr.h
-8512067006774026725 -rwxr-xr-x 1 tsc7 domain users   258 Apr  1 2019 12:06 main.c
+8512066998184092131 -rwxr-xr-x  1 tsc7 domain users   6649 Apr  1 2019 12:06 intarr.c
+8512067002479059428 -rwxr-xr-x  1 tsc7 domain users   4419 Apr  1 2019 12:06 intarr.h
+8512067006774026725 -rwxr-xr-x  1 tsc7 domain users    258 Apr  1 2019 12:06 main.c
 
 /home/tsc7/sfuhome/cmpt-127/CMPT127-1191-tsc7/10:
-4524348915065485862 -rwxr-xr-x 1 tsc7 domain users  2045 Apr  1 2019 12:06 image.cpp
-4524348923655420455 -rwxr-xr-x 1 tsc7 domain users  1026 Apr  1 2019 12:06 image.hpp
-8183564435979599385 -rwxr-xr-x 1 tsc7 domain users  4358 Apr  1 2019 12:06 image2.cpp
-8183564440274566685 -rwxr-xr-x 1 tsc7 domain users  1421 Apr  1 2019 12:06 image2.hpp
-8183564440274566686 -rwxr-xr-x 1 tsc7 domain users  4674 Apr  1 2019 12:06 image3.cpp
-8183564444569533983 -rwxr-xr-x 1 tsc7 domain users  1422 Apr  1 2019 12:06 image3.hpp
+4524348915065485862 -rwxr-xr-x  1 tsc7 domain users   2045 Apr  1 2019 12:06 image.cpp
+4524348923655420455 -rwxr-xr-x  1 tsc7 domain users   1026 Apr  1 2019 12:06 image.hpp
+8183564435979599385 -rwxr-xr-x  1 tsc7 domain users   4358 Apr  1 2019 12:06 image2.cpp
+8183564440274566685 -rwxr-xr-x  1 tsc7 domain users   1421 Apr  1 2019 12:06 image2.hpp
+8183564440274566686 -rwxr-xr-x  1 tsc7 domain users   4674 Apr  1 2019 12:06 image3.cpp
+8183564444569533983 -rwxr-xr-x  1 tsc7 domain users   1422 Apr  1 2019 12:06 image3.hpp
 
 /home/tsc7/sfuhome/cmpt-127/CMPT127-1191-tsc7/4:
--5880517428922070885 -rwxr-xr-x 1 tsc7 domain users   748 Feb 25 2019 14:11 Makefile
--5880515736704956260 -rwxr-xr-x 1 tsc7 domain users   759 Feb 11 2019 15:06 Makefile.macos
--5880513159724578659 -rwxr-xr-x 1 tsc7 domain users  5129 Feb 11 2019 15:06 draw.c
--5880508284936697698 -rwxr-xr-x 1 tsc7 domain users   372 Feb 11 2019 15:06 draw.h
--5880508263461861217 -rwxr-xr-x 1 tsc7 domain users 84225 Feb 11 2019 15:06 hadfield.png
--5880507133885462368 -rwxr-xr-x 1 tsc7 domain users  9990 Feb 11 2019 15:06 imgops.c
--5880505471733118815 -rwxr-xr-x 1 tsc7 domain users  5261 Feb 11 2019 15:06 imgops.h
--5880505441668347742 -rwxr-xr-x 1 tsc7 domain users  3399 Feb 11 2019 15:06 png.c
--5880505394423707485 -rwxr-xr-x 1 tsc7 domain users   634 Feb 11 2019 15:06 png.h
--6025120185988710190 -rwxr-xr-x 1 tsc7 domain users  1190 Feb 25 2019 14:11 t1.c
--6025120185988710189 -rwxr-xr-x 1 tsc7 domain users  1672 Feb 25 2019 14:11 t2.c
-4134071730876982798 -rwxr-xr-x 1 tsc7 domain users 76848 Feb 11 2019 15:06 test
--6025120134449102634 -rwxr-xr-x 1 tsc7 domain users  2617 Feb 25 2019 14:11 test.c
--6025120164513873708 -rwxr-xr-x 1 tsc7 domain users  1411 Feb 25 2019 14:11 t3.c
--6025120160218906411 -rwxr-xr-x 1 tsc7 domain users   503 Feb 25 2019 14:11 task.h
+12566226644787480731 -rwxr-xr-x  1 tsc7 domain users    748 Feb 25 2019 14:11 Makefile
+12566228337004595356 -rwxr-xr-x  1 tsc7 domain users    759 Feb 11 2019 15:06 Makefile.macos
+12566230913984972957 -rwxr-xr-x  1 tsc7 domain users   5129 Feb 11 2019 15:06 draw.c
+12566235788772853918 -rwxr-xr-x  1 tsc7 domain users    372 Feb 11 2019 15:06 draw.h
+12566235810247690399 -rwxr-xr-x  1 tsc7 domain users  84225 Feb 11 2019 15:06 hadfield.png
+12566236939824089248 -rwxr-xr-x  1 tsc7 domain users   9990 Feb 11 2019 15:06 imgops.c
+12566238601976432801 -rwxr-xr-x  1 tsc7 domain users   5261 Feb 11 2019 15:06 imgops.h
+12566238632041203874 -rwxr-xr-x  1 tsc7 domain users   3399 Feb 11 2019 15:06 png.c
+12566238679285844131 -rwxr-xr-x  1 tsc7 domain users    634 Feb 11 2019 15:06 png.h
+12421623887720841426 -rwxr-xr-x  1 tsc7 domain users   1190 Feb 25 2019 14:11 t1.c
+12421623887720841427 -rwxr-xr-x  1 tsc7 domain users   1672 Feb 25 2019 14:11 t2.c
+4134071730876982798 -rwxr-xr-x  1 tsc7 domain users  76848 Feb 11 2019 15:06 test
+12421623939260448982 -rwxr-xr-x  1 tsc7 domain users   2617 Feb 25 2019 14:11 test.c
+12421623909195677908 -rwxr-xr-x  1 tsc7 domain users   1411 Feb 25 2019 14:11 t3.c
+12421623913490645205 -rwxr-xr-x  1 tsc7 domain users    503 Feb 25 2019 14:11 task.h
 
 /home/tsc7/sfuhome/cmpt-127/CMPT127-1191-tsc7/3:
-4850031612179130820 -rwxr-xr-x 1 tsc7 domain users   738 Feb 11 2019 15:05 Makefile
-4850031612179130822 -rwxr-xr-x 1 tsc7 domain users   754 Feb 11 2019 15:06 Makefile.macos
-4850031612179130823 -rwxr-xr-x 1 tsc7 domain users  5129 Feb 11 2019 15:06 draw.c
-4850031616474098120 -rwxr-xr-x 1 tsc7 domain users   372 Feb 11 2019 15:06 draw.h
-7468249048854624254 -rwxr-xr-x 1 tsc7 domain users  1912 Feb 11 2019 15:06 fractal.c
-7468249057444558847 -rwxr-xr-x 1 tsc7 domain users   771 Feb 11 2019 15:06 get_name.c
-7468249061739526144 -rwxr-xr-x 1 tsc7 domain users   745 Feb 11 2019 15:06 get_name_parent.c
-7468249070329460737 -rwxr-xr-x 1 tsc7 domain users 84225 Feb 11 2019 15:06 hadfield.png
-7468249078919395330 -rwxr-xr-x 1 tsc7 domain users  9990 Feb 11 2019 15:06 imgops.c
-7468249087509329923 -rwxr-xr-x 1 tsc7 domain users  5261 Feb 11 2019 15:06 imgops.h
-7468249091804297220 -rwxr-xr-x 1 tsc7 domain users  3399 Feb 11 2019 15:06 png.c
-7468249096099264517 -rwxr-xr-x 1 tsc7 domain users   634 Feb 11 2019 15:06 png.h
-7468249104689199110 -rwxr-xr-x 1 tsc7 domain users  1511 Feb 11 2019 15:06 randomrandom.c
-8031396656670251194 -rwxr-xr-x 1 tsc7 domain users  2314 Feb 25 2019 14:11 test.c
-8031396549296068792 -rwxr-xr-x 1 tsc7 domain users  1385 Feb 25 2019 14:11 t3.c
-8031396583655807161 -rwxr-xr-x 1 tsc7 domain users  1228 Feb 25 2019 14:11 t7.c
+4850031612179130820 -rwxr-xr-x  1 tsc7 domain users    738 Feb 11 2019 15:05 Makefile
+4850031612179130822 -rwxr-xr-x  1 tsc7 domain users    754 Feb 11 2019 15:06 Makefile.macos
+4850031612179130823 -rwxr-xr-x  1 tsc7 domain users   5129 Feb 11 2019 15:06 draw.c
+4850031616474098120 -rwxr-xr-x  1 tsc7 domain users    372 Feb 11 2019 15:06 draw.h
+7468249048854624254 -rwxr-xr-x  1 tsc7 domain users   1912 Feb 11 2019 15:06 fractal.c
+7468249057444558847 -rwxr-xr-x  1 tsc7 domain users    771 Feb 11 2019 15:06 get_name.c
+7468249061739526144 -rwxr-xr-x  1 tsc7 domain users    745 Feb 11 2019 15:06 get_name_parent.c
+7468249070329460737 -rwxr-xr-x  1 tsc7 domain users  84225 Feb 11 2019 15:06 hadfield.png
+7468249078919395330 -rwxr-xr-x  1 tsc7 domain users   9990 Feb 11 2019 15:06 imgops.c
+7468249087509329923 -rwxr-xr-x  1 tsc7 domain users   5261 Feb 11 2019 15:06 imgops.h
+7468249091804297220 -rwxr-xr-x  1 tsc7 domain users   3399 Feb 11 2019 15:06 png.c
+7468249096099264517 -rwxr-xr-x  1 tsc7 domain users    634 Feb 11 2019 15:06 png.h
+7468249104689199110 -rwxr-xr-x  1 tsc7 domain users   1511 Feb 11 2019 15:06 randomrandom.c
+8031396656670251194 -rwxr-xr-x  1 tsc7 domain users   2314 Feb 25 2019 14:11 test.c
+8031396549296068792 -rwxr-xr-x  1 tsc7 domain users   1385 Feb 25 2019 14:11 t3.c
+8031396583655807161 -rwxr-xr-x  1 tsc7 domain users   1228 Feb 25 2019 14:11 t7.c
 
 /home/tsc7/sfuhome/cmpt-127/CMPT127-1191-tsc7/2:
-4357353353878250699 -rwxr-xr-x 1 tsc7 domain users  1181 Feb 11 2019 15:05 censored.c
-4357353375353087181 -rwxr-xr-x 1 tsc7 domain users   553 Feb 11 2019 15:05 contains.c
-4357353383943021774 -rwxr-xr-x 1 tsc7 domain users   649 Feb 11 2019 15:05 count.c
-4357353392532956367 -rwxr-xr-x 1 tsc7 domain users    45 Feb 11 2019 15:05 funcs.h
-4357353396827923664 -rwxr-xr-x 1 tsc7 domain users   193 Feb 11 2019 15:05 identical.c
-4357353405417858257 -rwxr-xr-x 1 tsc7 domain users   490 Feb 11 2019 15:05 inrect.c
-4389485692141774034 -rwxr-xr-x 1 tsc7 domain users   622 Feb 11 2019 15:05 letterfreq.c
-4389485700731708627 -rwxr-xr-x 1 tsc7 domain users   199 Feb 11 2019 15:05 reverse.c
-4389485705026675924 -rwxr-xr-x 1 tsc7 domain users   427 Feb 11 2019 15:05 scrambled.c
-4389485713616610517 -rwxr-xr-x 1 tsc7 domain users   515 Feb 11 2019 15:05 verticalgraph.c
-8031396149856974595 -rwxr-xr-x 1 tsc7 domain users    23 Feb 25 2019 14:11 beatles.txt
-8031396158446909188 -rwxr-xr-x 1 tsc7 domain users   295 Feb 25 2019 14:11 funcs.c
-8031396167036843781 -rwxr-xr-x 1 tsc7 domain users 20090 Feb 25 2019 14:11 happy_prince.txt
-8031396175626778374 -rwxr-xr-x 1 tsc7 domain users   234 Feb 25 2019 14:11 main.c
-8031396188511680263 -rwxr-xr-x 1 tsc7 domain users    99 Feb 25 2019 14:11 poem.txt
-8031396197101614856 -rwxr-xr-x 1 tsc7 domain users  1146 Feb 25 2019 14:11 t10.c
-8031396214281484041 -rwxr-xr-x 1 tsc7 domain users   255 Feb 25 2019 14:11 t2.c
-8031396429029848842 -rwxr-xr-x 1 tsc7 domain users   266 Feb 25 2019 14:11 t3.c
-8031396441914750731 -rwxr-xr-x 1 tsc7 domain users   287 Feb 25 2019 14:11 t4.c
+4357353353878250699 -rwxr-xr-x  1 tsc7 domain users   1181 Feb 11 2019 15:05 censored.c
+4357353375353087181 -rwxr-xr-x  1 tsc7 domain users    553 Feb 11 2019 15:05 contains.c
+4357353383943021774 -rwxr-xr-x  1 tsc7 domain users    649 Feb 11 2019 15:05 count.c
+4357353392532956367 -rwxr-xr-x  1 tsc7 domain users     45 Feb 11 2019 15:05 funcs.h
+4357353396827923664 -rwxr-xr-x  1 tsc7 domain users    193 Feb 11 2019 15:05 identical.c
+4357353405417858257 -rwxr-xr-x  1 tsc7 domain users    490 Feb 11 2019 15:05 inrect.c
+4389485692141774034 -rwxr-xr-x  1 tsc7 domain users    622 Feb 11 2019 15:05 letterfreq.c
+4389485700731708627 -rwxr-xr-x  1 tsc7 domain users    199 Feb 11 2019 15:05 reverse.c
+4389485705026675924 -rwxr-xr-x  1 tsc7 domain users    427 Feb 11 2019 15:05 scrambled.c
+4389485713616610517 -rwxr-xr-x  1 tsc7 domain users    515 Feb 11 2019 15:05 verticalgraph.c
+8031396149856974595 -rwxr-xr-x  1 tsc7 domain users     23 Feb 25 2019 14:11 beatles.txt
+8031396158446909188 -rwxr-xr-x  1 tsc7 domain users    295 Feb 25 2019 14:11 funcs.c
+8031396167036843781 -rwxr-xr-x  1 tsc7 domain users  20090 Feb 25 2019 14:11 happy_prince.txt
+8031396175626778374 -rwxr-xr-x  1 tsc7 domain users    234 Feb 25 2019 14:11 main.c
+8031396188511680263 -rwxr-xr-x  1 tsc7 domain users     99 Feb 25 2019 14:11 poem.txt
+8031396197101614856 -rwxr-xr-x  1 tsc7 domain users   1146 Feb 25 2019 14:11 t10.c
+8031396214281484041 -rwxr-xr-x  1 tsc7 domain users    255 Feb 25 2019 14:11 t2.c
+8031396429029848842 -rwxr-xr-x  1 tsc7 domain users    266 Feb 25 2019 14:11 t3.c
+8031396441914750731 -rwxr-xr-x  1 tsc7 domain users    287 Feb 25 2019 14:11 t4.c
 
 /home/tsc7/sfuhome/cmpt-127/CMPT127-1191-tsc7/1:
-5884151989241101932 -rwxr-xr-x 1 tsc7 domain users    85 Jan 15 2019 11:24 t1.c
-5877801742655012464 -rwxr-xr-x 1 tsc7 domain users  8448 Jan 15 2019 14:17 a.out
-7274463070804900537 -rwxr-xr-x 1 tsc7 domain users   799 Apr  1 2019 23:34 t2.c
-8407758563438177012 -rwxr-xr-x 1 tsc7 domain users   310 Apr  1 2019 23:34 t3.c
-8407759336532290296 -rwxr-xr-x 1 tsc7 domain users   262 Apr  1 2019 23:34 t4.c
-3746176694445854613 -rwxr-xr-x 1 tsc7 domain users   410 Apr  1 2019 23:34 t6.c
-3746176703035789204 -rwxr-xr-x 1 tsc7 domain users   218 Apr  1 2019 23:34 t5.c
-4390512507151341518 -rwxr-xr-x 1 tsc7 domain users   262 Feb 11 2019 15:05 t7.c
-4390512554395981787 -rwxr-xr-x 1 tsc7 domain users   437 Feb 11 2019 15:05 t8.c
-4164697368841556049 -rwxr-xr-x 1 tsc7 domain users   769 Feb 11 2019 15:05 t9.c
+5884151989241101932 -rwxr-xr-x  1 tsc7 domain users     85 Jan 15 2019 11:24 t1.c
+5877801742655012464 -rwxr-xr-x  1 tsc7 domain users   8448 Jan 15 2019 14:17 a.out
+7274463070804900537 -rwxr-xr-x  1 tsc7 domain users    799 Apr  1 2019 23:34 t2.c
+8407758563438177012 -rwxr-xr-x  1 tsc7 domain users    310 Apr  1 2019 23:34 t3.c
+8407759336532290296 -rwxr-xr-x  1 tsc7 domain users    262 Apr  1 2019 23:34 t4.c
+3746176694445854613 -rwxr-xr-x  1 tsc7 domain users    410 Apr  1 2019 23:34 t6.c
+3746176703035789204 -rwxr-xr-x  1 tsc7 domain users    218 Apr  1 2019 23:34 t5.c
+4390512507151341518 -rwxr-xr-x  1 tsc7 domain users    262 Feb 11 2019 15:05 t7.c
+4390512554395981787 -rwxr-xr-x  1 tsc7 domain users    437 Feb 11 2019 15:05 t8.c
+4164697368841556049 -rwxr-xr-x  1 tsc7 domain users    769 Feb 11 2019 15:05 t9.c
 
 /home/tsc7/sfuhome/cmpt-127/CMPT127-1191-tsc7/0:
--5121800370762057167 -rwxr-xr-x 1 tsc7 domain users    12 Jan  8 2019 12:28 tstsvn
-3667760998326172211 -rwxr-xr-x 1 tsc7 domain users     5 Jan  8 2019 12:35 handle
+13324943702947494449 -rwxr-xr-x  1 tsc7 domain users     12 Jan  8 2019 12:28 tstsvn
+3667760998326172211 -rwxr-xr-x  1 tsc7 domain users      5 Jan  8 2019 12:35 handle
 
 /home/tsc7/sfuhome/$RECYCLE.BIN:
-1264791487012555168 -rwxr-xr-x 1 tsc7 domain users   129 Sep 13 2018 12:28 desktop.ini
-1265409549986318758 -rwxr-xr-x 1 tsc7 domain users   108 Sep 13 2018 12:52 $IZ9VIM9.py
-1264912471946316196 -rwxr-xr-x 1 tsc7 domain users   282 Sep 13 2018 12:50 $RZ9VIM9.py
-2155108340270778795 -rwxr-xr-x 1 tsc7 domain users   154 Sep 20 2018 12:31 $IYDO8FB.mp4
-1264887569725933987 -rwxr-xr-x 1 tsc7 domain users 13283064 Sep 13 2018 12:33 $RYDO8FB.mp4
+1264791487012555168 -rwxr-xr-x  1 tsc7 domain users    129 Sep 13 2018 12:28 desktop.ini
+1265409549986318758 -rwxr-xr-x  1 tsc7 domain users    108 Sep 13 2018 12:52 $IZ9VIM9.py
+1264912471946316196 -rwxr-xr-x  1 tsc7 domain users    282 Sep 13 2018 12:50 $RZ9VIM9.py
+2155108340270778795 -rwxr-xr-x  1 tsc7 domain users    154 Sep 20 2018 12:31 $IYDO8FB.mp4
+1264887569725933987 -rwxr-xr-x  1 tsc7 domain users 13283064 Sep 13 2018 12:33 $RYDO8FB.mp4
 
-/home/tsc7/sfuhome/pub_html:
-
-tsc7@csil-cpu10:~/sfuhome/cmpt-300/cmpt300A4$ ./UnixLs -liR . .. ~
+tsc7@csil-cpu10:~/sfuhome/cmpt-300/cmpt300-A4$ ./UnixLs -liR . .. ~
 .:
-5042924172646138464 -rwxr-xr-x 1 tsc7 domain users  3211 Dec  5 2020 16:09 LsFile.c
-5042924176941105761 -rwxr-xr-x 1 tsc7 domain users   330 Dec  5 2020 15:53 LsFile.h
-5042924185531040354 -rwxr-xr-x 1 tsc7 domain users   103 Nov 29 2020 20:27 UnixLs.h
-5042924194120974947 -rwxr-xr-x 1 tsc7 domain users  1429 Dec  5 2020 15:39 UnixLs.c
-5042924202710909540 -rwxr-xr-x 1 tsc7 domain users    11 Nov 24 2020 23:18 README.md
-5042924207005876837 -rwxr-xr-x 1 tsc7 domain users 14674 Sep 29 2020 19:58 list.c
-5042924215595811430 -rwxr-xr-x 1 tsc7 domain users  5377 Dec  3 2020 18:58 list.h
-5042924228480713320 -rwxr-xr-x 1 tsc7 domain users   375 Dec  3 2020 18:53 makefile
-5042924237070647913 -rwxr-xr-x 1 tsc7 domain users     0 Nov 26 2020 17:55 SampleRun.txt
--9221002430345718140 -rwxr-xr-x 1 tsc7 domain users  1795 Dec  5 2020 15:54 LsOutput.c
-5042924262843758168 -rwxr-xr-x 1 tsc7 domain users   427 Dec  5 2020 15:39 LsOutput.h
--6715797935568866461 drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 15:12 test
-5042933385356062652 -rwxr-xr-x 1 tsc7 domain users  5680 Dec  5 2020 16:23 UnixLs.o
-5042933419715801021 -rwxr-xr-x 1 tsc7 domain users 13096 Dec  5 2020 16:23 LsOutput.o
-5042933548564819902 -rwxr-xr-x 1 tsc7 domain users 15456 Dec  5 2020 16:23 LsFile.o
-5042933587219525567 -rwxr-xr-x 1 tsc7 domain users 17904 Dec  5 2020 16:23 list.o
-5042933604399394752 -rwxr-xr-x 1 tsc7 domain users 36416 Dec  5 2020 16:23 UnixLs
+4315234447873532042 -rwxr-xr-x  1 tsc7 domain users   3271 Dec  5 2020 17:10 LsFile.c
+4315234469348368523 -rwxr-xr-x  1 tsc7 domain users    330 Dec  5 2020 15:53 LsFile.h
+4315234486528237708 -rwxr-xr-x  1 tsc7 domain users    103 Nov 29 2020 20:27 UnixLs.h
+4315234495118172301 -rwxr-xr-x  1 tsc7 domain users   1477 Dec  5 2020 17:11 UnixLs.c
+4315234499413139598 -rwxr-xr-x  1 tsc7 domain users     11 Nov 24 2020 23:18 README.md
+4315234503708106895 -rwxr-xr-x  1 tsc7 domain users  14674 Sep 29 2020 19:58 list.c
+4315234516593008784 -rwxr-xr-x  1 tsc7 domain users   5377 Dec  3 2020 18:58 list.h
+4315234520887976081 -rwxr-xr-x  1 tsc7 domain users    375 Dec  3 2020 18:53 makefile
+4315234529477910674 -rwxr-xr-x  1 tsc7 domain users 106912 Dec  5 2020 17:00 SampleRun.txt
+4315234538067845267 -rwxr-xr-x  1 tsc7 domain users   1860 Dec  5 2020 23:42 LsOutput.c
+4315234563837649044 -rwxr-xr-x  1 tsc7 domain users    441 Dec  5 2020 23:42 LsOutput.h
+4315234572427583637 drwxr-xr-x  2 tsc7 domain users      0 Dec  5 2020 23:52 test
+6354334982650949886 -rwxr-xr-x  1 tsc7 domain users   5680 Dec  5 2020 23:56 UnixLs.o
+5375649825817587968 -rwxr-xr-x  1 tsc7 domain users  13104 Dec  5 2020 23:56 LsOutput.o
+5375649830112555265 -rwxr-xr-x  1 tsc7 domain users  15464 Dec  5 2020 23:56 LsFile.o
+5375649834407522562 -rwxr-xr-x  1 tsc7 domain users  17904 Dec  5 2020 23:56 list.o
+5375649838702489859 -rwxr-xr-x  1 tsc7 domain users  36416 Dec  5 2020 23:56 UnixLs
 
 ./test:
-5042927153358773574 drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 15:07 perm
-5042927196308446541 drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 16:07 link
+5027575054751235052 drwxr-xr-x  2 tsc7 domain users      0 Dec  5 2020 16:07 link
 
 ./test/link:
-5042927204898381134 -rwxr-xr-x 1 tsc7 domain users    15 Dec  5 2020 16:04 a.txt
-5042927213488315727 lrwxrwxrwx 1 tsc7 domain users     5 Dec  5 2020 16:23 b.txt -> a.txt
-5042927222078250320 lrwxrwxrwx 1 tsc7 domain users     5 Dec  5 2020 16:23 c.txt -> a.txt
-
-./test/perm:
-5042927157653740871 -r-xr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:00 noperm.txt
-5042927166243675464 -rwxr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:04 owner.txt
-5042927170538642761 -rwxr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:06 group.txt
-5042927179128577354 -rwxr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:06 other.txt
-5042927183423544651 -rwxr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:06 all.txt
-5042927192013479244 -r-xr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:07 read.txt
+5027575059046202349 -rwxr-xr-x  1 tsc7 domain users     15 Dec  5 2020 16:04 a.txt
+5027575071931104238 lrwxrwxrwx  1 tsc7 domain users      5 Dec  5 2020 23:56 b.txt -> a.txt
+5027575076226071535 lrwxrwxrwx  1 tsc7 domain users      5 Dec  5 2020 23:56 c.txt -> a.txt
 
 ..:
-1976488493062581165 -rwxr-xr-x 1 tsc7 domain users  6913 Sep 29 2020 21:13 cmpt300-A1.zip
-1976488497357548462 drwxr-xr-x 2 tsc7 domain users     0 Sep 29 2020 21:14 cmpt300-A1
-1976488523127352245 -rwxr-xr-x 1 tsc7 domain users 13055 Oct 27 2020 19:32 cmpt300-A2.zip
-1976488527422319542 drwxr-xr-x 2 tsc7 domain users     0 Oct 27 2020 19:33 cmpt300-A2
-4402222155685826152 -rwxr-xr-x 1 tsc7 domain users 15381 Nov 19 2020 20:58 cmpt300-A3.zip
-4402229744893038185 drwxr-xr-x 2 tsc7 domain users     0 Nov 19 2020 21:01 cmpt300-A3
-1345746256152871516 -rwxr-xr-x 1 tsc7 domain users 177798 Dec  5 2020 16:22 cmpt300A4.zip
-1337733131373757022 drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 16:24 cmpt300A4
+1976488493062581165 -rwxr-xr-x  1 tsc7 domain users   6913 Sep 29 2020 21:13 cmpt300-A1.zip
+1976488497357548462 drwxr-xr-x  2 tsc7 domain users      0 Sep 29 2020 21:14 cmpt300-A1
+1976488523127352245 -rwxr-xr-x  1 tsc7 domain users  13055 Oct 27 2020 19:32 cmpt300-A2.zip
+1976488527422319542 drwxr-xr-x  2 tsc7 domain users      0 Oct 27 2020 19:33 cmpt300-A2
+4402222155685826152 -rwxr-xr-x  1 tsc7 domain users  15381 Nov 19 2020 20:58 cmpt300-A3.zip
+4402229744893038185 drwxr-xr-x  2 tsc7 domain users      0 Nov 19 2020 21:01 cmpt300-A3
+4315234087096279176 -rwxr-xr-x  1 tsc7 domain users  28949 Dec  5 2020 23:56 cmpt300-A4.zip
+4315234439283597449 drwxr-xr-x  2 tsc7 domain users      0 Dec  5 2020 23:56 cmpt300-A4
 
-../cmpt300A4:
-5042924172646138464 -rwxr-xr-x 1 tsc7 domain users  3211 Dec  5 2020 16:09 LsFile.c
-5042924176941105761 -rwxr-xr-x 1 tsc7 domain users   330 Dec  5 2020 15:53 LsFile.h
-5042924185531040354 -rwxr-xr-x 1 tsc7 domain users   103 Nov 29 2020 20:27 UnixLs.h
-5042924194120974947 -rwxr-xr-x 1 tsc7 domain users  1429 Dec  5 2020 15:39 UnixLs.c
-5042924202710909540 -rwxr-xr-x 1 tsc7 domain users    11 Nov 24 2020 23:18 README.md
-5042924207005876837 -rwxr-xr-x 1 tsc7 domain users 14674 Sep 29 2020 19:58 list.c
-5042924215595811430 -rwxr-xr-x 1 tsc7 domain users  5377 Dec  3 2020 18:58 list.h
-5042924228480713320 -rwxr-xr-x 1 tsc7 domain users   375 Dec  3 2020 18:53 makefile
-5042924237070647913 -rwxr-xr-x 1 tsc7 domain users     0 Nov 26 2020 17:55 SampleRun.txt
--9221002430345718140 -rwxr-xr-x 1 tsc7 domain users  1795 Dec  5 2020 15:54 LsOutput.c
-5042924262843758168 -rwxr-xr-x 1 tsc7 domain users   427 Dec  5 2020 15:39 LsOutput.h
--6715797935568866461 drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 15:12 test
-5042933385356062652 -rwxr-xr-x 1 tsc7 domain users  5680 Dec  5 2020 16:23 UnixLs.o
-5042933419715801021 -rwxr-xr-x 1 tsc7 domain users 13096 Dec  5 2020 16:23 LsOutput.o
-5042933548564819902 -rwxr-xr-x 1 tsc7 domain users 15456 Dec  5 2020 16:23 LsFile.o
-5042933587219525567 -rwxr-xr-x 1 tsc7 domain users 17904 Dec  5 2020 16:23 list.o
-5042933604399394752 -rwxr-xr-x 1 tsc7 domain users 36416 Dec  5 2020 16:23 UnixLs
+../cmpt300-A4:
+4315234447873532042 -rwxr-xr-x  1 tsc7 domain users   3271 Dec  5 2020 17:10 LsFile.c
+4315234469348368523 -rwxr-xr-x  1 tsc7 domain users    330 Dec  5 2020 15:53 LsFile.h
+4315234486528237708 -rwxr-xr-x  1 tsc7 domain users    103 Nov 29 2020 20:27 UnixLs.h
+4315234495118172301 -rwxr-xr-x  1 tsc7 domain users   1477 Dec  5 2020 17:11 UnixLs.c
+4315234499413139598 -rwxr-xr-x  1 tsc7 domain users     11 Nov 24 2020 23:18 README.md
+4315234503708106895 -rwxr-xr-x  1 tsc7 domain users  14674 Sep 29 2020 19:58 list.c
+4315234516593008784 -rwxr-xr-x  1 tsc7 domain users   5377 Dec  3 2020 18:58 list.h
+4315234520887976081 -rwxr-xr-x  1 tsc7 domain users    375 Dec  3 2020 18:53 makefile
+4315234529477910674 -rwxr-xr-x  1 tsc7 domain users 106912 Dec  5 2020 17:00 SampleRun.txt
+4315234538067845267 -rwxr-xr-x  1 tsc7 domain users   1860 Dec  5 2020 23:42 LsOutput.c
+4315234563837649044 -rwxr-xr-x  1 tsc7 domain users    441 Dec  5 2020 23:42 LsOutput.h
+4315234572427583637 drwxr-xr-x  2 tsc7 domain users      0 Dec  5 2020 23:52 test
+6354334982650949886 -rwxr-xr-x  1 tsc7 domain users   5680 Dec  5 2020 23:56 UnixLs.o
+5375649825817587968 -rwxr-xr-x  1 tsc7 domain users  13104 Dec  5 2020 23:56 LsOutput.o
+5375649830112555265 -rwxr-xr-x  1 tsc7 domain users  15464 Dec  5 2020 23:56 LsFile.o
+5375649834407522562 -rwxr-xr-x  1 tsc7 domain users  17904 Dec  5 2020 23:56 list.o
+5375649838702489859 -rwxr-xr-x  1 tsc7 domain users  36416 Dec  5 2020 23:56 UnixLs
 
-../cmpt300A4/test:
-5042927153358773574 drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 15:07 perm
-5042927196308446541 drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 16:07 link
+../cmpt300-A4/test:
+5027575054751235052 drwxr-xr-x  2 tsc7 domain users      0 Dec  5 2020 16:07 link
 
-../cmpt300A4/test/link:
-5042927204898381134 -rwxr-xr-x 1 tsc7 domain users    15 Dec  5 2020 16:04 a.txt
-5042927213488315727 lrwxrwxrwx 1 tsc7 domain users     5 Dec  5 2020 16:23 b.txt -> a.txt
-5042927222078250320 lrwxrwxrwx 1 tsc7 domain users     5 Dec  5 2020 16:23 c.txt -> a.txt
-
-../cmpt300A4/test/perm:
-5042927157653740871 -r-xr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:00 noperm.txt
-5042927166243675464 -rwxr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:04 owner.txt
-5042927170538642761 -rwxr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:06 group.txt
-5042927179128577354 -rwxr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:06 other.txt
-5042927183423544651 -rwxr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:06 all.txt
-5042927192013479244 -r-xr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:07 read.txt
+../cmpt300-A4/test/link:
+5027575059046202349 -rwxr-xr-x  1 tsc7 domain users     15 Dec  5 2020 16:04 a.txt
+5027575071931104238 lrwxrwxrwx  1 tsc7 domain users      5 Dec  5 2020 23:56 b.txt -> a.txt
+5027575076226071535 lrwxrwxrwx  1 tsc7 domain users      5 Dec  5 2020 23:56 c.txt -> a.txt
 
 ../cmpt300-A3:
-4402229749188005482 -rwxr-xr-x 1 tsc7 domain users 14674 Sep 29 2020 19:58 list.c
-4402229757777940075 -rwxr-xr-x 1 tsc7 domain users  5379 Nov 19 2020 20:45 list.h
-4402229766367874668 -rwxr-xr-x 1 tsc7 domain users  2907 Nov 19 2020 20:40 main.c
-4402229774957809261 -rwxr-xr-x 1 tsc7 domain users   516 Nov 19 2020 17:47 makefile
-4402229783547743854 -rwxr-xr-x 1 tsc7 domain users  3295 Nov 19 2020 20:38 message.c
-4402229792137678447 -rwxr-xr-x 1 tsc7 domain users   544 Nov 19 2020 18:32 message.h
-4402229800727613040 -rwxr-xr-x 1 tsc7 domain users  7387 Nov 19 2020 20:41 process.c
-4402229809317547633 -rwxr-xr-x 1 tsc7 domain users   915 Nov 19 2020 16:59 process.h
-4402229817907482226 -rwxr-xr-x 1 tsc7 domain users  4241 Nov 19 2020 20:51 README.md
-4402229826497416819 -rwxr-xr-x 1 tsc7 domain users  1852 Nov 19 2020 20:38 semaphore.c
-4402229830792384116 -rwxr-xr-x 1 tsc7 domain users   488 Nov 19 2020 16:42 semaphore.h
-4402229843677286005 -rwxr-xr-x 1 tsc7 domain users  8241 Nov 19 2020 20:37 textmenu.c
-4402229852262294838 -rwxr-xr-x 1 tsc7 domain users   727 Nov 19 2020 18:34 textmenu.h
-4402234499416909111 -rwxr-xr-x 1 tsc7 domain users  7656 Nov 19 2020 20:58 main.o
-4402234559546451256 -rwxr-xr-x 1 tsc7 domain users 17904 Nov 19 2020 20:58 list.o
-4402234623970960697 -rwxr-xr-x 1 tsc7 domain users 24088 Nov 19 2020 20:58 textmenu.o
-4402234679805535546 -rwxr-xr-x 1 tsc7 domain users 17096 Nov 19 2020 20:58 process.o
-4402234735640110395 -rwxr-xr-x 1 tsc7 domain users 10048 Nov 19 2020 20:58 message.o
-4402234774294816060 -rwxr-xr-x 1 tsc7 domain users  7672 Nov 19 2020 20:58 semaphore.o
-4402234800064619837 -rwxr-xr-x 1 tsc7 domain users 46288 Nov 19 2020 21:01 main
+4402229749188005482 -rwxr-xr-x  1 tsc7 domain users  14674 Sep 29 2020 19:58 list.c
+4402229757777940075 -rwxr-xr-x  1 tsc7 domain users   5379 Nov 19 2020 20:45 list.h
+4402229766367874668 -rwxr-xr-x  1 tsc7 domain users   2907 Nov 19 2020 20:40 main.c
+4402229774957809261 -rwxr-xr-x  1 tsc7 domain users    516 Nov 19 2020 17:47 makefile
+4402229783547743854 -rwxr-xr-x  1 tsc7 domain users   3295 Nov 19 2020 20:38 message.c
+4402229792137678447 -rwxr-xr-x  1 tsc7 domain users    544 Nov 19 2020 18:32 message.h
+4402229800727613040 -rwxr-xr-x  1 tsc7 domain users   7387 Nov 19 2020 20:41 process.c
+4402229809317547633 -rwxr-xr-x  1 tsc7 domain users    915 Nov 19 2020 16:59 process.h
+4402229817907482226 -rwxr-xr-x  1 tsc7 domain users   4241 Nov 19 2020 20:51 README.md
+4402229826497416819 -rwxr-xr-x  1 tsc7 domain users   1852 Nov 19 2020 20:38 semaphore.c
+4402229830792384116 -rwxr-xr-x  1 tsc7 domain users    488 Nov 19 2020 16:42 semaphore.h
+4402229843677286005 -rwxr-xr-x  1 tsc7 domain users   8241 Nov 19 2020 20:37 textmenu.c
+4402229852262294838 -rwxr-xr-x  1 tsc7 domain users    727 Nov 19 2020 18:34 textmenu.h
+4402234499416909111 -rwxr-xr-x  1 tsc7 domain users   7656 Nov 19 2020 20:58 main.o
+4402234559546451256 -rwxr-xr-x  1 tsc7 domain users  17904 Nov 19 2020 20:58 list.o
+4402234623970960697 -rwxr-xr-x  1 tsc7 domain users  24088 Nov 19 2020 20:58 textmenu.o
+4402234679805535546 -rwxr-xr-x  1 tsc7 domain users  17096 Nov 19 2020 20:58 process.o
+4402234735640110395 -rwxr-xr-x  1 tsc7 domain users  10048 Nov 19 2020 20:58 message.o
+4402234774294816060 -rwxr-xr-x  1 tsc7 domain users   7672 Nov 19 2020 20:58 semaphore.o
+4402234800064619837 -rwxr-xr-x  1 tsc7 domain users  46288 Nov 19 2020 21:01 main
 
 ../cmpt300-A2:
-1976488527422319543 -rwxr-xr-x 1 tsc7 domain users  1308 Oct 27 2020 18:41 keyboard.c
-1976488531717286840 -rwxr-xr-x 1 tsc7 domain users   147 Oct 26 2020 22:45 keyboard.h
-1976488536012254137 -rwxr-xr-x 1 tsc7 domain users 14674 Sep 29 2020 19:58 list.c
-3022571887320109778 -rwxr-xr-x 1 tsc7 domain users  5377 Oct 25 2020 14:01 list.h
-3022571895910044371 -rwxr-xr-x 1 tsc7 domain users  1400 Oct 27 2020 18:08 listmanager.c
-3022571904499978964 -rwxr-xr-x 1 tsc7 domain users   524 Oct 27 2020 17:14 listmanager.h
-3022571913089913557 -rwxr-xr-x 1 tsc7 domain users   838 Oct 27 2020 19:12 main.c
-3022571921679848150 -rwxr-xr-x 1 tsc7 domain users   715 Oct 26 2020 21:42 makefile
-3022571930269782743 -rwxr-xr-x 1 tsc7 domain users  2187 Oct 27 2020 18:41 receiver.c
-3022571934564750040 -rwxr-xr-x 1 tsc7 domain users   141 Oct 26 2020 22:17 receiver.h
-3022571943154684633 -rwxr-xr-x 1 tsc7 domain users  1951 Oct 27 2020 18:58 screen.c
-3022571951744619226 -rwxr-xr-x 1 tsc7 domain users   170 Oct 26 2020 22:47 screen.h
-3022571960334553819 -rwxr-xr-x 1 tsc7 domain users  3117 Oct 27 2020 19:01 sender.c
-3022571968924488412 -rwxr-xr-x 1 tsc7 domain users   186 Oct 26 2020 23:25 sender.h
-3022571977514423005 -rwxr-xr-x 1 tsc7 domain users  1434 Oct 27 2020 18:56 shutdownmanager.c
-3022571986104357598 -rwxr-xr-x 1 tsc7 domain users   234 Oct 27 2020 18:09 shutdownmanager.h
-3022578093547852511 -rwxr-xr-x 1 tsc7 domain users  6808 Oct 27 2020 19:33 main.o
--8474417100065645687 -rwxr-xr-x 1 tsc7 domain users  9288 Oct 27 2020 19:33 keyboard.o
--8474417246094533750 -rwxr-xr-x 1 tsc7 domain users 16744 Oct 27 2020 19:33 sender.o
--8474417108655580277 -rwxr-xr-x 1 tsc7 domain users 12848 Oct 27 2020 19:33 receiver.o
--8474417173080089716 -rwxr-xr-x 1 tsc7 domain users 12464 Oct 27 2020 19:33 screen.o
--8474417082885776499 -rwxr-xr-x 1 tsc7 domain users 17904 Oct 27 2020 19:33 list.o
--8474417082885776498 -rwxr-xr-x 1 tsc7 domain users  8408 Oct 27 2020 19:33 listmanager.o
--8474416919677019249 -rwxr-xr-x 1 tsc7 domain users 10768 Oct 27 2020 19:33 shutdownmanager.o
--8474416971216626800 -rwxr-xr-x 1 tsc7 domain users 47720 Oct 27 2020 19:33 s-talk
+1976488527422319543 -rwxr-xr-x  1 tsc7 domain users   1308 Oct 27 2020 18:41 keyboard.c
+1976488531717286840 -rwxr-xr-x  1 tsc7 domain users    147 Oct 26 2020 22:45 keyboard.h
+1976488536012254137 -rwxr-xr-x  1 tsc7 domain users  14674 Sep 29 2020 19:58 list.c
+3022571887320109778 -rwxr-xr-x  1 tsc7 domain users   5377 Oct 25 2020 14:01 list.h
+3022571895910044371 -rwxr-xr-x  1 tsc7 domain users   1400 Oct 27 2020 18:08 listmanager.c
+3022571904499978964 -rwxr-xr-x  1 tsc7 domain users    524 Oct 27 2020 17:14 listmanager.h
+3022571913089913557 -rwxr-xr-x  1 tsc7 domain users    838 Oct 27 2020 19:12 main.c
+3022571921679848150 -rwxr-xr-x  1 tsc7 domain users    715 Oct 26 2020 21:42 makefile
+3022571930269782743 -rwxr-xr-x  1 tsc7 domain users   2187 Oct 27 2020 18:41 receiver.c
+3022571934564750040 -rwxr-xr-x  1 tsc7 domain users    141 Oct 26 2020 22:17 receiver.h
+3022571943154684633 -rwxr-xr-x  1 tsc7 domain users   1951 Oct 27 2020 18:58 screen.c
+3022571951744619226 -rwxr-xr-x  1 tsc7 domain users    170 Oct 26 2020 22:47 screen.h
+3022571960334553819 -rwxr-xr-x  1 tsc7 domain users   3117 Oct 27 2020 19:01 sender.c
+3022571968924488412 -rwxr-xr-x  1 tsc7 domain users    186 Oct 26 2020 23:25 sender.h
+3022571977514423005 -rwxr-xr-x  1 tsc7 domain users   1434 Oct 27 2020 18:56 shutdownmanager.c
+3022571986104357598 -rwxr-xr-x  1 tsc7 domain users    234 Oct 27 2020 18:09 shutdownmanager.h
+3022578093547852511 -rwxr-xr-x  1 tsc7 domain users   6808 Oct 27 2020 19:33 main.o
+9972326973643905929 -rwxr-xr-x  1 tsc7 domain users   9288 Oct 27 2020 19:33 keyboard.o
+9972326827615017866 -rwxr-xr-x  1 tsc7 domain users  16744 Oct 27 2020 19:33 sender.o
+9972326965053971339 -rwxr-xr-x  1 tsc7 domain users  12848 Oct 27 2020 19:33 receiver.o
+9972326900629461900 -rwxr-xr-x  1 tsc7 domain users  12464 Oct 27 2020 19:33 screen.o
+9972326990823775117 -rwxr-xr-x  1 tsc7 domain users  17904 Oct 27 2020 19:33 list.o
+9972326990823775118 -rwxr-xr-x  1 tsc7 domain users   8408 Oct 27 2020 19:33 listmanager.o
+9972327154032532367 -rwxr-xr-x  1 tsc7 domain users  10768 Oct 27 2020 19:33 shutdownmanager.o
+9972327102492924816 -rwxr-xr-x  1 tsc7 domain users  47720 Oct 27 2020 19:33 s-talk
 
 ../cmpt300-A1:
-1976488497357548463 -rwxr-xr-x 1 tsc7 domain users 14674 Sep 29 2020 20:56 list.c
-1976488501652515760 -rwxr-xr-x 1 tsc7 domain users  5378 Sep 29 2020 20:56 list.h
-1976488505947483057 -rwxr-xr-x 1 tsc7 domain users    75 Sep 29 2020 20:56 makefile
-1976488510242450354 -rwxr-xr-x 1 tsc7 domain users 12718 Sep 29 2020 20:56 test.c
-1976488518832384947 -rwxr-xr-x 1 tsc7 domain users 22696 Sep 29 2020 21:14 test
+1976488497357548463 -rwxr-xr-x  1 tsc7 domain users  14674 Sep 29 2020 20:56 list.c
+1976488501652515760 -rwxr-xr-x  1 tsc7 domain users   5378 Sep 29 2020 20:56 list.h
+1976488505947483057 -rwxr-xr-x  1 tsc7 domain users     75 Sep 29 2020 20:56 makefile
+1976488510242450354 -rwxr-xr-x  1 tsc7 domain users  12718 Sep 29 2020 20:56 test.c
+1976488518832384947 -rwxr-xr-x  1 tsc7 domain users  22696 Sep 29 2020 21:14 test
 
 /home/tsc7:
-453204442293707733 drwxr-xr-x 2 tsc7 domain users     0 Sep 29 2020 21:08 sfuhome
-15569765750 drwxr-xr-x 2 tsc7 domain users    10 Jan 15 2019 11:13 Desktop
-16107621202 drwxr-xr-x 2 tsc7 domain users    10 Dec  2 2019 11:09 Downloads
-16643396550 drwxr-xr-x 2 tsc7 domain users    10 Jan  8 2019 11:30 Templates
-170842 drwxr-xr-x 2 tsc7 domain users    10 Jan  8 2019 11:30 Public
-537041886 drwxr-xr-x 2 tsc7 domain users    10 Jan  8 2019 11:30 Documents
-1075043502 drwxr-xr-x 2 tsc7 domain users    10 Jan  8 2019 11:30 Music
-1610725214 drwxr-xr-x 2 tsc7 domain users    10 Jan  8 2019 11:30 Pictures
-2148029073 drwxr-xr-x 2 tsc7 domain users    10 Jan  8 2019 11:30 Videos
-8594901754 lrwxrwxrwx 1 tsc7 domain users    37 Sep 13 2019 12:32 Android -> /usr/shared/CMPT/scratch/tsc7/Android
-8594901756 lrwxrwxrwx 1 tsc7 domain users    40 Sep 13 2019 12:32 VirtualBox VMs -> /usr/shared/CMPT/scratch/tsc7/VirtualBox
+453204442293707733 drwxr-xr-x  2 tsc7 domain users      0 Sep 29 2020 21:08 sfuhome
+15569765750 drwxr-xr-x  2 tsc7 domain users     10 Jan 15 2019 11:13 Desktop
+16107621202 drwxr-xr-x  2 tsc7 domain users     10 Dec  2 2019 11:09 Downloads
+16643396550 drwxr-xr-x  2 tsc7 domain users     10 Jan  8 2019 11:30 Templates
+170842 drwxr-xr-x  2 tsc7 domain users     10 Jan  8 2019 11:30 Public
+537041886 drwxr-xr-x  2 tsc7 domain users     10 Jan  8 2019 11:30 Documents
+1075043502 drwxr-xr-x  2 tsc7 domain users     10 Jan  8 2019 11:30 Music
+1610725214 drwxr-xr-x  2 tsc7 domain users     10 Jan  8 2019 11:30 Pictures
+2148029073 drwxr-xr-x  2 tsc7 domain users     10 Jan  8 2019 11:30 Videos
+8594901754 lrwxrwxrwx  1 tsc7 domain users     37 Sep 13 2019 12:32 Android -> /usr/shared/CMPT/scratch/tsc7/Android
+8594901756 lrwxrwxrwx  1 tsc7 domain users     40 Sep 13 2019 12:32 VirtualBox VMs -> /usr/shared/CMPT/scratch/tsc7/VirtualBox
 
 /home/tsc7/VirtualBox VMs:
 
 /home/tsc7/Android:
-104595657 drwxr-xr-x 2 tsc7 domain users  4096 Sep 13 2019 12:32 Sdk
+104595657 drwxr-xr-x  2 tsc7 domain users   4096 Sep 13 2019 12:32 Sdk
 
 /home/tsc7/Android/Sdk:
 
@@ -1512,522 +1455,511 @@ tsc7@csil-cpu10:~/sfuhome/cmpt-300/cmpt300A4$ ./UnixLs -liR . .. ~
 /home/tsc7/Desktop:
 
 /home/tsc7/sfuhome:
--6652083375647884485 drwxr-xr-x 2 tsc7 domain users     0 Jun  6 2018 14:04 pub_html
-1264783695941880222 -rwxr-xr-x 1 tsc7 domain users   282 Oct  4 2019 11:16 desktop.ini
-1264791487012555167 drwxr-xr-x 2 tsc7 domain users     0 Sep 20 2018 12:31 $RECYCLE.BIN
-4162612982555926768 drwxr-xr-x 2 tsc7 domain users     0 Jan  8 2019 12:25 cmpt-127
-1976368427251821484 drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 16:23 cmpt-300
--3101329114822780212 drwxr-xr-x 2 tsc7 domain users     0 Nov 24 2019 00:15 cmpt-295
--3366194018479945042 drwxr-xr-x 2 tsc7 domain users     0 Dec  2 2019 11:09 cmpt-225
-1264885284803332514 drwxr-xr-x 2 tsc7 domain users     0 Oct  4 2018 12:31 cmpt-120
+11794660698061667131 drwxr-xr-x  2 tsc7 domain users      0 Jun  6 2018 14:04 pub_html
+1264783695941880222 -rwxr-xr-x  1 tsc7 domain users    282 Oct  4 2019 11:16 desktop.ini
+1264791487012555167 drwxr-xr-x  2 tsc7 domain users      0 Sep 20 2018 12:31 $RECYCLE.BIN
+4162612982555926768 drwxr-xr-x  2 tsc7 domain users      0 Jan  8 2019 12:25 cmpt-127
+1976368427251821484 drwxr-xr-x  2 tsc7 domain users      0 Dec  5 2020 23:56 cmpt-300
+15345414958886771404 drwxr-xr-x  2 tsc7 domain users      0 Nov 24 2019 00:15 cmpt-295
+15080550055229606574 drwxr-xr-x  2 tsc7 domain users      0 Dec  2 2019 11:09 cmpt-225
+1264885284803332514 drwxr-xr-x  2 tsc7 domain users      0 Oct  4 2018 12:31 cmpt-120
 
 /home/tsc7/sfuhome/cmpt-120:
-2155144469535767586 -rwxr-xr-x 1 tsc7 domain users  5851 Sep 20 2018 13:20 Lab Week 3.py
-1264879666986109345 -rwxr-xr-x 1 tsc7 domain users 59207 Sep 13 2018 12:32 labWk2.pdf
-1430776863308007847 -rwxr-xr-x 1 tsc7 domain users  8704 Sep 16 2018 18:43 Thumbs.db
-1265402819772565925 -rwxr-xr-x 1 tsc7 domain users  1750 Sep 16 2018 19:19 Lab Week 2.py
--8753236940848931661 -rwxr-xr-x 1 tsc7 domain users  2132 Sep 27 2018 13:19 Lab Week 4.py
-2155106317341182378 -rwxr-xr-x 1 tsc7 domain users 158918 Sep 20 2018 12:30 labWk3.pdf
-2155433701225242978 -rwxr-xr-x 1 tsc7 domain users 224606 Sep 27 2018 12:34 labWk4.pdf
-1927010289401973870 -rwxr-xr-x 1 tsc7 domain users  2562 Oct  4 2018 13:19 Lab Week 5.py
-1927008867769338024 -rwxr-xr-x 1 tsc7 domain users 119026 Oct  4 2018 12:30 labWk5.pdf
+2155144469535767586 -rwxr-xr-x  1 tsc7 domain users   5851 Sep 20 2018 13:20 Lab Week 3.py
+1264879666986109345 -rwxr-xr-x  1 tsc7 domain users  59207 Sep 13 2018 12:32 labWk2.pdf
+1430776863308007847 -rwxr-xr-x  1 tsc7 domain users   8704 Sep 16 2018 18:43 Thumbs.db
+1265402819772565925 -rwxr-xr-x  1 tsc7 domain users   1750 Sep 16 2018 19:19 Lab Week 2.py
+9693507132860619955 -rwxr-xr-x  1 tsc7 domain users   2132 Sep 27 2018 13:19 Lab Week 4.py
+2155106317341182378 -rwxr-xr-x  1 tsc7 domain users 158918 Sep 20 2018 12:30 labWk3.pdf
+2155433701225242978 -rwxr-xr-x  1 tsc7 domain users 224606 Sep 27 2018 12:34 labWk4.pdf
+1927010289401973870 -rwxr-xr-x  1 tsc7 domain users   2562 Oct  4 2018 13:19 Lab Week 5.py
+1927008867769338024 -rwxr-xr-x  1 tsc7 domain users 119026 Oct  4 2018 12:30 labWk5.pdf
 
 /home/tsc7/sfuhome/cmpt-225:
--3366193129421714769 -rwxr-xr-x 1 tsc7 domain users  5574 Oct 21 2019 22:36 A1a.zip
--3366192910378382672 drwxr-xr-x 2 tsc7 domain users     0 Oct 21 2019 22:36 A1a
-5585508434771456434 -rwxr-xr-x 1 tsc7 domain users  5881 Oct 22 2019 19:11 A1-travis.zip
-5585508434771456435 drwxr-xr-x 2 tsc7 domain users     0 Oct 22 2019 19:12 A1-travis
--47669176238431432 drwxr-xr-x 2 tsc7 domain users     0 Dec  2 2019 12:05 TEST
-7877425433451919401 drwxr-xr-x 2 tsc7 domain users     0 Dec  2 2019 11:05 A2
+15080550944287836847 -rwxr-xr-x  1 tsc7 domain users   5574 Oct 21 2019 22:36 A1a.zip
+15080551163331168944 drwxr-xr-x  2 tsc7 domain users      0 Oct 21 2019 22:36 A1a
+5585508434771456434 -rwxr-xr-x  1 tsc7 domain users   5881 Oct 22 2019 19:11 A1-travis.zip
+5585508434771456435 drwxr-xr-x  2 tsc7 domain users      0 Oct 22 2019 19:12 A1-travis
+18399074897471120184 drwxr-xr-x  2 tsc7 domain users      0 Dec  2 2019 12:05 TEST
+7877425433451919401 drwxr-xr-x  2 tsc7 domain users      0 Dec  2 2019 11:05 A2
 
 /home/tsc7/sfuhome/cmpt-225/A2:
-6526348225286704899 -rwxr-xr-x 1 tsc7 domain users 11839 Dec  2 2019 11:01 AvlTreeB.h
-6526348225286704898 -rwxr-xr-x 1 tsc7 domain users  8628 Dec  2 2019 10:44 BinarySearchTree1.h
-6526348229581672193 -rwxr-xr-x 1 tsc7 domain users  9009 Dec  2 2019 10:41 BinarySearchTree2.h
-6526348225286704900 -rwxr-xr-x 1 tsc7 domain users   283 Nov 28 2019 18:45 dsexceptions.h
-6526348229581672197 -rwxr-xr-x 1 tsc7 domain users   417 Dec  1 2019 17:58 Makefile
--48475539169770038 -rwxr-xr-x 1 tsc7 domain users  1122 Dec  1 2019 17:49 TestAVLTree.cpp
-6526348229581672198 -rwxr-xr-x 1 tsc7 domain users   855 Dec  2 2019 10:54 TestBinarySearchTree1.cpp
-6526348233876639495 -rwxr-xr-x 1 tsc7 domain users  1287 Dec  2 2019 10:44 TestBinarySearchTree2.cpp
+6526348225286704899 -rwxr-xr-x  1 tsc7 domain users  11839 Dec  2 2019 11:01 AvlTreeB.h
+6526348225286704898 -rwxr-xr-x  1 tsc7 domain users   8628 Dec  2 2019 10:44 BinarySearchTree1.h
+6526348229581672193 -rwxr-xr-x  1 tsc7 domain users   9009 Dec  2 2019 10:41 BinarySearchTree2.h
+6526348225286704900 -rwxr-xr-x  1 tsc7 domain users    283 Nov 28 2019 18:45 dsexceptions.h
+6526348229581672197 -rwxr-xr-x  1 tsc7 domain users    417 Dec  1 2019 17:58 Makefile
+18398268534539781578 -rwxr-xr-x  1 tsc7 domain users   1122 Dec  1 2019 17:49 TestAVLTree.cpp
+6526348229581672198 -rwxr-xr-x  1 tsc7 domain users    855 Dec  2 2019 10:54 TestBinarySearchTree1.cpp
+6526348233876639495 -rwxr-xr-x  1 tsc7 domain users   1287 Dec  2 2019 10:44 TestBinarySearchTree2.cpp
 
 /home/tsc7/sfuhome/cmpt-225/TEST:
--161306039432688108 -rwxr-xr-x 1 tsc7 domain users  9910 Dec  2 2019 12:05 A2.zip
--47661840434289862 drwxr-xr-x 2 tsc7 domain users     0 Dec  2 2019 12:05 A2
+18285438034276863508 -rwxr-xr-x  1 tsc7 domain users   9910 Dec  2 2019 12:05 A2.zip
+18399082233275261754 drwxr-xr-x  2 tsc7 domain users      0 Dec  2 2019 12:05 A2
 
 /home/tsc7/sfuhome/cmpt-225/TEST/A2:
--47661836139322565 -rwxr-xr-x 1 tsc7 domain users  9009 Dec  2 2019 10:41 BinarySearchTree2.h
--47661831844355268 -rwxr-xr-x 1 tsc7 domain users  8628 Dec  2 2019 10:44 BinarySearchTree1.h
--47661827549387971 -rwxr-xr-x 1 tsc7 domain users 12256 Dec  2 2019 12:04 AvlTreeB.h
--47661823254420674 -rwxr-xr-x 1 tsc7 domain users   283 Nov 28 2019 18:45 dsexceptions.h
--47661823254420673 -rwxr-xr-x 1 tsc7 domain users   417 Dec  1 2019 17:58 Makefile
--47661818959453376 -rwxr-xr-x 1 tsc7 domain users   855 Dec  2 2019 10:54 TestBinarySearchTree1.cpp
--47661814664486079 -rwxr-xr-x 1 tsc7 domain users  1287 Dec  2 2019 10:44 TestBinarySearchTree2.cpp
--6126819419474638216 -rwxr-xr-x 1 tsc7 domain users  1122 Dec  2 2019 12:04 TestAVLTree.cpp
+18399082237570229051 -rwxr-xr-x  1 tsc7 domain users   9009 Dec  2 2019 10:41 BinarySearchTree2.h
+18399082241865196348 -rwxr-xr-x  1 tsc7 domain users   8628 Dec  2 2019 10:44 BinarySearchTree1.h
+18399082246160163645 -rwxr-xr-x  1 tsc7 domain users  12256 Dec  2 2019 12:04 AvlTreeB.h
+18399082250455130942 -rwxr-xr-x  1 tsc7 domain users    283 Nov 28 2019 18:45 dsexceptions.h
+18399082250455130943 -rwxr-xr-x  1 tsc7 domain users    417 Dec  1 2019 17:58 Makefile
+18399082254750098240 -rwxr-xr-x  1 tsc7 domain users    855 Dec  2 2019 10:54 TestBinarySearchTree1.cpp
+18399082259045065537 -rwxr-xr-x  1 tsc7 domain users   1287 Dec  2 2019 10:44 TestBinarySearchTree2.cpp
+12319924654234913400 -rwxr-xr-x  1 tsc7 domain users   1122 Dec  2 2019 12:04 TestAVLTree.cpp
 
 /home/tsc7/sfuhome/cmpt-225/A1-travis:
-5585508443361391028 -rwxr-xr-x 1 tsc7 domain users   283 Oct 13 2019 18:13 dsexceptions.h
-5585508443361391029 -rwxr-xr-x 1 tsc7 domain users  2036 Oct 22 2019 19:08 Exp.cpp
-5585508443361391030 -rwxr-xr-x 1 tsc7 domain users  8377 Oct 22 2019 19:08 List.h
-5585508443361391031 -rwxr-xr-x 1 tsc7 domain users   123 Oct 20 2019 21:21 Makefile
-5585508443361391032 -rwxr-xr-x 1 tsc7 domain users  3073 Oct 22 2019 19:08 Test.cpp
-5585508443361391033 -rwxr-xr-x 1 tsc7 domain users  4492 Oct 22 2019 16:13 Vector.h
-5585508451951325626 -rwxr-xr-x 1 tsc7 domain users 47368 Oct 22 2019 19:12 Test.o
-5585508447656358331 -rwxr-xr-x 1 tsc7 domain users 26600 Oct 22 2019 19:12 Test
-5585508443361391036 -rwxr-xr-x 1 tsc7 domain users 24328 Oct 22 2019 19:12 Exp.o
-5585508443361391037 -rwxr-xr-x 1 tsc7 domain users 20168 Oct 22 2019 19:12 Exp
+5585508443361391028 -rwxr-xr-x  1 tsc7 domain users    283 Oct 13 2019 18:13 dsexceptions.h
+5585508443361391029 -rwxr-xr-x  1 tsc7 domain users   2036 Oct 22 2019 19:08 Exp.cpp
+5585508443361391030 -rwxr-xr-x  1 tsc7 domain users   8377 Oct 22 2019 19:08 List.h
+5585508443361391031 -rwxr-xr-x  1 tsc7 domain users    123 Oct 20 2019 21:21 Makefile
+5585508443361391032 -rwxr-xr-x  1 tsc7 domain users   3073 Oct 22 2019 19:08 Test.cpp
+5585508443361391033 -rwxr-xr-x  1 tsc7 domain users   4492 Oct 22 2019 16:13 Vector.h
+5585508451951325626 -rwxr-xr-x  1 tsc7 domain users  47368 Oct 22 2019 19:12 Test.o
+5585508447656358331 -rwxr-xr-x  1 tsc7 domain users  26600 Oct 22 2019 19:12 Test
+5585508443361391036 -rwxr-xr-x  1 tsc7 domain users  24328 Oct 22 2019 19:12 Exp.o
+5585508443361391037 -rwxr-xr-x  1 tsc7 domain users  20168 Oct 22 2019 19:12 Exp
 
 /home/tsc7/sfuhome/cmpt-225/A1a:
--3383581244390028619 -rwxr-xr-x 1 tsc7 domain users   283 Oct 13 2019 18:13 dsexceptions.h
--3383581235800094026 -rwxr-xr-x 1 tsc7 domain users  1667 Oct 21 2019 22:13 Exp.cpp
--2175523024106337609 -rwxr-xr-x 1 tsc7 domain users  8523 Oct 21 2019 22:14 List.h
--2175523015516403016 -rwxr-xr-x 1 tsc7 domain users   123 Oct 20 2019 21:21 Makefile
--2175523006926468423 -rwxr-xr-x 1 tsc7 domain users  1781 Oct 21 2019 22:07 Test.cpp
--2175522998336533830 -rwxr-xr-x 1 tsc7 domain users  4492 Oct 21 2019 22:14 Vector.h
--2175519837240603973 -rwxr-xr-x 1 tsc7 domain users 44408 Oct 21 2019 22:36 Test.o
-9047301287108260104 -rwxr-xr-x 1 tsc7 domain users 26600 Oct 21 2019 22:36 Test
-6565707571888164977 -rwxr-xr-x 1 tsc7 domain users 24448 Oct 21 2019 22:36 Exp.o
-6565707846766071922 -rwxr-xr-x 1 tsc7 domain users 20168 Oct 21 2019 22:36 Exp
+15063162829319522997 -rwxr-xr-x  1 tsc7 domain users    283 Oct 13 2019 18:13 dsexceptions.h
+15063162837909457590 -rwxr-xr-x  1 tsc7 domain users   1667 Oct 21 2019 22:13 Exp.cpp
+16271221049603214007 -rwxr-xr-x  1 tsc7 domain users   8523 Oct 21 2019 22:14 List.h
+16271221058193148600 -rwxr-xr-x  1 tsc7 domain users    123 Oct 20 2019 21:21 Makefile
+16271221066783083193 -rwxr-xr-x  1 tsc7 domain users   1781 Oct 21 2019 22:07 Test.cpp
+16271221075373017786 -rwxr-xr-x  1 tsc7 domain users   4492 Oct 21 2019 22:14 Vector.h
+16271224236468947643 -rwxr-xr-x  1 tsc7 domain users  44408 Oct 21 2019 22:36 Test.o
+9047301287108260104 -rwxr-xr-x  1 tsc7 domain users  26600 Oct 21 2019 22:36 Test
+6565707571888164977 -rwxr-xr-x  1 tsc7 domain users  24448 Oct 21 2019 22:36 Exp.o
+6565707846766071922 -rwxr-xr-x  1 tsc7 domain users  20168 Oct 21 2019 22:36 Exp
 
 /home/tsc7/sfuhome/cmpt-295:
--3099969761968563507 -rwxr-xr-x 1 tsc7 domain users  5755 Sep 14 2019 16:41 q3.zip
--3099916843676509490 drwxr-xr-x 2 tsc7 domain users     0 Sep 14 2019 16:42 q3
--3099916787841934634 -rwxr-xr-x 1 tsc7 domain users  5635 Sep 17 2019 09:15 q4.zip
--3099916779252000041 drwxr-xr-x 2 tsc7 domain users     0 Sep 17 2019 09:16 q4
--3361054076497600466 -rwxr-xr-x 1 tsc7 domain users  2032 Sep 19 2019 18:04 q4b.zip
--3361048707788480465 drwxr-xr-x 2 tsc7 domain users     0 Sep 19 2019 18:39 q4b
--8649879583663558911 -rwxr-xr-x 1 tsc7 domain users  1125 Sep 26 2019 20:21 a2a.zip
--8649879570778657022 drwxr-xr-x 2 tsc7 domain users     0 Sep 26 2019 20:21 a2a
-4550478199017834682 -rwxr-xr-x 1 tsc7 domain users  2070 Oct  2 2019 23:25 a3a.zip
-4550478199017834683 drwxr-xr-x 2 tsc7 domain users     0 Oct  2 2019 23:26 a3a
--5195158901788933904 -rwxr-xr-x 1 tsc7 domain users  2539 Oct 16 2019 21:08 a4.zip
--5195158893198999311 drwxr-xr-x 2 tsc7 domain users     0 Oct 16 2019 21:10 a4
--2194612397094076086 drwxr-xr-x 2 tsc7 domain users     0 Oct 22 2019 10:38 care-l5
--2194612358439370417 -rwxr-xr-x 1 tsc7 domain users  1733 Oct 22 2019 09:32 care-l5.zip
--3260400332503723096 -rwxr-xr-x 1 tsc7 domain users  2878 Oct 24 2019 15:28 A5.zip
--3260400323913788503 drwxr-xr-x 2 tsc7 domain users     0 Oct 24 2019 22:39 A5
--3260400104870456399 -rwxr-xr-x 1 tsc7 domain users 12089 Oct 28 2019 11:44 a6.zip
--3260400053330848844 drwxr-xr-x 2 tsc7 domain users     0 Oct 28 2019 11:45 a6
-8274155496797778260 -rwxr-xr-x 1 tsc7 domain users  8986 Oct 28 2019 22:25 L6.zip
-8274155496797778261 drwxr-xr-x 2 tsc7 domain users     0 Oct 29 2019 09:10 L6
--1199100481813206949 -rwxr-xr-x 1 tsc7 domain users 199434 Nov  1 2019 11:27 Assignment 6.pdf
--1605821137282459525 -rwxr-xr-x 1 tsc7 domain users 11125 Nov  6 2019 11:53 A7q5.zip
--1610807581428213636 drwxr-xr-x 2 tsc7 domain users     0 Nov  6 2019 14:29 A7q5
--696214589469560290 -rwxr-xr-x 1 tsc7 domain users  8410 Nov 18 2019 20:54 Base.zip
--7559148028708933532 -rwxr-xr-x 1 tsc7 domain users  2714 Nov 24 2019 00:14 A9.zip
--696181294883081697 drwxr-xr-x 2 tsc7 domain users     0 Nov 21 2019 21:14 a8
--7559148024413966235 drwxr-xr-x 2 tsc7 domain users     0 Nov 25 2019 12:41 A9
+15346774311740988109 -rwxr-xr-x  1 tsc7 domain users   5755 Sep 14 2019 16:41 q3.zip
+15346827230033042126 drwxr-xr-x  2 tsc7 domain users      0 Sep 14 2019 16:42 q3
+15346827285867616982 -rwxr-xr-x  1 tsc7 domain users   5635 Sep 17 2019 09:15 q4.zip
+15346827294457551575 drwxr-xr-x  2 tsc7 domain users      0 Sep 17 2019 09:16 q4
+15085689997211951150 -rwxr-xr-x  1 tsc7 domain users   2032 Sep 19 2019 18:04 q4b.zip
+15085695365921071151 drwxr-xr-x  2 tsc7 domain users      0 Sep 19 2019 18:39 q4b
+9796864490045992705 -rwxr-xr-x  1 tsc7 domain users   1125 Sep 26 2019 20:21 a2a.zip
+9796864502930894594 drwxr-xr-x  2 tsc7 domain users      0 Sep 26 2019 20:21 a2a
+4550478199017834682 -rwxr-xr-x  1 tsc7 domain users   2070 Oct  2 2019 23:25 a3a.zip
+4550478199017834683 drwxr-xr-x  2 tsc7 domain users      0 Oct  2 2019 23:26 a3a
+13251585171920617712 -rwxr-xr-x  1 tsc7 domain users   2539 Oct 16 2019 21:08 a4.zip
+13251585180510552305 drwxr-xr-x  2 tsc7 domain users      0 Oct 16 2019 21:10 a4
+16252131676615475530 drwxr-xr-x  2 tsc7 domain users      0 Oct 22 2019 10:38 care-l5
+16252131715270181199 -rwxr-xr-x  1 tsc7 domain users   1733 Oct 22 2019 09:32 care-l5.zip
+15186343741205828520 -rwxr-xr-x  1 tsc7 domain users   2878 Oct 24 2019 15:28 A5.zip
+15186343749795763113 drwxr-xr-x  2 tsc7 domain users      0 Oct 24 2019 22:39 A5
+15186343968839095217 -rwxr-xr-x  1 tsc7 domain users  12089 Oct 28 2019 11:44 a6.zip
+15186344020378702772 drwxr-xr-x  2 tsc7 domain users      0 Oct 28 2019 11:45 a6
+8274155496797778260 -rwxr-xr-x  1 tsc7 domain users   8986 Oct 28 2019 22:25 L6.zip
+8274155496797778261 drwxr-xr-x  2 tsc7 domain users      0 Oct 29 2019 09:10 L6
+17247643591896344667 -rwxr-xr-x  1 tsc7 domain users 199434 Nov  1 2019 11:27 Assignment 6.pdf
+16840922936427092091 -rwxr-xr-x  1 tsc7 domain users  11125 Nov  6 2019 11:53 A7q5.zip
+16835936492281337980 drwxr-xr-x  2 tsc7 domain users      0 Nov  6 2019 14:29 A7q5
+17750529484239991326 -rwxr-xr-x  1 tsc7 domain users   8410 Nov 18 2019 20:54 Base.zip
+10887596045000618084 -rwxr-xr-x  1 tsc7 domain users   2714 Nov 24 2019 00:14 A9.zip
+17750562778826469919 drwxr-xr-x  2 tsc7 domain users      0 Nov 21 2019 21:14 a8
+10887596049295585381 drwxr-xr-x  2 tsc7 domain users      0 Nov 25 2019 12:41 A9
 
 /home/tsc7/sfuhome/cmpt-295/A9:
--3890152364710418570 -rwxr-xr-x 1 tsc7 domain users   823 Nov 25 2019 12:41 main.c
--7559148028708933529 -r-xr-xr-x 1 tsc7 domain users   350 Nov 19 2019 13:03 makefile
--7559148024413966232 -r-xr-xr-x 1 tsc7 domain users   695 Nov 19 2019 13:03 matrix.c
--7559148024413966231 -r-xr-xr-x 1 tsc7 domain users   265 Nov 19 2019 13:03 matrix.h
--3890152394775189643 -rwxr-xr-x 1 tsc7 domain users  1802 Nov 25 2019 12:40 mul.c
--6715409283975338132 -r-xr-xr-x 1 tsc7 domain users   114 Nov 19 2019 13:03 mul.h
--3890419786554136722 -rwxr-xr-x 1 tsc7 domain users  2297 Nov 25 2019 12:41 main.s
--3890380921395075217 -rwxr-xr-x 1 tsc7 domain users  2440 Nov 25 2019 12:41 main.o
--3890380998704486544 -rwxr-xr-x 1 tsc7 domain users  2690 Nov 25 2019 12:41 mul.s
--3890311033687234703 -rwxr-xr-x 1 tsc7 domain users  2136 Nov 25 2019 12:41 mul.o
--3890311050867103886 -rwxr-xr-x 1 tsc7 domain users  2955 Nov 24 2019 00:15 matrix.s
--3890194897771550861 -rwxr-xr-x 1 tsc7 domain users  2440 Nov 24 2019 00:15 matrix.o
--3890194811872204940 -rwxr-xr-x 1 tsc7 domain users 12960 Nov 25 2019 12:41 x
+14556591708999133046 -rwxr-xr-x  1 tsc7 domain users    823 Nov 25 2019 12:41 main.c
+10887596045000618087 -r-xr-xr-x  1 tsc7 domain users    350 Nov 19 2019 13:03 makefile
+10887596049295585384 -r-xr-xr-x  1 tsc7 domain users    695 Nov 19 2019 13:03 matrix.c
+10887596049295585385 -r-xr-xr-x  1 tsc7 domain users    265 Nov 19 2019 13:03 matrix.h
+14556591678934361973 -rwxr-xr-x  1 tsc7 domain users   1802 Nov 25 2019 12:40 mul.c
+11731334789734213484 -r-xr-xr-x  1 tsc7 domain users    114 Nov 19 2019 13:03 mul.h
+14556324287155414894 -rwxr-xr-x  1 tsc7 domain users   2297 Nov 25 2019 12:41 main.s
+14556363152314476399 -rwxr-xr-x  1 tsc7 domain users   2440 Nov 25 2019 12:41 main.o
+14556363075005065072 -rwxr-xr-x  1 tsc7 domain users   2690 Nov 25 2019 12:41 mul.s
+14556433040022316913 -rwxr-xr-x  1 tsc7 domain users   2136 Nov 25 2019 12:41 mul.o
+14556433022842447730 -rwxr-xr-x  1 tsc7 domain users   2955 Nov 24 2019 00:15 matrix.s
+14556549175938000755 -rwxr-xr-x  1 tsc7 domain users   2440 Nov 24 2019 00:15 matrix.o
+14556549261837346676 -rwxr-xr-x  1 tsc7 domain users  12960 Nov 25 2019 12:41 x
 
 /home/tsc7/sfuhome/cmpt-295/a8:
--696181290588114400 -rwxr-xr-x 1 tsc7 domain users  2976 Nov 18 2019 20:53 biggrid
--696181281998179807 -rwxr-xr-x 1 tsc7 domain users   566 Nov 18 2019 20:53 gengrid.py
--696181273408245214 -rwxr-xr-x 1 tsc7 domain users  3519 Nov 18 2019 20:53 main.c
--696181260523343325 -rwxr-xr-x 1 tsc7 domain users  8233 Nov 18 2019 20:58 main.s
--696181251933408732 -rwxr-xr-x 1 tsc7 domain users  6664 Nov 18 2019 20:58 main.o
--696181251933408731 -rwxr-xr-x 1 tsc7 domain users   220 Nov 18 2019 20:53 makefile
--696181239048506842 -rwxr-xr-x 1 tsc7 domain users   606 Nov 20 2019 11:00 smallgrid
--682801767377057437 -rwxr-xr-x 1 tsc7 domain users  3352 Nov 21 2019 21:14 stats.c
--696177996348198360 -rwxr-xr-x 1 tsc7 domain users  6645 Nov 21 2019 21:14 stats.s
--682822675277854367 -rwxr-xr-x 1 tsc7 domain users  2832 Nov 21 2019 21:14 stats.o
--682801690067646110 -rwxr-xr-x 1 tsc7 domain users 13184 Nov 21 2019 21:14 x
--696172292631629269 -rwxr-xr-x 1 tsc7 domain users     0 Nov 18 2019 20:56 basegrid
--682764744758965916 -rwxr-xr-x 1 tsc7 domain users  2087 Nov 20 2019 10:48 stats2.c
+17750562783121437216 -rwxr-xr-x  1 tsc7 domain users   2976 Nov 18 2019 20:53 biggrid
+17750562791711371809 -rwxr-xr-x  1 tsc7 domain users    566 Nov 18 2019 20:53 gengrid.py
+17750562800301306402 -rwxr-xr-x  1 tsc7 domain users   3519 Nov 18 2019 20:53 main.c
+17750562813186208291 -rwxr-xr-x  1 tsc7 domain users   8233 Nov 18 2019 20:58 main.s
+17750562821776142884 -rwxr-xr-x  1 tsc7 domain users   6664 Nov 18 2019 20:58 main.o
+17750562821776142885 -rwxr-xr-x  1 tsc7 domain users    220 Nov 18 2019 20:53 makefile
+17750562834661044774 -rwxr-xr-x  1 tsc7 domain users    606 Nov 20 2019 11:00 smallgrid
+17763942306332494179 -rwxr-xr-x  1 tsc7 domain users   3352 Nov 21 2019 21:14 stats.c
+17750566077361353256 -rwxr-xr-x  1 tsc7 domain users   6645 Nov 21 2019 21:14 stats.s
+17763921398431697249 -rwxr-xr-x  1 tsc7 domain users   2832 Nov 21 2019 21:14 stats.o
+17763942383641905506 -rwxr-xr-x  1 tsc7 domain users  13184 Nov 21 2019 21:14 x
+17750571781077922347 -rwxr-xr-x  1 tsc7 domain users      0 Nov 18 2019 20:56 basegrid
+17763979328950585700 -rwxr-xr-x  1 tsc7 domain users   2087 Nov 20 2019 10:48 stats2.c
 
 /home/tsc7/sfuhome/cmpt-295/A7q5:
--1610807572838279043 drwxr-xr-x 2 tsc7 domain users     0 Nov  6 2019 14:42 q5
+16835936500871272573 drwxr-xr-x  2 tsc7 domain users      0 Nov  6 2019 14:42 q5
 
 /home/tsc7/sfuhome/cmpt-295/A7q5/q5:
--1610807568543311746 -rwxr-xr-x 1 tsc7 domain users  1550 Aug  7 2019 16:51 LL.c
--1610807564248344449 -rwxr-xr-x 1 tsc7 domain users   248 Aug  7 2019 16:51 LL.h
--1610807559953377152 -rwxr-xr-x 1 tsc7 domain users   221 Aug  7 2019 16:51 makefile
--4689045264207550261 -rwxr-xr-x 1 tsc7 domain users  1577 Nov  6 2019 14:42 main.c
--1610807555658409854 -rwxr-xr-x 1 tsc7 domain users  3316 Nov  6 2019 14:42 main.s
--4689095901871970105 -rwxr-xr-x 1 tsc7 domain users  3008 Nov  6 2019 14:42 main.o
--4689050830485165878 -rwxr-xr-x 1 tsc7 domain users  4039 Nov  6 2019 14:39 LL.s
--4689082342660216632 -rwxr-xr-x 1 tsc7 domain users  2816 Nov  6 2019 14:39 LL.o
--4689068933772318519 -rwxr-xr-x 1 tsc7 domain users 13120 Nov  6 2019 14:42 x
+16835936505166239870 -rwxr-xr-x  1 tsc7 domain users   1550 Aug  7 2019 16:51 LL.c
+16835936509461207167 -rwxr-xr-x  1 tsc7 domain users    248 Aug  7 2019 16:51 LL.h
+16835936513756174464 -rwxr-xr-x  1 tsc7 domain users    221 Aug  7 2019 16:51 makefile
+13757698809502001355 -rwxr-xr-x  1 tsc7 domain users   1577 Nov  6 2019 14:42 main.c
+16835936518051141762 -rwxr-xr-x  1 tsc7 domain users   3316 Nov  6 2019 14:42 main.s
+13757648171837581511 -rwxr-xr-x  1 tsc7 domain users   3008 Nov  6 2019 14:42 main.o
+13757693243224385738 -rwxr-xr-x  1 tsc7 domain users   4039 Nov  6 2019 14:39 LL.s
+13757661731049334984 -rwxr-xr-x  1 tsc7 domain users   2816 Nov  6 2019 14:39 LL.o
+13757675139937233097 -rwxr-xr-x  1 tsc7 domain users  13120 Nov  6 2019 14:42 x
 
 /home/tsc7/sfuhome/cmpt-295/L6:
-4384830746456251549 drwxr-xr-x 2 tsc7 domain users     0 Oct 29 2019 09:32 care-l6
+4384830746456251549 drwxr-xr-x  2 tsc7 domain users      0 Oct 29 2019 09:32 care-l6
 
 /home/tsc7/sfuhome/cmpt-295/L6/care-l6:
--1304844414887304815 -rwxr-xr-x 1 tsc7 domain users  1714 Oct 29 2019 09:31 main.c
-4384830759341153439 -rwxr-xr-x 1 tsc7 domain users   268 Oct 28 2019 22:20 sum_plus.s
-4384830763636120736 -rwxr-xr-x 1 tsc7 domain users   244 Oct  4 2019 08:55 makefile
-4384830772226055329 -rwxr-xr-x 1 tsc7 domain users  2534 Oct 29 2019 09:32 main.s
--1304846463586705009 -rwxr-xr-x 1 tsc7 domain users  2904 Oct 29 2019 09:32 main.o
-4384830780815989923 -rwxr-xr-x 1 tsc7 domain users   816 Oct 28 2019 22:20 sum_plus.o
--1304846377687359088 -rwxr-xr-x 1 tsc7 domain users  8832 Oct 29 2019 09:32 x
-4390323026081022938 -rwxr-xr-x 1 tsc7 domain users  2445 Oct 28 2019 21:48 main copy.s
--1304953378207604338 -rwxr-xr-x 1 tsc7 domain users   243 Oct 28 2019 22:18 sum_plus1.s
+17141899658822246801 -rwxr-xr-x  1 tsc7 domain users   1714 Oct 29 2019 09:31 main.c
+4384830759341153439 -rwxr-xr-x  1 tsc7 domain users    268 Oct 28 2019 22:20 sum_plus.s
+4384830763636120736 -rwxr-xr-x  1 tsc7 domain users    244 Oct  4 2019 08:55 makefile
+4384830772226055329 -rwxr-xr-x  1 tsc7 domain users   2534 Oct 29 2019 09:32 main.s
+17141897610122846607 -rwxr-xr-x  1 tsc7 domain users   2904 Oct 29 2019 09:32 main.o
+4384830780815989923 -rwxr-xr-x  1 tsc7 domain users    816 Oct 28 2019 22:20 sum_plus.o
+17141897696022192528 -rwxr-xr-x  1 tsc7 domain users   8832 Oct 29 2019 09:32 x
+4390323026081022938 -rwxr-xr-x  1 tsc7 domain users   2445 Oct 28 2019 21:48 main copy.s
+17141790695501947278 -rwxr-xr-x  1 tsc7 domain users    243 Oct 28 2019 22:18 sum_plus1.s
 
 /home/tsc7/sfuhome/cmpt-295/a6:
--3260400044740914251 drwxr-xr-x 2 tsc7 domain users     0 Oct 28 2019 12:00 care-a6
+15186344028968637365 drwxr-xr-x  2 tsc7 domain users      0 Oct 28 2019 12:00 care-a6
 
 /home/tsc7/sfuhome/cmpt-295/a6/care-a6:
--1338074856034397314 -rwxr-xr-x 1 tsc7 domain users   459 Oct 25 2019 09:43 assembly.sample
--1338074851739430017 -rwxr-xr-x 1 tsc7 domain users   633 Oct 27 2019 15:31 lsearch_2.c
--1338074847444462720 -rwxr-xr-x 1 tsc7 domain users    44 Oct 25 2019 09:43 lsearch_2.h
--1337867903035239543 -rwxr-xr-x 1 tsc7 domain users  2478 Oct 28 2019 12:00 main.c
--1338074843149495422 -rwxr-xr-x 1 tsc7 domain users   287 Oct 25 2019 09:43 makefile
--1338074838854528125 -rwxr-xr-x 1 tsc7 domain users  6003 Oct 28 2019 12:00 main.s
--1338074825969626239 -rwxr-xr-x 1 tsc7 domain users  4448 Oct 28 2019 12:00 main.o
--1338074834559560827 -rwxr-xr-x 1 tsc7 domain users   797 Oct 28 2019 11:41 lsearch_2.s
--1338074825969626234 -rwxr-xr-x 1 tsc7 domain users   848 Oct 28 2019 11:45 lsearch_2.o
--1338074821674658940 -rwxr-xr-x 1 tsc7 domain users 12912 Oct 28 2019 12:00 x
--1338074825969626232 -rwxr-xr-x 1 tsc7 domain users   768 Oct 27 2019 15:37 lsearch_2 copy.s
+17108669217675154302 -rwxr-xr-x  1 tsc7 domain users    459 Oct 25 2019 09:43 assembly.sample
+17108669221970121599 -rwxr-xr-x  1 tsc7 domain users    633 Oct 27 2019 15:31 lsearch_2.c
+17108669226265088896 -rwxr-xr-x  1 tsc7 domain users     44 Oct 25 2019 09:43 lsearch_2.h
+17108876170674312073 -rwxr-xr-x  1 tsc7 domain users   2478 Oct 28 2019 12:00 main.c
+17108669230560056194 -rwxr-xr-x  1 tsc7 domain users    287 Oct 25 2019 09:43 makefile
+17108669234855023491 -rwxr-xr-x  1 tsc7 domain users   6003 Oct 28 2019 12:00 main.s
+17108669247739925377 -rwxr-xr-x  1 tsc7 domain users   4448 Oct 28 2019 12:00 main.o
+17108669239149990789 -rwxr-xr-x  1 tsc7 domain users    797 Oct 28 2019 11:41 lsearch_2.s
+17108669247739925382 -rwxr-xr-x  1 tsc7 domain users    848 Oct 28 2019 11:45 lsearch_2.o
+17108669252034892676 -rwxr-xr-x  1 tsc7 domain users  12912 Oct 28 2019 12:00 x
+17108669247739925384 -rwxr-xr-x  1 tsc7 domain users    768 Oct 27 2019 15:37 lsearch_2 copy.s
 
 /home/tsc7/sfuhome/cmpt-295/A5:
--3260400289554050134 -rwxr-xr-x 1 tsc7 domain users  1876 Oct 24 2019 13:44 main.c
--3260400259489279061 -r-xr-xr-x 1 tsc7 domain users   309 Oct 17 2019 16:22 makefile
--3260400246604377172 -r-xr-xr-x 1 tsc7 domain users   959 Oct 17 2019 16:22 output.c
--3260400225129540691 -r-xr-xr-x 1 tsc7 domain users   141 Oct 17 2019 16:22 output.h
--3260400199359736914 -rwxr-xr-x 1 tsc7 domain users  1210 Oct 24 2019 22:37 sum_float.s
--3260400190769802321 -rwxr-xr-x 1 tsc7 domain users  3621 Oct 24 2019 15:29 main.s
--3260400173589933136 -rwxr-xr-x 1 tsc7 domain users  3960 Oct 24 2019 15:29 main.o
-2162784494786193450 -rwxr-xr-x 1 tsc7 domain users  2288 Oct 24 2019 22:39 sum_float.o
--3260400096280521806 -rwxr-xr-x 1 tsc7 domain users  2589 Oct 24 2019 15:29 output.s
--3260400083395619917 -rwxr-xr-x 1 tsc7 domain users  2448 Oct 24 2019 15:29 output.o
-2162784610750310443 -rwxr-xr-x 1 tsc7 domain users 13896 Oct 24 2019 22:39 x
+15186343784155501482 -rwxr-xr-x  1 tsc7 domain users   1876 Oct 24 2019 13:44 main.c
+15186343814220272555 -r-xr-xr-x  1 tsc7 domain users    309 Oct 17 2019 16:22 makefile
+15186343827105174444 -r-xr-xr-x  1 tsc7 domain users    959 Oct 17 2019 16:22 output.c
+15186343848580010925 -r-xr-xr-x  1 tsc7 domain users    141 Oct 17 2019 16:22 output.h
+15186343874349814702 -rwxr-xr-x  1 tsc7 domain users   1210 Oct 24 2019 22:37 sum_float.s
+15186343882939749295 -rwxr-xr-x  1 tsc7 domain users   3621 Oct 24 2019 15:29 main.s
+15186343900119618480 -rwxr-xr-x  1 tsc7 domain users   3960 Oct 24 2019 15:29 main.o
+2162784494786193450 -rwxr-xr-x  1 tsc7 domain users   2288 Oct 24 2019 22:39 sum_float.o
+15186343977429029810 -rwxr-xr-x  1 tsc7 domain users   2589 Oct 24 2019 15:29 output.s
+15186343990313931699 -rwxr-xr-x  1 tsc7 domain users   2448 Oct 24 2019 15:29 output.o
+2162784610750310443 -rwxr-xr-x  1 tsc7 domain users  13896 Oct 24 2019 22:39 x
 
 /home/tsc7/sfuhome/cmpt-295/care-l5:
--2194612392799108789 -rwxr-xr-x 1 tsc7 domain users   258 Oct 20 2019 22:20 makefile
--2194612379914206900 -rwxr-xr-x 1 tsc7 domain users    66 Oct 20 2019 22:20 qsorts.h
--2194612375619239603 -rwxr-xr-x 1 tsc7 domain users  1077 Oct 20 2019 22:20 qsorts.c
--2194430595423403691 -rwxr-xr-x 1 tsc7 domain users  1084 Oct 22 2019 10:38 main.c
--2194598751982976688 -rwxr-xr-x 1 tsc7 domain users  2458 Oct 22 2019 10:38 main.s
--2194612208115515058 -rwxr-xr-x 1 tsc7 domain users  2568 Oct 22 2019 10:38 main.o
--2194598644608794286 -rwxr-xr-x 1 tsc7 domain users  3838 Oct 22 2019 09:38 qsorts.s
--2194598627428925101 -rwxr-xr-x 1 tsc7 domain users  2176 Oct 22 2019 09:38 qsorts.o
--2194598472810102447 -rwxr-xr-x 1 tsc7 domain users 12840 Oct 22 2019 10:38 x
+16252131680910442827 -rwxr-xr-x  1 tsc7 domain users    258 Oct 20 2019 22:20 makefile
+16252131693795344716 -rwxr-xr-x  1 tsc7 domain users     66 Oct 20 2019 22:20 qsorts.h
+16252131698090312013 -rwxr-xr-x  1 tsc7 domain users   1077 Oct 20 2019 22:20 qsorts.c
+16252313478286147925 -rwxr-xr-x  1 tsc7 domain users   1084 Oct 22 2019 10:38 main.c
+16252145321726574928 -rwxr-xr-x  1 tsc7 domain users   2458 Oct 22 2019 10:38 main.s
+16252131865594036558 -rwxr-xr-x  1 tsc7 domain users   2568 Oct 22 2019 10:38 main.o
+16252145429100757330 -rwxr-xr-x  1 tsc7 domain users   3838 Oct 22 2019 09:38 qsorts.s
+16252145446280626515 -rwxr-xr-x  1 tsc7 domain users   2176 Oct 22 2019 09:38 qsorts.o
+16252145600899449169 -rwxr-xr-x  1 tsc7 domain users  12840 Oct 22 2019 10:38 x
 
 /home/tsc7/sfuhome/cmpt-295/a4:
--5195158888904032014 -rwxr-xr-x 1 tsc7 domain users   643 Oct  1 2019 13:49 dot_prod.s
--5195158880314097421 -rwxr-xr-x 1 tsc7 domain users   908 Oct  1 2019 13:49 main.c
--5195158871724162828 -rwxr-xr-x 1 tsc7 domain users   326 Oct  1 2019 13:49 makefile
--5195158867429195531 -rwxr-xr-x 1 tsc7 domain users  1177 Oct 16 2019 20:53 matrix_prod.s
--5195158863134228234 -rwxr-xr-x 1 tsc7 domain users   419 Oct  1 2019 13:49 mod.s
--5195158854544293641 -rwxr-xr-x 1 tsc7 domain users  2327 Oct 16 2019 21:10 main.s
--1777828362674667272 -rwxr-xr-x 1 tsc7 domain users  2624 Oct 16 2019 21:10 main.o
--1777828332609896199 -rwxr-xr-x 1 tsc7 domain users  2000 Oct 16 2019 21:10 dot_prod.o
-4518095309541758178 -rwxr-xr-x 1 tsc7 domain users  1936 Oct 16 2019 21:10 mod.o
-4518095313836725475 -rwxr-xr-x 1 tsc7 domain users  2336 Oct 16 2019 21:10 matrix_prod.o
--4867721396984764401 -rwxr-xr-x 1 tsc7 domain users 10104 Oct 16 2019 21:10 x
+13251585184805519602 -rwxr-xr-x  1 tsc7 domain users    643 Oct  1 2019 13:49 dot_prod.s
+13251585193395454195 -rwxr-xr-x  1 tsc7 domain users    908 Oct  1 2019 13:49 main.c
+13251585201985388788 -rwxr-xr-x  1 tsc7 domain users    326 Oct  1 2019 13:49 makefile
+13251585206280356085 -rwxr-xr-x  1 tsc7 domain users   1177 Oct 16 2019 20:53 matrix_prod.s
+13251585210575323382 -rwxr-xr-x  1 tsc7 domain users    419 Oct  1 2019 13:49 mod.s
+13251585219165257975 -rwxr-xr-x  1 tsc7 domain users   2327 Oct 16 2019 21:10 main.s
+16668915711034884344 -rwxr-xr-x  1 tsc7 domain users   2624 Oct 16 2019 21:10 main.o
+16668915741099655417 -rwxr-xr-x  1 tsc7 domain users   2000 Oct 16 2019 21:10 dot_prod.o
+4518095309541758178 -rwxr-xr-x  1 tsc7 domain users   1936 Oct 16 2019 21:10 mod.o
+4518095313836725475 -rwxr-xr-x  1 tsc7 domain users   2336 Oct 16 2019 21:10 matrix_prod.o
+13579022676724787215 -rwxr-xr-x  1 tsc7 domain users  10104 Oct 16 2019 21:10 x
 
 /home/tsc7/sfuhome/cmpt-295/a3a:
-4550478211902736572 -rwxr-xr-x 1 tsc7 domain users   992 Sep 24 2019 13:55 bonux.c
-4550478220492671165 -rwxr-xr-x 1 tsc7 domain users   501 Oct  2 2019 23:21 dot_prod.s
-4550478229082605758 -rwxr-xr-x 1 tsc7 domain users   912 Oct  2 2019 21:04 main.c
-4550478237672540351 -rwxr-xr-x 1 tsc7 domain users   353 Sep 24 2019 13:55 makefile
-4550478241967507648 -rwxr-xr-x 1 tsc7 domain users  2957 Oct  2 2019 23:26 main.s
-4550478250557442241 -rwxr-xr-x 1 tsc7 domain users  2720 Oct  2 2019 23:26 main.o
-4550478267737311426 -rwxr-xr-x 1 tsc7 domain users  2000 Oct  2 2019 23:26 dot_prod.o
-4550478276327246019 -rwxr-xr-x 1 tsc7 domain users  9424 Oct  2 2019 23:26 x
--4215739052142578702 -rwxr-xr-x 1 tsc7 domain users  2357 Oct  2 2019 23:26 bonux.s
--4215739026372774925 -rwxr-xr-x 1 tsc7 domain users  2488 Oct  2 2019 23:26 bonux.o
--4215738966243232780 -rwxr-xr-x 1 tsc7 domain users  9424 Oct  2 2019 23:26 bonux
+4550478211902736572 -rwxr-xr-x  1 tsc7 domain users    992 Sep 24 2019 13:55 bonux.c
+4550478220492671165 -rwxr-xr-x  1 tsc7 domain users    501 Oct  2 2019 23:21 dot_prod.s
+4550478229082605758 -rwxr-xr-x  1 tsc7 domain users    912 Oct  2 2019 21:04 main.c
+4550478237672540351 -rwxr-xr-x  1 tsc7 domain users    353 Sep 24 2019 13:55 makefile
+4550478241967507648 -rwxr-xr-x  1 tsc7 domain users   2957 Oct  2 2019 23:26 main.s
+4550478250557442241 -rwxr-xr-x  1 tsc7 domain users   2720 Oct  2 2019 23:26 main.o
+4550478267737311426 -rwxr-xr-x  1 tsc7 domain users   2000 Oct  2 2019 23:26 dot_prod.o
+4550478276327246019 -rwxr-xr-x  1 tsc7 domain users   9424 Oct  2 2019 23:26 x
+14231005021566972914 -rwxr-xr-x  1 tsc7 domain users   2357 Oct  2 2019 23:26 bonux.s
+14231005047336776691 -rwxr-xr-x  1 tsc7 domain users   2488 Oct  2 2019 23:26 bonux.o
+14231005107466318836 -rwxr-xr-x  1 tsc7 domain users   9424 Oct  2 2019 23:26 bonux
 
 /home/tsc7/sfuhome/cmpt-295/a2a:
--8649879570778657021 -rwxr-xr-x 1 tsc7 domain users   212 Sep 26 2019 19:49 main.c
--8649879566483689724 -rwxr-xr-x 1 tsc7 domain users   298 Aug 28 2019 14:33 makefile
--8649879562188722427 -rwxr-xr-x 1 tsc7 domain users   245 Sep 26 2019 20:03 sqrt.s
--3268850083658124326 -rwxr-xr-x 1 tsc7 domain users   902 Sep 26 2019 20:21 main.s
--3268850066478255141 -rwxr-xr-x 1 tsc7 domain users  1816 Sep 26 2019 20:21 main.o
--3268850045003418660 -rwxr-xr-x 1 tsc7 domain users  2024 Sep 26 2019 20:21 sqrt.o
--3268850010643680291 -rwxr-xr-x 1 tsc7 domain users  9200 Sep 26 2019 20:21 x
+9796864502930894595 -rwxr-xr-x  1 tsc7 domain users    212 Sep 26 2019 19:49 main.c
+9796864507225861892 -rwxr-xr-x  1 tsc7 domain users    298 Aug 28 2019 14:33 makefile
+9796864511520829189 -rwxr-xr-x  1 tsc7 domain users    245 Sep 26 2019 20:03 sqrt.s
+15177893990051427290 -rwxr-xr-x  1 tsc7 domain users    902 Sep 26 2019 20:21 main.s
+15177894007231296475 -rwxr-xr-x  1 tsc7 domain users   1816 Sep 26 2019 20:21 main.o
+15177894028706132956 -rwxr-xr-x  1 tsc7 domain users   2024 Sep 26 2019 20:21 sqrt.o
+15177894063065871325 -rwxr-xr-x  1 tsc7 domain users   9200 Sep 26 2019 20:21 x
 
 /home/tsc7/sfuhome/cmpt-295/q4b:
--3360917423523143621 -rwxr-xr-x 1 tsc7 domain users   203 Sep 19 2019 18:39 main.c
--3361048690608611279 -rwxr-xr-x 1 tsc7 domain users   645 Sep 19 2019 18:39 main.s
--3361048682018676686 -rwxr-xr-x 1 tsc7 domain users   289 Aug 27 2019 09:23 makefile
--3361048673428742093 -rwxr-xr-x 1 tsc7 domain users   136 Sep 16 2019 19:59 mul.s
--3361009284283670476 -rwxr-xr-x 1 tsc7 domain users   452 Sep 19 2019 17:58 mul-bonus.s
--3361048677723709392 -rwxr-xr-x 1 tsc7 domain users  1800 Sep 19 2019 18:39 main.o
--3361003919869517770 -rwxr-xr-x 1 tsc7 domain users   888 Sep 19 2019 18:04 mul-bonus.o
--3361003881214812105 -rwxr-xr-x 1 tsc7 domain users  8520 Sep 19 2019 18:39 bonux
--3361003194020044744 -rwxr-xr-x 1 tsc7 domain users   776 Sep 19 2019 18:04 mul.o
--3361003924164485067 -rwxr-xr-x 1 tsc7 domain users  8424 Sep 19 2019 18:39 x
+15085826650186407995 -rwxr-xr-x  1 tsc7 domain users    203 Sep 19 2019 18:39 main.c
+15085695383100940337 -rwxr-xr-x  1 tsc7 domain users    645 Sep 19 2019 18:39 main.s
+15085695391690874930 -rwxr-xr-x  1 tsc7 domain users    289 Aug 27 2019 09:23 makefile
+15085695400280809523 -rwxr-xr-x  1 tsc7 domain users    136 Sep 16 2019 19:59 mul.s
+15085734789425881140 -rwxr-xr-x  1 tsc7 domain users    452 Sep 19 2019 17:58 mul-bonus.s
+15085695395985842224 -rwxr-xr-x  1 tsc7 domain users   1800 Sep 19 2019 18:39 main.o
+15085740153840033846 -rwxr-xr-x  1 tsc7 domain users    888 Sep 19 2019 18:04 mul-bonus.o
+15085740192494739511 -rwxr-xr-x  1 tsc7 domain users   8520 Sep 19 2019 18:39 bonux
+15085740879689506872 -rwxr-xr-x  1 tsc7 domain users    776 Sep 19 2019 18:04 mul.o
+15085740149545066549 -rwxr-xr-x  1 tsc7 domain users   8424 Sep 19 2019 18:39 x
 
 /home/tsc7/sfuhome/cmpt-295/q4:
--3099916770662065448 -rwxr-xr-x 1 tsc7 domain users   195 Sep 15 2019 22:12 main.c
--2917437010552988967 -rwxr-xr-x 1 tsc7 domain users   136 Sep 16 2019 19:59 mul.s
--5122328741915552233 -rwxr-xr-x 1 tsc7 domain users   134 Aug 27 2019 09:23 mul-bonus.s
--5048125489590584830 -rwxr-xr-x 1 tsc7 domain users   289 Aug 27 2019 09:23 makefile
--5048125485295617533 -rwxr-xr-x 1 tsc7 domain users   628 Sep 15 2019 22:12 main.s
--5048125468115748345 -rwxr-xr-x 1 tsc7 domain users  1800 Sep 17 2019 09:16 main.o
--5048125450935879160 -rwxr-xr-x 1 tsc7 domain users   776 Sep 17 2019 09:16 mul.o
--5048125446640911863 -rwxr-xr-x 1 tsc7 domain users  8464 Sep 17 2019 09:16 x
+15346827303047486168 -rwxr-xr-x  1 tsc7 domain users    195 Sep 15 2019 22:12 main.c
+15529307063156562649 -rwxr-xr-x  1 tsc7 domain users    136 Sep 16 2019 19:59 mul.s
+13324415331793999383 -rwxr-xr-x  1 tsc7 domain users    134 Aug 27 2019 09:23 mul-bonus.s
+13398618584118966786 -rwxr-xr-x  1 tsc7 domain users    289 Aug 27 2019 09:23 makefile
+13398618588413934083 -rwxr-xr-x  1 tsc7 domain users    628 Sep 15 2019 22:12 main.s
+13398618605593803271 -rwxr-xr-x  1 tsc7 domain users   1800 Sep 17 2019 09:16 main.o
+13398618622773672456 -rwxr-xr-x  1 tsc7 domain users    776 Sep 17 2019 09:16 mul.o
+13398618627068639753 -rwxr-xr-x  1 tsc7 domain users   8464 Sep 17 2019 09:16 x
 
 /home/tsc7/sfuhome/cmpt-295/q3:
--3099916835086574897 -rwxr-xr-x 1 tsc7 domain users  2200 Sep 14 2019 16:42 main.o
--3099916830791607600 -rwxr-xr-x 1 tsc7 domain users   183 Aug 27 2019 09:23 makefile
--3099916822201673007 -rwxr-xr-x 1 tsc7 domain users   173 Aug 27 2019 09:23 mystery.s
--3099916813611738414 -rwxr-xr-x 1 tsc7 domain users   240 Sep 14 2019 16:27 main.c
--3099916809316771117 -rwxr-xr-x 1 tsc7 domain users  1181 Sep 14 2019 16:27 main.s
--3099916792136901932 -rwxr-xr-x 1 tsc7 domain users   776 Sep 14 2019 16:42 mystery.o
--3099916787841934635 -rwxr-xr-x 1 tsc7 domain users  8504 Sep 14 2019 16:42 x
+15346827238622976719 -rwxr-xr-x  1 tsc7 domain users   2200 Sep 14 2019 16:42 main.o
+15346827242917944016 -rwxr-xr-x  1 tsc7 domain users    183 Aug 27 2019 09:23 makefile
+15346827251507878609 -rwxr-xr-x  1 tsc7 domain users    173 Aug 27 2019 09:23 mystery.s
+15346827260097813202 -rwxr-xr-x  1 tsc7 domain users    240 Sep 14 2019 16:27 main.c
+15346827264392780499 -rwxr-xr-x  1 tsc7 domain users   1181 Sep 14 2019 16:27 main.s
+15346827281572649684 -rwxr-xr-x  1 tsc7 domain users    776 Sep 14 2019 16:42 mystery.o
+15346827285867616981 -rwxr-xr-x  1 tsc7 domain users   8504 Sep 14 2019 16:42 x
 
 /home/tsc7/sfuhome/cmpt-300:
-1976488493062581165 -rwxr-xr-x 1 tsc7 domain users  6913 Sep 29 2020 21:13 cmpt300-A1.zip
-1976488497357548462 drwxr-xr-x 2 tsc7 domain users     0 Sep 29 2020 21:14 cmpt300-A1
-1976488523127352245 -rwxr-xr-x 1 tsc7 domain users 13055 Oct 27 2020 19:32 cmpt300-A2.zip
-1976488527422319542 drwxr-xr-x 2 tsc7 domain users     0 Oct 27 2020 19:33 cmpt300-A2
-4402222155685826152 -rwxr-xr-x 1 tsc7 domain users 15381 Nov 19 2020 20:58 cmpt300-A3.zip
-4402229744893038185 drwxr-xr-x 2 tsc7 domain users     0 Nov 19 2020 21:01 cmpt300-A3
-1345746256152871516 -rwxr-xr-x 1 tsc7 domain users 177798 Dec  5 2020 16:22 cmpt300A4.zip
-1337733131373757022 drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 16:24 cmpt300A4
+1976488493062581165 -rwxr-xr-x  1 tsc7 domain users   6913 Sep 29 2020 21:13 cmpt300-A1.zip
+1976488497357548462 drwxr-xr-x  2 tsc7 domain users      0 Sep 29 2020 21:14 cmpt300-A1
+1976488523127352245 -rwxr-xr-x  1 tsc7 domain users  13055 Oct 27 2020 19:32 cmpt300-A2.zip
+1976488527422319542 drwxr-xr-x  2 tsc7 domain users      0 Oct 27 2020 19:33 cmpt300-A2
+4402222155685826152 -rwxr-xr-x  1 tsc7 domain users  15381 Nov 19 2020 20:58 cmpt300-A3.zip
+4402229744893038185 drwxr-xr-x  2 tsc7 domain users      0 Nov 19 2020 21:01 cmpt300-A3
+4315234087096279176 -rwxr-xr-x  1 tsc7 domain users  28949 Dec  5 2020 23:56 cmpt300-A4.zip
+4315234439283597449 drwxr-xr-x  2 tsc7 domain users      0 Dec  5 2020 23:56 cmpt300-A4
 
-/home/tsc7/sfuhome/cmpt-300/cmpt300A4:
-5042924172646138464 -rwxr-xr-x 1 tsc7 domain users  3211 Dec  5 2020 16:09 LsFile.c
-5042924176941105761 -rwxr-xr-x 1 tsc7 domain users   330 Dec  5 2020 15:53 LsFile.h
-5042924185531040354 -rwxr-xr-x 1 tsc7 domain users   103 Nov 29 2020 20:27 UnixLs.h
-5042924194120974947 -rwxr-xr-x 1 tsc7 domain users  1429 Dec  5 2020 15:39 UnixLs.c
-5042924202710909540 -rwxr-xr-x 1 tsc7 domain users    11 Nov 24 2020 23:18 README.md
-5042924207005876837 -rwxr-xr-x 1 tsc7 domain users 14674 Sep 29 2020 19:58 list.c
-5042924215595811430 -rwxr-xr-x 1 tsc7 domain users  5377 Dec  3 2020 18:58 list.h
-5042924228480713320 -rwxr-xr-x 1 tsc7 domain users   375 Dec  3 2020 18:53 makefile
-5042924237070647913 -rwxr-xr-x 1 tsc7 domain users     0 Nov 26 2020 17:55 SampleRun.txt
--9221002430345718140 -rwxr-xr-x 1 tsc7 domain users  1795 Dec  5 2020 15:54 LsOutput.c
-5042924262843758168 -rwxr-xr-x 1 tsc7 domain users   427 Dec  5 2020 15:39 LsOutput.h
--6715797935568866461 drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 15:12 test
-5042933385356062652 -rwxr-xr-x 1 tsc7 domain users  5680 Dec  5 2020 16:23 UnixLs.o
-5042933419715801021 -rwxr-xr-x 1 tsc7 domain users 13096 Dec  5 2020 16:23 LsOutput.o
-5042933548564819902 -rwxr-xr-x 1 tsc7 domain users 15456 Dec  5 2020 16:23 LsFile.o
-5042933587219525567 -rwxr-xr-x 1 tsc7 domain users 17904 Dec  5 2020 16:23 list.o
-5042933604399394752 -rwxr-xr-x 1 tsc7 domain users 36416 Dec  5 2020 16:23 UnixLs
+/home/tsc7/sfuhome/cmpt-300/cmpt300-A4:
+4315234447873532042 -rwxr-xr-x  1 tsc7 domain users   3271 Dec  5 2020 17:10 LsFile.c
+4315234469348368523 -rwxr-xr-x  1 tsc7 domain users    330 Dec  5 2020 15:53 LsFile.h
+4315234486528237708 -rwxr-xr-x  1 tsc7 domain users    103 Nov 29 2020 20:27 UnixLs.h
+4315234495118172301 -rwxr-xr-x  1 tsc7 domain users   1477 Dec  5 2020 17:11 UnixLs.c
+4315234499413139598 -rwxr-xr-x  1 tsc7 domain users     11 Nov 24 2020 23:18 README.md
+4315234503708106895 -rwxr-xr-x  1 tsc7 domain users  14674 Sep 29 2020 19:58 list.c
+4315234516593008784 -rwxr-xr-x  1 tsc7 domain users   5377 Dec  3 2020 18:58 list.h
+4315234520887976081 -rwxr-xr-x  1 tsc7 domain users    375 Dec  3 2020 18:53 makefile
+4315234529477910674 -rwxr-xr-x  1 tsc7 domain users 106912 Dec  5 2020 17:00 SampleRun.txt
+4315234538067845267 -rwxr-xr-x  1 tsc7 domain users   1860 Dec  5 2020 23:42 LsOutput.c
+4315234563837649044 -rwxr-xr-x  1 tsc7 domain users    441 Dec  5 2020 23:42 LsOutput.h
+4315234572427583637 drwxr-xr-x  2 tsc7 domain users      0 Dec  5 2020 23:52 test
+6354334982650949886 -rwxr-xr-x  1 tsc7 domain users   5680 Dec  5 2020 23:56 UnixLs.o
+5375649825817587968 -rwxr-xr-x  1 tsc7 domain users  13104 Dec  5 2020 23:56 LsOutput.o
+5375649830112555265 -rwxr-xr-x  1 tsc7 domain users  15464 Dec  5 2020 23:56 LsFile.o
+5375649834407522562 -rwxr-xr-x  1 tsc7 domain users  17904 Dec  5 2020 23:56 list.o
+5375649838702489859 -rwxr-xr-x  1 tsc7 domain users  36416 Dec  5 2020 23:56 UnixLs
 
-/home/tsc7/sfuhome/cmpt-300/cmpt300A4/test:
-5042927153358773574 drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 15:07 perm
-5042927196308446541 drwxr-xr-x 2 tsc7 domain users     0 Dec  5 2020 16:07 link
+/home/tsc7/sfuhome/cmpt-300/cmpt300-A4/test:
+5027575054751235052 drwxr-xr-x  2 tsc7 domain users      0 Dec  5 2020 16:07 link
 
-/home/tsc7/sfuhome/cmpt-300/cmpt300A4/test/link:
-5042927204898381134 -rwxr-xr-x 1 tsc7 domain users    15 Dec  5 2020 16:04 a.txt
-5042927213488315727 lrwxrwxrwx 1 tsc7 domain users     5 Dec  5 2020 16:23 b.txt -> a.txt
-5042927222078250320 lrwxrwxrwx 1 tsc7 domain users     5 Dec  5 2020 16:23 c.txt -> a.txt
-
-/home/tsc7/sfuhome/cmpt-300/cmpt300A4/test/perm:
-5042927157653740871 -r-xr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:00 noperm.txt
-5042927166243675464 -rwxr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:04 owner.txt
-5042927170538642761 -rwxr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:06 group.txt
-5042927179128577354 -rwxr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:06 other.txt
-5042927183423544651 -rwxr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:06 all.txt
-5042927192013479244 -r-xr-xr-x 1 tsc7 domain users     0 Dec  5 2020 15:07 read.txt
+/home/tsc7/sfuhome/cmpt-300/cmpt300-A4/test/link:
+5027575059046202349 -rwxr-xr-x  1 tsc7 domain users     15 Dec  5 2020 16:04 a.txt
+5027575071931104238 lrwxrwxrwx  1 tsc7 domain users      5 Dec  5 2020 23:56 b.txt -> a.txt
+5027575076226071535 lrwxrwxrwx  1 tsc7 domain users      5 Dec  5 2020 23:56 c.txt -> a.txt
 
 /home/tsc7/sfuhome/cmpt-300/cmpt300-A3:
-4402229749188005482 -rwxr-xr-x 1 tsc7 domain users 14674 Sep 29 2020 19:58 list.c
-4402229757777940075 -rwxr-xr-x 1 tsc7 domain users  5379 Nov 19 2020 20:45 list.h
-4402229766367874668 -rwxr-xr-x 1 tsc7 domain users  2907 Nov 19 2020 20:40 main.c
-4402229774957809261 -rwxr-xr-x 1 tsc7 domain users   516 Nov 19 2020 17:47 makefile
-4402229783547743854 -rwxr-xr-x 1 tsc7 domain users  3295 Nov 19 2020 20:38 message.c
-4402229792137678447 -rwxr-xr-x 1 tsc7 domain users   544 Nov 19 2020 18:32 message.h
-4402229800727613040 -rwxr-xr-x 1 tsc7 domain users  7387 Nov 19 2020 20:41 process.c
-4402229809317547633 -rwxr-xr-x 1 tsc7 domain users   915 Nov 19 2020 16:59 process.h
-4402229817907482226 -rwxr-xr-x 1 tsc7 domain users  4241 Nov 19 2020 20:51 README.md
-4402229826497416819 -rwxr-xr-x 1 tsc7 domain users  1852 Nov 19 2020 20:38 semaphore.c
-4402229830792384116 -rwxr-xr-x 1 tsc7 domain users   488 Nov 19 2020 16:42 semaphore.h
-4402229843677286005 -rwxr-xr-x 1 tsc7 domain users  8241 Nov 19 2020 20:37 textmenu.c
-4402229852262294838 -rwxr-xr-x 1 tsc7 domain users   727 Nov 19 2020 18:34 textmenu.h
-4402234499416909111 -rwxr-xr-x 1 tsc7 domain users  7656 Nov 19 2020 20:58 main.o
-4402234559546451256 -rwxr-xr-x 1 tsc7 domain users 17904 Nov 19 2020 20:58 list.o
-4402234623970960697 -rwxr-xr-x 1 tsc7 domain users 24088 Nov 19 2020 20:58 textmenu.o
-4402234679805535546 -rwxr-xr-x 1 tsc7 domain users 17096 Nov 19 2020 20:58 process.o
-4402234735640110395 -rwxr-xr-x 1 tsc7 domain users 10048 Nov 19 2020 20:58 message.o
-4402234774294816060 -rwxr-xr-x 1 tsc7 domain users  7672 Nov 19 2020 20:58 semaphore.o
-4402234800064619837 -rwxr-xr-x 1 tsc7 domain users 46288 Nov 19 2020 21:01 main
+4402229749188005482 -rwxr-xr-x  1 tsc7 domain users  14674 Sep 29 2020 19:58 list.c
+4402229757777940075 -rwxr-xr-x  1 tsc7 domain users   5379 Nov 19 2020 20:45 list.h
+4402229766367874668 -rwxr-xr-x  1 tsc7 domain users   2907 Nov 19 2020 20:40 main.c
+4402229774957809261 -rwxr-xr-x  1 tsc7 domain users    516 Nov 19 2020 17:47 makefile
+4402229783547743854 -rwxr-xr-x  1 tsc7 domain users   3295 Nov 19 2020 20:38 message.c
+4402229792137678447 -rwxr-xr-x  1 tsc7 domain users    544 Nov 19 2020 18:32 message.h
+4402229800727613040 -rwxr-xr-x  1 tsc7 domain users   7387 Nov 19 2020 20:41 process.c
+4402229809317547633 -rwxr-xr-x  1 tsc7 domain users    915 Nov 19 2020 16:59 process.h
+4402229817907482226 -rwxr-xr-x  1 tsc7 domain users   4241 Nov 19 2020 20:51 README.md
+4402229826497416819 -rwxr-xr-x  1 tsc7 domain users   1852 Nov 19 2020 20:38 semaphore.c
+4402229830792384116 -rwxr-xr-x  1 tsc7 domain users    488 Nov 19 2020 16:42 semaphore.h
+4402229843677286005 -rwxr-xr-x  1 tsc7 domain users   8241 Nov 19 2020 20:37 textmenu.c
+4402229852262294838 -rwxr-xr-x  1 tsc7 domain users    727 Nov 19 2020 18:34 textmenu.h
+4402234499416909111 -rwxr-xr-x  1 tsc7 domain users   7656 Nov 19 2020 20:58 main.o
+4402234559546451256 -rwxr-xr-x  1 tsc7 domain users  17904 Nov 19 2020 20:58 list.o
+4402234623970960697 -rwxr-xr-x  1 tsc7 domain users  24088 Nov 19 2020 20:58 textmenu.o
+4402234679805535546 -rwxr-xr-x  1 tsc7 domain users  17096 Nov 19 2020 20:58 process.o
+4402234735640110395 -rwxr-xr-x  1 tsc7 domain users  10048 Nov 19 2020 20:58 message.o
+4402234774294816060 -rwxr-xr-x  1 tsc7 domain users   7672 Nov 19 2020 20:58 semaphore.o
+4402234800064619837 -rwxr-xr-x  1 tsc7 domain users  46288 Nov 19 2020 21:01 main
 
 /home/tsc7/sfuhome/cmpt-300/cmpt300-A2:
-1976488527422319543 -rwxr-xr-x 1 tsc7 domain users  1308 Oct 27 2020 18:41 keyboard.c
-1976488531717286840 -rwxr-xr-x 1 tsc7 domain users   147 Oct 26 2020 22:45 keyboard.h
-1976488536012254137 -rwxr-xr-x 1 tsc7 domain users 14674 Sep 29 2020 19:58 list.c
-3022571887320109778 -rwxr-xr-x 1 tsc7 domain users  5377 Oct 25 2020 14:01 list.h
-3022571895910044371 -rwxr-xr-x 1 tsc7 domain users  1400 Oct 27 2020 18:08 listmanager.c
-3022571904499978964 -rwxr-xr-x 1 tsc7 domain users   524 Oct 27 2020 17:14 listmanager.h
-3022571913089913557 -rwxr-xr-x 1 tsc7 domain users   838 Oct 27 2020 19:12 main.c
-3022571921679848150 -rwxr-xr-x 1 tsc7 domain users   715 Oct 26 2020 21:42 makefile
-3022571930269782743 -rwxr-xr-x 1 tsc7 domain users  2187 Oct 27 2020 18:41 receiver.c
-3022571934564750040 -rwxr-xr-x 1 tsc7 domain users   141 Oct 26 2020 22:17 receiver.h
-3022571943154684633 -rwxr-xr-x 1 tsc7 domain users  1951 Oct 27 2020 18:58 screen.c
-3022571951744619226 -rwxr-xr-x 1 tsc7 domain users   170 Oct 26 2020 22:47 screen.h
-3022571960334553819 -rwxr-xr-x 1 tsc7 domain users  3117 Oct 27 2020 19:01 sender.c
-3022571968924488412 -rwxr-xr-x 1 tsc7 domain users   186 Oct 26 2020 23:25 sender.h
-3022571977514423005 -rwxr-xr-x 1 tsc7 domain users  1434 Oct 27 2020 18:56 shutdownmanager.c
-3022571986104357598 -rwxr-xr-x 1 tsc7 domain users   234 Oct 27 2020 18:09 shutdownmanager.h
-3022578093547852511 -rwxr-xr-x 1 tsc7 domain users  6808 Oct 27 2020 19:33 main.o
--8474417100065645687 -rwxr-xr-x 1 tsc7 domain users  9288 Oct 27 2020 19:33 keyboard.o
--8474417246094533750 -rwxr-xr-x 1 tsc7 domain users 16744 Oct 27 2020 19:33 sender.o
--8474417108655580277 -rwxr-xr-x 1 tsc7 domain users 12848 Oct 27 2020 19:33 receiver.o
--8474417173080089716 -rwxr-xr-x 1 tsc7 domain users 12464 Oct 27 2020 19:33 screen.o
--8474417082885776499 -rwxr-xr-x 1 tsc7 domain users 17904 Oct 27 2020 19:33 list.o
--8474417082885776498 -rwxr-xr-x 1 tsc7 domain users  8408 Oct 27 2020 19:33 listmanager.o
--8474416919677019249 -rwxr-xr-x 1 tsc7 domain users 10768 Oct 27 2020 19:33 shutdownmanager.o
--8474416971216626800 -rwxr-xr-x 1 tsc7 domain users 47720 Oct 27 2020 19:33 s-talk
+1976488527422319543 -rwxr-xr-x  1 tsc7 domain users   1308 Oct 27 2020 18:41 keyboard.c
+1976488531717286840 -rwxr-xr-x  1 tsc7 domain users    147 Oct 26 2020 22:45 keyboard.h
+1976488536012254137 -rwxr-xr-x  1 tsc7 domain users  14674 Sep 29 2020 19:58 list.c
+3022571887320109778 -rwxr-xr-x  1 tsc7 domain users   5377 Oct 25 2020 14:01 list.h
+3022571895910044371 -rwxr-xr-x  1 tsc7 domain users   1400 Oct 27 2020 18:08 listmanager.c
+3022571904499978964 -rwxr-xr-x  1 tsc7 domain users    524 Oct 27 2020 17:14 listmanager.h
+3022571913089913557 -rwxr-xr-x  1 tsc7 domain users    838 Oct 27 2020 19:12 main.c
+3022571921679848150 -rwxr-xr-x  1 tsc7 domain users    715 Oct 26 2020 21:42 makefile
+3022571930269782743 -rwxr-xr-x  1 tsc7 domain users   2187 Oct 27 2020 18:41 receiver.c
+3022571934564750040 -rwxr-xr-x  1 tsc7 domain users    141 Oct 26 2020 22:17 receiver.h
+3022571943154684633 -rwxr-xr-x  1 tsc7 domain users   1951 Oct 27 2020 18:58 screen.c
+3022571951744619226 -rwxr-xr-x  1 tsc7 domain users    170 Oct 26 2020 22:47 screen.h
+3022571960334553819 -rwxr-xr-x  1 tsc7 domain users   3117 Oct 27 2020 19:01 sender.c
+3022571968924488412 -rwxr-xr-x  1 tsc7 domain users    186 Oct 26 2020 23:25 sender.h
+3022571977514423005 -rwxr-xr-x  1 tsc7 domain users   1434 Oct 27 2020 18:56 shutdownmanager.c
+3022571986104357598 -rwxr-xr-x  1 tsc7 domain users    234 Oct 27 2020 18:09 shutdownmanager.h
+3022578093547852511 -rwxr-xr-x  1 tsc7 domain users   6808 Oct 27 2020 19:33 main.o
+9972326973643905929 -rwxr-xr-x  1 tsc7 domain users   9288 Oct 27 2020 19:33 keyboard.o
+9972326827615017866 -rwxr-xr-x  1 tsc7 domain users  16744 Oct 27 2020 19:33 sender.o
+9972326965053971339 -rwxr-xr-x  1 tsc7 domain users  12848 Oct 27 2020 19:33 receiver.o
+9972326900629461900 -rwxr-xr-x  1 tsc7 domain users  12464 Oct 27 2020 19:33 screen.o
+9972326990823775117 -rwxr-xr-x  1 tsc7 domain users  17904 Oct 27 2020 19:33 list.o
+9972326990823775118 -rwxr-xr-x  1 tsc7 domain users   8408 Oct 27 2020 19:33 listmanager.o
+9972327154032532367 -rwxr-xr-x  1 tsc7 domain users  10768 Oct 27 2020 19:33 shutdownmanager.o
+9972327102492924816 -rwxr-xr-x  1 tsc7 domain users  47720 Oct 27 2020 19:33 s-talk
 
 /home/tsc7/sfuhome/cmpt-300/cmpt300-A1:
-1976488497357548463 -rwxr-xr-x 1 tsc7 domain users 14674 Sep 29 2020 20:56 list.c
-1976488501652515760 -rwxr-xr-x 1 tsc7 domain users  5378 Sep 29 2020 20:56 list.h
-1976488505947483057 -rwxr-xr-x 1 tsc7 domain users    75 Sep 29 2020 20:56 makefile
-1976488510242450354 -rwxr-xr-x 1 tsc7 domain users 12718 Sep 29 2020 20:56 test.c
-1976488518832384947 -rwxr-xr-x 1 tsc7 domain users 22696 Sep 29 2020 21:14 test
+1976488497357548463 -rwxr-xr-x  1 tsc7 domain users  14674 Sep 29 2020 20:56 list.c
+1976488501652515760 -rwxr-xr-x  1 tsc7 domain users   5378 Sep 29 2020 20:56 list.h
+1976488505947483057 -rwxr-xr-x  1 tsc7 domain users     75 Sep 29 2020 20:56 makefile
+1976488510242450354 -rwxr-xr-x  1 tsc7 domain users  12718 Sep 29 2020 20:56 test.c
+1976488518832384947 -rwxr-xr-x  1 tsc7 domain users  22696 Sep 29 2020 21:14 test
 
 /home/tsc7/sfuhome/cmpt-127:
-6067307498029617178 drwxr-xr-x 2 tsc7 domain users     0 Apr  2 2019 12:27 CMPT127-1191-tsc7
+6067307498029617178 drwxr-xr-x  2 tsc7 domain users      0 Apr  2 2019 12:27 CMPT127-1191-tsc7
 
 /home/tsc7/sfuhome/cmpt-127/CMPT127-1191-tsc7:
--5121800383646959056 drwxr-xr-x 2 tsc7 domain users     0 Jan  8 2019 12:34 0
-1386528521066988412 drwxr-xr-x 2 tsc7 domain users     0 Apr  1 2019 23:34 1
-4357353345288316106 drwxr-xr-x 2 tsc7 domain users     0 Feb 25 2019 14:11 2
-4389485726501512406 drwxr-xr-x 2 tsc7 domain users     0 Feb 25 2019 14:11 3
--5880529025333770090 drwxr-xr-x 2 tsc7 domain users     0 Feb 25 2019 14:11 4
-4489643663763358346 -rwxr-xr-x 1 tsc7 domain users 12944 Apr  2 2019 12:27 a.out
-8784148456199010687 -rwxr-xr-x 1 tsc7 domain users   239 Feb 26 2019 11:49 Error.c
-8784148494853716352 -rwxr-xr-x 1 tsc7 domain users   852 Feb 26 2019 12:58 LabExam1.c
-4524348902180583972 drwxr-xr-x 2 tsc7 domain users     0 Apr  1 2019 12:06 10
-8512066993889124834 drwxr-xr-x 2 tsc7 domain users     0 Apr  1 2019 12:06 5
-8512743674576544230 drwxr-xr-x 2 tsc7 domain users     0 Apr  1 2019 23:34 6
-8512743704641315308 drwxr-xr-x 2 tsc7 domain users     0 Apr  1 2019 19:25 7
-7894968996195907160 drwxr-xr-x 2 tsc7 domain users     0 Apr  1 2019 12:06 8
-4421900969962856460 drwxr-xr-x 2 tsc7 domain users     0 Apr  1 2019 23:34 Midterm
-7762271343002128538 -rwxr-xr-x 1 tsc7 domain users  1172 Apr  2 2019 12:20 LabExam2.h
-654574731267944687 -rwxr-xr-x 1 tsc7 domain users  1414 Apr  2 2019 12:20 TestDriver.c
-4461591948153121447 -rwxr-xr-x 1 tsc7 domain users  2865 Apr  2 2019 12:20 LabExam2.c
+13324943690062592560 drwxr-xr-x  2 tsc7 domain users      0 Jan  8 2019 12:34 0
+1386528521066988412 drwxr-xr-x  2 tsc7 domain users      0 Apr  1 2019 23:34 1
+4357353345288316106 drwxr-xr-x  2 tsc7 domain users      0 Feb 25 2019 14:11 2
+4389485726501512406 drwxr-xr-x  2 tsc7 domain users      0 Feb 25 2019 14:11 3
+12566215048375781526 drwxr-xr-x  2 tsc7 domain users      0 Feb 25 2019 14:11 4
+4489643663763358346 -rwxr-xr-x  1 tsc7 domain users  12944 Apr  2 2019 12:27 a.out
+8784148456199010687 -rwxr-xr-x  1 tsc7 domain users    239 Feb 26 2019 11:49 Error.c
+8784148494853716352 -rwxr-xr-x  1 tsc7 domain users    852 Feb 26 2019 12:58 LabExam1.c
+4524348902180583972 drwxr-xr-x  2 tsc7 domain users      0 Apr  1 2019 12:06 10
+8512066993889124834 drwxr-xr-x  2 tsc7 domain users      0 Apr  1 2019 12:06 5
+8512743674576544230 drwxr-xr-x  2 tsc7 domain users      0 Apr  1 2019 23:34 6
+8512743704641315308 drwxr-xr-x  2 tsc7 domain users      0 Apr  1 2019 19:25 7
+7894968996195907160 drwxr-xr-x  2 tsc7 domain users      0 Apr  1 2019 12:06 8
+4421900969962856460 drwxr-xr-x  2 tsc7 domain users      0 Apr  1 2019 23:34 Midterm
+7762271343002128538 -rwxr-xr-x  1 tsc7 domain users   1172 Apr  2 2019 12:20 LabExam2.h
+654574731267944687 -rwxr-xr-x  1 tsc7 domain users   1414 Apr  2 2019 12:20 TestDriver.c
+4461591948153121447 -rwxr-xr-x  1 tsc7 domain users   2865 Apr  2 2019 12:20 LabExam2.c
 
 /home/tsc7/sfuhome/cmpt-127/CMPT127-1191-tsc7/Midterm:
-4421900969962856461 -rwxr-xr-x 1 tsc7 domain users  1070 Apr  1 2019 23:34 D100.c
-4421900974257823758 -rwxr-xr-x 1 tsc7 domain users  1217 Apr  1 2019 23:34 D200.c
-4421900978552791055 -rwxr-xr-x 1 tsc7 domain users  1061 Apr  1 2019 23:34 D300.c
-175665571161488748 -rwxr-xr-x 1 tsc7 domain users  1331 Apr  1 2019 23:34 D400.c
-175665575456456045 -rwxr-xr-x 1 tsc7 domain users  1293 Apr  1 2019 23:34 D500.c
+4421900969962856461 -rwxr-xr-x  1 tsc7 domain users   1070 Apr  1 2019 23:34 D100.c
+4421900974257823758 -rwxr-xr-x  1 tsc7 domain users   1217 Apr  1 2019 23:34 D200.c
+4421900978552791055 -rwxr-xr-x  1 tsc7 domain users   1061 Apr  1 2019 23:34 D300.c
+175665571161488748 -rwxr-xr-x  1 tsc7 domain users   1331 Apr  1 2019 23:34 D400.c
+175665575456456045 -rwxr-xr-x  1 tsc7 domain users   1293 Apr  1 2019 23:34 D500.c
 
 /home/tsc7/sfuhome/cmpt-127/CMPT127-1191-tsc7/8:
-7894969717750412889 -rwxr-xr-x 1 tsc7 domain users  2530 Apr  1 2019 12:06 demo.c
-8144685429937420823 -rwxr-xr-x 1 tsc7 domain users  1214 Apr  1 2019 12:06 point_array.h
-8144685434232388120 -rwxr-xr-x 1 tsc7 domain users  1755 Apr  1 2019 12:06 t1.c
-8144685438527355417 -rwxr-xr-x 1 tsc7 domain users  2003 Apr  1 2019 12:06 t2.c
+7894969717750412889 -rwxr-xr-x  1 tsc7 domain users   2530 Apr  1 2019 12:06 demo.c
+8144685429937420823 -rwxr-xr-x  1 tsc7 domain users   1214 Apr  1 2019 12:06 point_array.h
+8144685434232388120 -rwxr-xr-x  1 tsc7 domain users   1755 Apr  1 2019 12:06 t1.c
+8144685438527355417 -rwxr-xr-x  1 tsc7 domain users   2003 Apr  1 2019 12:06 t2.c
 
 /home/tsc7/sfuhome/cmpt-127/CMPT127-1191-tsc7/7:
-8512743708936282605 -rwxr-xr-x 1 tsc7 domain users   349 Apr  1 2019 12:06 Makefile
-8512743717526217198 -rwxr-xr-x 1 tsc7 domain users  1533 Apr  1 2019 12:06 list.c
-8512743721821184495 -rwxr-xr-x 1 tsc7 domain users  1811 Apr  1 2019 12:06 list.h
-4524438155903106242 -rwxr-xr-x 1 tsc7 domain users  3586 Apr  1 2019 12:06 main.c
-4524438164493040835 -rwxr-xr-x 1 tsc7 domain users  1984 Apr  1 2019 12:06 t1.c
-4524438173082975428 -rwxr-xr-x 1 tsc7 domain users  1482 Apr  1 2019 12:06 t2.c
-4524438228917550282 -rwxr-xr-x 1 tsc7 domain users  1491 Apr  1 2019 12:06 t3.c
-4524438276162190541 -rwxr-xr-x 1 tsc7 domain users  1976 Apr  1 2019 12:06 t4.c
--5845094114903655762 -rwxr-xr-x 1 tsc7 domain users  1486 Apr  1 2019 12:06 t5.c
-8153762276386961873 -rwxr-xr-x 1 tsc7 domain users   345 Apr  1 2019 19:25 test.c
-8153762272091994576 -rwxr-xr-x 1 tsc7 domain users  1031 Apr  1 2019 19:25 sort.c
+8512743708936282605 -rwxr-xr-x  1 tsc7 domain users    349 Apr  1 2019 12:06 Makefile
+8512743717526217198 -rwxr-xr-x  1 tsc7 domain users   1533 Apr  1 2019 12:06 list.c
+8512743721821184495 -rwxr-xr-x  1 tsc7 domain users   1811 Apr  1 2019 12:06 list.h
+4524438155903106242 -rwxr-xr-x  1 tsc7 domain users   3586 Apr  1 2019 12:06 main.c
+4524438164493040835 -rwxr-xr-x  1 tsc7 domain users   1984 Apr  1 2019 12:06 t1.c
+4524438173082975428 -rwxr-xr-x  1 tsc7 domain users   1482 Apr  1 2019 12:06 t2.c
+4524438228917550282 -rwxr-xr-x  1 tsc7 domain users   1491 Apr  1 2019 12:06 t3.c
+4524438276162190541 -rwxr-xr-x  1 tsc7 domain users   1976 Apr  1 2019 12:06 t4.c
+12601649958805895854 -rwxr-xr-x  1 tsc7 domain users   1486 Apr  1 2019 12:06 t5.c
+8153762276386961873 -rwxr-xr-x  1 tsc7 domain users    345 Apr  1 2019 19:25 test.c
+8153762272091994576 -rwxr-xr-x  1 tsc7 domain users   1031 Apr  1 2019 19:25 sort.c
 
 /home/tsc7/sfuhome/cmpt-127/CMPT127-1191-tsc7/6:
-8512743678871511527 -rwxr-xr-x 1 tsc7 domain users  6649 Apr  1 2019 12:06 intarr.c
-8512743683166478824 -rwxr-xr-x 1 tsc7 domain users  6005 Apr  1 2019 12:06 intarr.h
-8512743691756413417 -rwxr-xr-x 1 tsc7 domain users   263 Apr  1 2019 12:06 main.c
-8512743696051380714 -rwxr-xr-x 1 tsc7 domain users  2285 Apr  1 2019 23:34 t1.c
-8512743700346348011 -rwxr-xr-x 1 tsc7 domain users  2853 Apr  1 2019 12:06 t2.c
+8512743678871511527 -rwxr-xr-x  1 tsc7 domain users   6649 Apr  1 2019 12:06 intarr.c
+8512743683166478824 -rwxr-xr-x  1 tsc7 domain users   6005 Apr  1 2019 12:06 intarr.h
+8512743691756413417 -rwxr-xr-x  1 tsc7 domain users    263 Apr  1 2019 12:06 main.c
+8512743696051380714 -rwxr-xr-x  1 tsc7 domain users   2285 Apr  1 2019 23:34 t1.c
+8512743700346348011 -rwxr-xr-x  1 tsc7 domain users   2853 Apr  1 2019 12:06 t2.c
 
 /home/tsc7/sfuhome/cmpt-127/CMPT127-1191-tsc7/5:
-8512066998184092131 -rwxr-xr-x 1 tsc7 domain users  6649 Apr  1 2019 12:06 intarr.c
-8512067002479059428 -rwxr-xr-x 1 tsc7 domain users  4419 Apr  1 2019 12:06 intarr.h
-8512067006774026725 -rwxr-xr-x 1 tsc7 domain users   258 Apr  1 2019 12:06 main.c
+8512066998184092131 -rwxr-xr-x  1 tsc7 domain users   6649 Apr  1 2019 12:06 intarr.c
+8512067002479059428 -rwxr-xr-x  1 tsc7 domain users   4419 Apr  1 2019 12:06 intarr.h
+8512067006774026725 -rwxr-xr-x  1 tsc7 domain users    258 Apr  1 2019 12:06 main.c
 
 /home/tsc7/sfuhome/cmpt-127/CMPT127-1191-tsc7/10:
-4524348915065485862 -rwxr-xr-x 1 tsc7 domain users  2045 Apr  1 2019 12:06 image.cpp
-4524348923655420455 -rwxr-xr-x 1 tsc7 domain users  1026 Apr  1 2019 12:06 image.hpp
-8183564435979599385 -rwxr-xr-x 1 tsc7 domain users  4358 Apr  1 2019 12:06 image2.cpp
-8183564440274566685 -rwxr-xr-x 1 tsc7 domain users  1421 Apr  1 2019 12:06 image2.hpp
-8183564440274566686 -rwxr-xr-x 1 tsc7 domain users  4674 Apr  1 2019 12:06 image3.cpp
-8183564444569533983 -rwxr-xr-x 1 tsc7 domain users  1422 Apr  1 2019 12:06 image3.hpp
+4524348915065485862 -rwxr-xr-x  1 tsc7 domain users   2045 Apr  1 2019 12:06 image.cpp
+4524348923655420455 -rwxr-xr-x  1 tsc7 domain users   1026 Apr  1 2019 12:06 image.hpp
+8183564435979599385 -rwxr-xr-x  1 tsc7 domain users   4358 Apr  1 2019 12:06 image2.cpp
+8183564440274566685 -rwxr-xr-x  1 tsc7 domain users   1421 Apr  1 2019 12:06 image2.hpp
+8183564440274566686 -rwxr-xr-x  1 tsc7 domain users   4674 Apr  1 2019 12:06 image3.cpp
+8183564444569533983 -rwxr-xr-x  1 tsc7 domain users   1422 Apr  1 2019 12:06 image3.hpp
 
 /home/tsc7/sfuhome/cmpt-127/CMPT127-1191-tsc7/4:
--5880517428922070885 -rwxr-xr-x 1 tsc7 domain users   748 Feb 25 2019 14:11 Makefile
--5880515736704956260 -rwxr-xr-x 1 tsc7 domain users   759 Feb 11 2019 15:06 Makefile.macos
--5880513159724578659 -rwxr-xr-x 1 tsc7 domain users  5129 Feb 11 2019 15:06 draw.c
--5880508284936697698 -rwxr-xr-x 1 tsc7 domain users   372 Feb 11 2019 15:06 draw.h
--5880508263461861217 -rwxr-xr-x 1 tsc7 domain users 84225 Feb 11 2019 15:06 hadfield.png
--5880507133885462368 -rwxr-xr-x 1 tsc7 domain users  9990 Feb 11 2019 15:06 imgops.c
--5880505471733118815 -rwxr-xr-x 1 tsc7 domain users  5261 Feb 11 2019 15:06 imgops.h
--5880505441668347742 -rwxr-xr-x 1 tsc7 domain users  3399 Feb 11 2019 15:06 png.c
--5880505394423707485 -rwxr-xr-x 1 tsc7 domain users   634 Feb 11 2019 15:06 png.h
--6025120185988710190 -rwxr-xr-x 1 tsc7 domain users  1190 Feb 25 2019 14:11 t1.c
--6025120185988710189 -rwxr-xr-x 1 tsc7 domain users  1672 Feb 25 2019 14:11 t2.c
-4134071730876982798 -rwxr-xr-x 1 tsc7 domain users 76848 Feb 11 2019 15:06 test
--6025120134449102634 -rwxr-xr-x 1 tsc7 domain users  2617 Feb 25 2019 14:11 test.c
--6025120164513873708 -rwxr-xr-x 1 tsc7 domain users  1411 Feb 25 2019 14:11 t3.c
--6025120160218906411 -rwxr-xr-x 1 tsc7 domain users   503 Feb 25 2019 14:11 task.h
+12566226644787480731 -rwxr-xr-x  1 tsc7 domain users    748 Feb 25 2019 14:11 Makefile
+12566228337004595356 -rwxr-xr-x  1 tsc7 domain users    759 Feb 11 2019 15:06 Makefile.macos
+12566230913984972957 -rwxr-xr-x  1 tsc7 domain users   5129 Feb 11 2019 15:06 draw.c
+12566235788772853918 -rwxr-xr-x  1 tsc7 domain users    372 Feb 11 2019 15:06 draw.h
+12566235810247690399 -rwxr-xr-x  1 tsc7 domain users  84225 Feb 11 2019 15:06 hadfield.png
+12566236939824089248 -rwxr-xr-x  1 tsc7 domain users   9990 Feb 11 2019 15:06 imgops.c
+12566238601976432801 -rwxr-xr-x  1 tsc7 domain users   5261 Feb 11 2019 15:06 imgops.h
+12566238632041203874 -rwxr-xr-x  1 tsc7 domain users   3399 Feb 11 2019 15:06 png.c
+12566238679285844131 -rwxr-xr-x  1 tsc7 domain users    634 Feb 11 2019 15:06 png.h
+12421623887720841426 -rwxr-xr-x  1 tsc7 domain users   1190 Feb 25 2019 14:11 t1.c
+12421623887720841427 -rwxr-xr-x  1 tsc7 domain users   1672 Feb 25 2019 14:11 t2.c
+4134071730876982798 -rwxr-xr-x  1 tsc7 domain users  76848 Feb 11 2019 15:06 test
+12421623939260448982 -rwxr-xr-x  1 tsc7 domain users   2617 Feb 25 2019 14:11 test.c
+12421623909195677908 -rwxr-xr-x  1 tsc7 domain users   1411 Feb 25 2019 14:11 t3.c
+12421623913490645205 -rwxr-xr-x  1 tsc7 domain users    503 Feb 25 2019 14:11 task.h
 
 /home/tsc7/sfuhome/cmpt-127/CMPT127-1191-tsc7/3:
-4850031612179130820 -rwxr-xr-x 1 tsc7 domain users   738 Feb 11 2019 15:05 Makefile
-4850031612179130822 -rwxr-xr-x 1 tsc7 domain users   754 Feb 11 2019 15:06 Makefile.macos
-4850031612179130823 -rwxr-xr-x 1 tsc7 domain users  5129 Feb 11 2019 15:06 draw.c
-4850031616474098120 -rwxr-xr-x 1 tsc7 domain users   372 Feb 11 2019 15:06 draw.h
-7468249048854624254 -rwxr-xr-x 1 tsc7 domain users  1912 Feb 11 2019 15:06 fractal.c
-7468249057444558847 -rwxr-xr-x 1 tsc7 domain users   771 Feb 11 2019 15:06 get_name.c
-7468249061739526144 -rwxr-xr-x 1 tsc7 domain users   745 Feb 11 2019 15:06 get_name_parent.c
-7468249070329460737 -rwxr-xr-x 1 tsc7 domain users 84225 Feb 11 2019 15:06 hadfield.png
-7468249078919395330 -rwxr-xr-x 1 tsc7 domain users  9990 Feb 11 2019 15:06 imgops.c
-7468249087509329923 -rwxr-xr-x 1 tsc7 domain users  5261 Feb 11 2019 15:06 imgops.h
-7468249091804297220 -rwxr-xr-x 1 tsc7 domain users  3399 Feb 11 2019 15:06 png.c
-7468249096099264517 -rwxr-xr-x 1 tsc7 domain users   634 Feb 11 2019 15:06 png.h
-7468249104689199110 -rwxr-xr-x 1 tsc7 domain users  1511 Feb 11 2019 15:06 randomrandom.c
-8031396656670251194 -rwxr-xr-x 1 tsc7 domain users  2314 Feb 25 2019 14:11 test.c
-8031396549296068792 -rwxr-xr-x 1 tsc7 domain users  1385 Feb 25 2019 14:11 t3.c
-8031396583655807161 -rwxr-xr-x 1 tsc7 domain users  1228 Feb 25 2019 14:11 t7.c
+4850031612179130820 -rwxr-xr-x  1 tsc7 domain users    738 Feb 11 2019 15:05 Makefile
+4850031612179130822 -rwxr-xr-x  1 tsc7 domain users    754 Feb 11 2019 15:06 Makefile.macos
+4850031612179130823 -rwxr-xr-x  1 tsc7 domain users   5129 Feb 11 2019 15:06 draw.c
+4850031616474098120 -rwxr-xr-x  1 tsc7 domain users    372 Feb 11 2019 15:06 draw.h
+7468249048854624254 -rwxr-xr-x  1 tsc7 domain users   1912 Feb 11 2019 15:06 fractal.c
+7468249057444558847 -rwxr-xr-x  1 tsc7 domain users    771 Feb 11 2019 15:06 get_name.c
+7468249061739526144 -rwxr-xr-x  1 tsc7 domain users    745 Feb 11 2019 15:06 get_name_parent.c
+7468249070329460737 -rwxr-xr-x  1 tsc7 domain users  84225 Feb 11 2019 15:06 hadfield.png
+7468249078919395330 -rwxr-xr-x  1 tsc7 domain users   9990 Feb 11 2019 15:06 imgops.c
+7468249087509329923 -rwxr-xr-x  1 tsc7 domain users   5261 Feb 11 2019 15:06 imgops.h
+7468249091804297220 -rwxr-xr-x  1 tsc7 domain users   3399 Feb 11 2019 15:06 png.c
+7468249096099264517 -rwxr-xr-x  1 tsc7 domain users    634 Feb 11 2019 15:06 png.h
+7468249104689199110 -rwxr-xr-x  1 tsc7 domain users   1511 Feb 11 2019 15:06 randomrandom.c
+8031396656670251194 -rwxr-xr-x  1 tsc7 domain users   2314 Feb 25 2019 14:11 test.c
+8031396549296068792 -rwxr-xr-x  1 tsc7 domain users   1385 Feb 25 2019 14:11 t3.c
+8031396583655807161 -rwxr-xr-x  1 tsc7 domain users   1228 Feb 25 2019 14:11 t7.c
 
 /home/tsc7/sfuhome/cmpt-127/CMPT127-1191-tsc7/2:
-4357353353878250699 -rwxr-xr-x 1 tsc7 domain users  1181 Feb 11 2019 15:05 censored.c
-4357353375353087181 -rwxr-xr-x 1 tsc7 domain users   553 Feb 11 2019 15:05 contains.c
-4357353383943021774 -rwxr-xr-x 1 tsc7 domain users   649 Feb 11 2019 15:05 count.c
-4357353392532956367 -rwxr-xr-x 1 tsc7 domain users    45 Feb 11 2019 15:05 funcs.h
-4357353396827923664 -rwxr-xr-x 1 tsc7 domain users   193 Feb 11 2019 15:05 identical.c
-4357353405417858257 -rwxr-xr-x 1 tsc7 domain users   490 Feb 11 2019 15:05 inrect.c
-4389485692141774034 -rwxr-xr-x 1 tsc7 domain users   622 Feb 11 2019 15:05 letterfreq.c
-4389485700731708627 -rwxr-xr-x 1 tsc7 domain users   199 Feb 11 2019 15:05 reverse.c
-4389485705026675924 -rwxr-xr-x 1 tsc7 domain users   427 Feb 11 2019 15:05 scrambled.c
-4389485713616610517 -rwxr-xr-x 1 tsc7 domain users   515 Feb 11 2019 15:05 verticalgraph.c
-8031396149856974595 -rwxr-xr-x 1 tsc7 domain users    23 Feb 25 2019 14:11 beatles.txt
-8031396158446909188 -rwxr-xr-x 1 tsc7 domain users   295 Feb 25 2019 14:11 funcs.c
-8031396167036843781 -rwxr-xr-x 1 tsc7 domain users 20090 Feb 25 2019 14:11 happy_prince.txt
-8031396175626778374 -rwxr-xr-x 1 tsc7 domain users   234 Feb 25 2019 14:11 main.c
-8031396188511680263 -rwxr-xr-x 1 tsc7 domain users    99 Feb 25 2019 14:11 poem.txt
-8031396197101614856 -rwxr-xr-x 1 tsc7 domain users  1146 Feb 25 2019 14:11 t10.c
-8031396214281484041 -rwxr-xr-x 1 tsc7 domain users   255 Feb 25 2019 14:11 t2.c
-8031396429029848842 -rwxr-xr-x 1 tsc7 domain users   266 Feb 25 2019 14:11 t3.c
-8031396441914750731 -rwxr-xr-x 1 tsc7 domain users   287 Feb 25 2019 14:11 t4.c
+4357353353878250699 -rwxr-xr-x  1 tsc7 domain users   1181 Feb 11 2019 15:05 censored.c
+4357353375353087181 -rwxr-xr-x  1 tsc7 domain users    553 Feb 11 2019 15:05 contains.c
+4357353383943021774 -rwxr-xr-x  1 tsc7 domain users    649 Feb 11 2019 15:05 count.c
+4357353392532956367 -rwxr-xr-x  1 tsc7 domain users     45 Feb 11 2019 15:05 funcs.h
+4357353396827923664 -rwxr-xr-x  1 tsc7 domain users    193 Feb 11 2019 15:05 identical.c
+4357353405417858257 -rwxr-xr-x  1 tsc7 domain users    490 Feb 11 2019 15:05 inrect.c
+4389485692141774034 -rwxr-xr-x  1 tsc7 domain users    622 Feb 11 2019 15:05 letterfreq.c
+4389485700731708627 -rwxr-xr-x  1 tsc7 domain users    199 Feb 11 2019 15:05 reverse.c
+4389485705026675924 -rwxr-xr-x  1 tsc7 domain users    427 Feb 11 2019 15:05 scrambled.c
+4389485713616610517 -rwxr-xr-x  1 tsc7 domain users    515 Feb 11 2019 15:05 verticalgraph.c
+8031396149856974595 -rwxr-xr-x  1 tsc7 domain users     23 Feb 25 2019 14:11 beatles.txt
+8031396158446909188 -rwxr-xr-x  1 tsc7 domain users    295 Feb 25 2019 14:11 funcs.c
+8031396167036843781 -rwxr-xr-x  1 tsc7 domain users  20090 Feb 25 2019 14:11 happy_prince.txt
+8031396175626778374 -rwxr-xr-x  1 tsc7 domain users    234 Feb 25 2019 14:11 main.c
+8031396188511680263 -rwxr-xr-x  1 tsc7 domain users     99 Feb 25 2019 14:11 poem.txt
+8031396197101614856 -rwxr-xr-x  1 tsc7 domain users   1146 Feb 25 2019 14:11 t10.c
+8031396214281484041 -rwxr-xr-x  1 tsc7 domain users    255 Feb 25 2019 14:11 t2.c
+8031396429029848842 -rwxr-xr-x  1 tsc7 domain users    266 Feb 25 2019 14:11 t3.c
+8031396441914750731 -rwxr-xr-x  1 tsc7 domain users    287 Feb 25 2019 14:11 t4.c
 
 /home/tsc7/sfuhome/cmpt-127/CMPT127-1191-tsc7/1:
-5884151989241101932 -rwxr-xr-x 1 tsc7 domain users    85 Jan 15 2019 11:24 t1.c
-5877801742655012464 -rwxr-xr-x 1 tsc7 domain users  8448 Jan 15 2019 14:17 a.out
-7274463070804900537 -rwxr-xr-x 1 tsc7 domain users   799 Apr  1 2019 23:34 t2.c
-8407758563438177012 -rwxr-xr-x 1 tsc7 domain users   310 Apr  1 2019 23:34 t3.c
-8407759336532290296 -rwxr-xr-x 1 tsc7 domain users   262 Apr  1 2019 23:34 t4.c
-3746176694445854613 -rwxr-xr-x 1 tsc7 domain users   410 Apr  1 2019 23:34 t6.c
-3746176703035789204 -rwxr-xr-x 1 tsc7 domain users   218 Apr  1 2019 23:34 t5.c
-4390512507151341518 -rwxr-xr-x 1 tsc7 domain users   262 Feb 11 2019 15:05 t7.c
-4390512554395981787 -rwxr-xr-x 1 tsc7 domain users   437 Feb 11 2019 15:05 t8.c
-4164697368841556049 -rwxr-xr-x 1 tsc7 domain users   769 Feb 11 2019 15:05 t9.c
+5884151989241101932 -rwxr-xr-x  1 tsc7 domain users     85 Jan 15 2019 11:24 t1.c
+5877801742655012464 -rwxr-xr-x  1 tsc7 domain users   8448 Jan 15 2019 14:17 a.out
+7274463070804900537 -rwxr-xr-x  1 tsc7 domain users    799 Apr  1 2019 23:34 t2.c
+8407758563438177012 -rwxr-xr-x  1 tsc7 domain users    310 Apr  1 2019 23:34 t3.c
+8407759336532290296 -rwxr-xr-x  1 tsc7 domain users    262 Apr  1 2019 23:34 t4.c
+3746176694445854613 -rwxr-xr-x  1 tsc7 domain users    410 Apr  1 2019 23:34 t6.c
+3746176703035789204 -rwxr-xr-x  1 tsc7 domain users    218 Apr  1 2019 23:34 t5.c
+4390512507151341518 -rwxr-xr-x  1 tsc7 domain users    262 Feb 11 2019 15:05 t7.c
+4390512554395981787 -rwxr-xr-x  1 tsc7 domain users    437 Feb 11 2019 15:05 t8.c
+4164697368841556049 -rwxr-xr-x  1 tsc7 domain users    769 Feb 11 2019 15:05 t9.c
 
 /home/tsc7/sfuhome/cmpt-127/CMPT127-1191-tsc7/0:
--5121800370762057167 -rwxr-xr-x 1 tsc7 domain users    12 Jan  8 2019 12:28 tstsvn
-3667760998326172211 -rwxr-xr-x 1 tsc7 domain users     5 Jan  8 2019 12:35 handle
+13324943702947494449 -rwxr-xr-x  1 tsc7 domain users     12 Jan  8 2019 12:28 tstsvn
+3667760998326172211 -rwxr-xr-x  1 tsc7 domain users      5 Jan  8 2019 12:35 handle
 
 /home/tsc7/sfuhome/$RECYCLE.BIN:
-1264791487012555168 -rwxr-xr-x 1 tsc7 domain users   129 Sep 13 2018 12:28 desktop.ini
-1265409549986318758 -rwxr-xr-x 1 tsc7 domain users   108 Sep 13 2018 12:52 $IZ9VIM9.py
-1264912471946316196 -rwxr-xr-x 1 tsc7 domain users   282 Sep 13 2018 12:50 $RZ9VIM9.py
-2155108340270778795 -rwxr-xr-x 1 tsc7 domain users   154 Sep 20 2018 12:31 $IYDO8FB.mp4
-1264887569725933987 -rwxr-xr-x 1 tsc7 domain users 13283064 Sep 13 2018 12:33 $RYDO8FB.mp4
-
-/home/tsc7/sfuhome/pub_html:
+1264791487012555168 -rwxr-xr-x  1 tsc7 domain users    129 Sep 13 2018 12:28 desktop.ini
+1265409549986318758 -rwxr-xr-x  1 tsc7 domain users    108 Sep 13 2018 12:52 $IZ9VIM9.py
+1264912471946316196 -rwxr-xr-x  1 tsc7 domain users    282 Sep 13 2018 12:50 $RZ9VIM9.py
+2155108340270778795 -rwxr-xr-x  1 tsc7 domain users    154 Sep 20 2018 12:31 $IYDO8FB.mp4
+1264887569725933987 -rwxr-xr-x  1 tsc7 domain users 13283064 Sep 13 2018 12:33 $RYDO8FB.mp4
