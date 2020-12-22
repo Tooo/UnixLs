@@ -8,7 +8,7 @@
 #include "LsFile.h"
 
 /*
-    LsFile
+    LsOutput
     Handles all screen outputs
 */
 
