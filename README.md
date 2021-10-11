@@ -5,7 +5,7 @@ Allows multiple directories and a few options.
 ## Installation
 1. Clone the repository
 ```bash
-git clone https://github.com/Toooo123/List-Implementation.git
+git clone https://github.com/Tooo/UnixLs.git
 ```
 2. Make the objects and executable file: 
 ```bash
